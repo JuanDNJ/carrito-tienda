@@ -3,14 +3,14 @@ import { AddTocartIcon } from './AddtoCartIcon'
 import { DelteToCartIcon } from './DelteTocartIcon'
 export function Product({ product }) {
 
-    const { cart, addProdut, deleteProdut } = useCart()
+    const { cart, addToCart, deleteToCart } = useCart()
     const handlerAddCart = (product) => {
         // console.log(product)
-        addProdut(product)
+        addToCart(product)
     }
     const handlerDeleteProduct = (product) => {
         // console.log(product)
-        deleteProdut(product)
+        deleteToCart(product)
     }
     return (
         <li>

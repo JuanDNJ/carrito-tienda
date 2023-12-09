@@ -1,36 +1,35 @@
-import { useContext, createContext, useState } from "react";
+import { useContext, createContext, useState, useReducer } from "react";
+import { cartActions } from './actions/cartActions'
+import { useToggle } from "../hooks/useToggle";
+
 
 const Ctx = createContext()
+const initialState = []
 
 export default function CartProvider({ children }) {
-    const [cart, setCart] = useState([])
-    const [isOpenList, setIsOpenList] = useState(false)
 
-    const addProdut = (product) => {
-        const productInCartIndex = cart.findIndex(item => item.id === product.id)
+    const { isToggle, setToggle } = useToggle()
+    const [state, dispacth] = useReducer(cartActions, initialState)
 
-        if (productInCartIndex >= 0) {
-            const newCart = structuredClone(cart)
-            newCart[productInCartIndex].quantity += 1
-            return setCart(() => newCart)
-        }
-        setCart((prev) => (
-            [...prev, {
-                ...product,
-                quantity: 1
-            }]
-        ))
-    }
-    const deleteProdut = (product) => {
-        setCart((prev) => prev.filter(item => item.id !== product.id))
+    const addToCart = (product) => dispacth({
+        type: 'ADD_TO_CART',
+        payload: product
+    })
+    const deleteToCart = (product) => dispacth({
+        type: 'REMOVE_TO_CART',
+        payload: product
+    })
+    const clearCart = () => dispacth({ type: 'CLEAR_CART' })
 
-    }
-    const clearProduts = () => {
-        setCart(() => [])
-    }
     return (
         <Ctx.Provider value={{
-            cart, isOpenList, addProdut, deleteProdut, clearProduts, setIsOpenList
+            cart: state,
+            isToggle,
+            setToggle,
+            addToCart,
+            deleteToCart,
+            clearCart,
+            dispacth
         }}>
             {children}
         </Ctx.Provider>

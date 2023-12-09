@@ -1,14 +1,14 @@
 import { useCart } from "../context/CartCtx"
 import { AddTocartIcon } from "./AddtoCartIcon"
 export function ToggleCart() {
-    const { setIsOpenList, isOpenList } = useCart()
+    const { isToggle, setToggle } = useCart()
     let fill = "#fff"
-    if (isOpenList) fill = "green"
+    if (isToggle) fill = "green"
 
     return (
         <button
-            className={`${isOpenList ? "toggle-cart-close" : "toggle-cart-open"}`}
-            onClick={() => setIsOpenList(prev => !prev)}
+            className={`${isToggle ? "toggle-cart-close" : "toggle-cart-open"}`}
+            onClick={() => setToggle(prev => !prev)}
             type="button"
         >
             <AddTocartIcon fill={fill} />

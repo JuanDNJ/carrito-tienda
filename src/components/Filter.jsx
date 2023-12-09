@@ -1,8 +1,9 @@
-
 import { categories } from '../data/categories.json'
-import { useFilters } from '../context/FilterCtx'
+import { useFiltersCtx } from '../context/FilterCtx'
+
 export function Filter() {
-    const { filters, setFilters, minPriceFilterId, categoryFilterId } = useFilters()
+    const { filters, setFilters, minPriceFilterId, categoryFilterId } = useFiltersCtx()
+
     const minPrice = filters.price
 
 

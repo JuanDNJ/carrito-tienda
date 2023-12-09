@@ -1,31 +1,20 @@
-import { useContext, createContext, useState, useId } from "react";
+import { useContext, createContext, useId } from "react";
+import { useFilter as hook } from "../hooks/useFilter";
 
 const Ctx = createContext()
 
-export default function FilterProvider({ children }) {
+export default function FilterCtx({ children }) {
 
-    const [filters, setFilters] = useState({
-        category: 'all',
-        price: 1
-    })
+    const { filters, filterdProducts, setFilters } = hook()
     const minPriceFilterId = useId()
     const categoryFilterId = useId()
 
-    const filterdProducts = (products) => {
-        return products.filter(product => {
-            return product.price >= filters.price && (
-                filters.category === 'all' ||
-                product.category === filters.category
-            )
-        })
-    }
-
     const value = {
         filters,
+        minPriceFilterId,
+        categoryFilterId,
         setFilters,
         filterdProducts,
-        minPriceFilterId,
-        categoryFilterId
     }
     return (
         <Ctx.Provider value={value}>
@@ -34,8 +23,12 @@ export default function FilterProvider({ children }) {
     )
 }
 
-export function useFilters() {
+function useFiltersCtx() {
     const ctx = useContext(Ctx)
     if (!ctx) throw new Error("No hay contexto");
     return ctx
+}
+
+export {
+    useFiltersCtx
 }

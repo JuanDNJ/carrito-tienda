@@ -1,22 +1,22 @@
-import { useState } from 'react'
 import { products as initialProducts } from './data/products.json'
 import { Products } from './components/Products'
+import { useState } from "react"
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
-import { useFilters } from './context/FilterCtx'
+import { useFiltersCtx } from './context/FilterCtx'
 
-
+import { IS_DEVELOPMENT } from "./config";
 function App() {
-  const { filters, setFilters, filterdProducts } = useFilters()
-  const [products] = useState(initialProducts)
+  const { filters, setFilters, filterdProducts } = useFiltersCtx()
+  const [allProducts] = useState(initialProducts)
 
-  const filteredProducts = filterdProducts(products)
+  const filteredProducts = filterdProducts(allProducts)
 
   return (
     <section className='app' >
       <Header changeFilters={setFilters} />
       <Products products={filteredProducts} />
-      <Footer filters={filters} />
+      {IS_DEVELOPMENT && <Footer filters={filters} />}
     </section>
   )
 }
