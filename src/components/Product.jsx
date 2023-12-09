@@ -1,15 +1,13 @@
 import { useCartCtx } from '../context/CartCtx'
-import { AddTocartIcon } from './AddtoCartIcon'
+import { CartIcon } from './CartIcon'
 import { DelteToCartIcon } from './DelteTocartIcon'
 export function Product({ product }) {
 
     const { cart, addToCart, deleteToCart } = useCartCtx()
     const handlerAddCart = (product) => {
-        // console.log(product)
         addToCart(product)
     }
     const handlerDeleteProduct = (product) => {
-        // console.log(product)
         deleteToCart(product)
     }
     return (
@@ -27,7 +25,7 @@ export function Product({ product }) {
                         <DelteToCartIcon fill="#fff" />
                     </button> :
                     <button title='Add to cart' type='button' onClick={() => handlerAddCart(product)}>
-                        <AddTocartIcon fill="#fff" />
+                        <CartIcon fill="#fff" />
                     </button>}
             </div>
         </li>

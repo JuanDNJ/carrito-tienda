@@ -1,15 +1,15 @@
-import { useContext, createContext, useState, useReducer } from "react";
-import { cartActions } from './actions/cartActions'
+import { useContext, createContext, useMemo } from "react";
 import { useToggle } from "../hooks/useToggle";
-
+import { useReducerCart } from "../reducers/cartReducer";
 
 const Ctx = createContext()
-const initialState = []
+
 
 export default function CartProvider({ children }) {
 
     const { isToggle, setToggle } = useToggle()
-    const [state, dispacth] = useReducer(cartActions, initialState)
+    const [state, dispacth] = useReducerCart()
+    const cart = state;
 
     const addToCart = (product) => dispacth({
         type: 'ADD_TO_CART',
@@ -21,16 +21,18 @@ export default function CartProvider({ children }) {
     })
     const clearCart = () => dispacth({ type: 'CLEAR_CART' })
 
+    const values = {
+        cart,
+        isToggle,
+        setToggle,
+        addToCart,
+        deleteToCart,
+        clearCart,
+        dispacth
+    };
+
     return (
-        <Ctx.Provider value={{
-            cart: state,
-            isToggle,
-            setToggle,
-            addToCart,
-            deleteToCart,
-            clearCart,
-            dispacth
-        }}>
+        <Ctx.Provider value={values}>
             {children}
         </Ctx.Provider>
     )

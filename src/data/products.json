@@ -12,6 +12,7 @@
                 "count": 120
             }
         },
+        
         {
             "id": 2,
             "title": "Mens Casual Premium Slim Fit T-Shirts ",
@@ -235,6 +236,18 @@
             "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
             "category": "women's clothing",
             "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+            "rating": {
+                "rate": 3.6,
+                "count": 145
+            }
+        },
+        {
+            "id": 21,
+            "title": "MacBook Air de 13 pulgadas chip Apple M1 256GB (2020)",
+            "price": 1219.01,
+            "description": "Chip Apple M1 con CPU de 8 núcleos, GPU de 7 núcleos y Neural Engine de 16 núcleos8 GB de memoria RAM 256 GB SSD.",
+            "category": "electronics",
+            "image": "https://www.macnificos.com/sites/files/styles/product_category/public/images/product/mgn63ya.png?itok=AOqOyMEE",
             "rating": {
                 "rate": 3.6,
                 "count": 145

@@ -1,5 +1,5 @@
 import { useCartCtx } from "../context/CartCtx"
-import { AddTocartIcon } from "./AddtoCartIcon"
+import { CartIcon } from "./CartIcon"
 export function ToggleCart() {
     const { isToggle, setToggle } = useCartCtx()
     let fill = "#fff"
@@ -11,6 +11,6 @@ export function ToggleCart() {
             onClick={() => setToggle(prev => !prev)}
             type="button"
         >
-            <AddTocartIcon fill={fill} />
+            <CartIcon fill={fill} />
         </button>)
 }
