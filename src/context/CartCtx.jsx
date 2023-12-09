@@ -36,7 +36,7 @@ export default function CartProvider({ children }) {
     )
 }
 
-export function useCart() {
+export function useCartCtx() {
     const ctx = useContext(Ctx)
     if (!ctx) throw new Error("Cannot use")
     return ctx

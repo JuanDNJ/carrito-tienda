@@ -1,10 +1,10 @@
 import { DelteToCartIcon } from "./DelteTocartIcon"
-import { useCart } from "../context/CartCtx"
+import { useCartCtx } from "../context/CartCtx"
 import { ToggleCart } from "./ToggleCart"
 
 export function Cart() {
 
-    const { cart, deleteToCart, clearCart, isToggle } = useCart()
+    const { cart, deleteToCart, clearCart, isToggle } = useCartCtx()
 
     return (
         <>

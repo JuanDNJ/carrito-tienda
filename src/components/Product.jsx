@@ -1,9 +1,9 @@
-import { useCart } from '../context/CartCtx'
+import { useCartCtx } from '../context/CartCtx'
 import { AddTocartIcon } from './AddtoCartIcon'
 import { DelteToCartIcon } from './DelteTocartIcon'
 export function Product({ product }) {
 
-    const { cart, addToCart, deleteToCart } = useCart()
+    const { cart, addToCart, deleteToCart } = useCartCtx()
     const handlerAddCart = (product) => {
         // console.log(product)
         addToCart(product)
