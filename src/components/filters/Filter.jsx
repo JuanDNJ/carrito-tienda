@@ -1,5 +1,6 @@
-import { categories } from '../data/categories.json'
-import { useFiltersCtx } from '../context/FilterCtx'
+import styles from './filters.module.css'
+import { categories } from '../../data/categories.json'
+import { useFiltersCtx } from '../../context/FilterCtx'
 
 export function Filter() {
     const { filters, setFilters, minPriceFilterId, categoryFilterId } = useFiltersCtx()
@@ -31,7 +32,7 @@ export function Filter() {
 
     }
     return (
-        <section className='filters'>
+        <form className={styles.filters}>
             <label htmlFor={minPriceFilterId}>
                 <input type="range" min="0" id={minPriceFilterId} max="1000" onChange={handlerChangeMinPrice} />
                 <span>${minPrice}</span>
@@ -42,20 +43,20 @@ export function Filter() {
                 </select>
             </label>
 
-            {
-                filters.category === "clothing" ?
-                    <div>
-                        <label htmlFor={'men'}>
-                            Men
-                            <input type="radio" onChange={handlerChangeSex} id="men" name="sex" value={'men'} />
-                        </label>
-                        <label htmlFor={'women'}>
-                            Women
-                            <input type="radio" onChange={handlerChangeSex} id="women" name="sex" value={'women'} />
-                        </label>
-                    </div>
-                    : null
-            }
-        </section >
+            {filters.category === "clothing" && <div className={styles.sex}>
+                <label htmlFor={'all'}>
+                    <span>All</span>
+                    <input type="radio" onChange={handlerChangeSex} id="all" name="sex" value={'all'} />
+                </label>
+                <label htmlFor={'men'}>
+                    <span>Men</span>
+                    <input type="radio" onChange={handlerChangeSex} id="men" name="sex" value={'men'} />
+                </label>
+                <label htmlFor={'women'}>
+                    <span>Women</span>
+                    <input type="radio" onChange={handlerChangeSex} id="women" name="sex" value={'women'} />
+                </label>
+            </div>}
+        </form >
     )
 }

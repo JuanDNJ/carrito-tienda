@@ -1,0 +1,31 @@
+button {
+    transform: scale(.7);
+    background: rgb(84, 210, 226);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    border: none;
+    border-radius: 50%;
+    border: 1px solid transparent;
+  }
+  
+  button.toggleCartClose {
+    background: rgb(248, 136, 108);
+    border: 1px solid rgb(255, 255, 255);
+  }
+ 
+  button.toggleCartOpen {
+    background: rgb(101, 245, 238);
+    border: 1px solid rgb(255, 255, 255);
+  }
+  .deleteToCart{
+    background: rgb(247, 36, 36)
+  }
+ 
+  button.deleteToCart:hover {
+    border: 1px solid gray;
+    background: rgb(245, 44, 44);
+ 
+  }

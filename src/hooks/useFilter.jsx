@@ -6,8 +6,6 @@ export function useFilter() {
         price: 1
     })
 
-
-
     const filterdProducts = (products) => {
         return products.filter(product => {
             return product.price >= filters.price && (
@@ -21,20 +19,3 @@ export function useFilter() {
     }
     return { filters, filterdProducts, setFilters }
 }
-// const cat = products.filter(product => product.categories && product.categories.filter(cat => filters.categories.includes(cat)))
-// console.log(cat)
-
-// return product.categories.filter(category => {
-//     return filters.categories.filter(filter => filter === category)
-// })
-
-// {
-//     let all
-//     if (product.categories) {
-//         all = product.categories.map(cat => filters.categories.includes(cat))
-//         // console.log(fil)
-//         // console.log(product)
-//         // console.log(inc)
-//     }
-//     return all
-// }

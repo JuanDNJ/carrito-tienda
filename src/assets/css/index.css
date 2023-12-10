@@ -5,181 +5,32 @@
  }
 
  body {
+   display: flex;
+   flex-direction: row;
+   place-content: center;
    width: 100%;
    height: 100vh;
-   background: #223;
-   color: #dbdbdb
+   color: #dbdbdb;
  }
 
  h1 {
    font-size: 1.3rem;
+   font-weight: 900;
+   color: rgb(255, 255, 255);
+ }
+
+ .app {
+   display: flex;
+   max-width: 1280px;
+   margin: 0 auto;
  }
 
  ::-webkit-scrollbar {
    width: 1px;
  }
-
- .mainHeader {
-   display: flex;
-   flex-direction: column;
-   width: 100%;
- }
-
- .menu {
-   display: flex;
-   width: 100%;
-   align-items: center;
-   place-content: space-between;
-   padding: 1rem;
- }
-
- .filters {
-   display: flex;
-   place-content: space-evenly;
- }
-
- .products {
-   width: 100%;
-   padding: 60px;
-   list-style: none;
- }
-
- .photoProduct {
-   width: 100%;
-   aspect-ratio: 16/9;
-   object-fit: cover;
-   display: block;
-   border-radius: 4px;
-   background: #fff;
-   grid-area: foto;
- }
-
-
  ul {
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-   justify-content: center;
-   gap: 1rem;
+   list-style: none;
+   margin: 0;
+   padding: 0;
  }
-
- .products li {
-   display: grid;
-   grid-template-areas: "foto foto" "body body" "price button";
-   grid-template-rows: auto 1fr 100px;
-   padding: 1rem;
-   color: #fff;
-   background: #111;
- }
-
- .products .first-child,
- .last-child,
- .midle-child {
-   display: flex;
-   place-items: center;
-   position: relative;
- }
-
- .first-child {
-   grid-area: body;
-   padding: .5rem;
- }
-
- .midle-child {
-   grid-area: price;
-   place-content: center;
-
- }
-
- .last-child {
-   grid-area: button;
-   place-content: flex-end;
-
- }
-
- .products span {
-   font-size: 1rem;
-   opacity: .9;
- }
-
- .midle-child strong {
-   font-size: 1.1rem;
-   color: gold
- }
-
- .midle-child span {
-   font-size: 1.3rem;
-   color: rgb(147, 247, 147)
- }
-
- button {
-   transform: scale(.7);
-   background: linear-gradient(rgb(73, 22, 22), transparent);
-   width: 44px;
-   height: 44px;
-   display: flex;
-   place-items: center;
-   place-content: center;
-   border: none;
-   border-radius: 50%;
-   border: 1px solid transparent;
- }
-
- button.toggle-cart-close {
-   background: rgb(248, 136, 108);
-   border: 1px solid rgb(255, 255, 255);
- }
-
- button.toggle-cart-open {
-   background: rgb(101, 245, 238);
-   border: 1px solid rgb(255, 255, 255);
- }
-
- button:hover,
- button.deleteToCart:hover {
-   transform: scale(.8);
-   border: 1px solid orange;
-   background: linear-gradient(rgb(87, 87, 87), transparent);
- }
-
- button.deleteToCart:hover {
-   border: 1px solid gray;
-   background: linear-gradient(rgb(245, 44, 44), transparent);
-
- }
-
- .cart {
-   display: flex;
-   flex-direction: column;
-   border-left: 1px solid orange;
-   background: #333;
-   position: fixed;
-   right: 0;
-   gap: 1rem;
-   padding: 2rem;
-   width: 220px;
-   height: 100vh;
-   overflow: hidden scroll;
-   z-index: 10;
- }
-
- .footer {
-   position: fixed;
-   left: 1rem;
-   bottom: 1rem;
-   background: rgba(0, 0, 0.7);
-   padding: 8px 24px;
-   border-radius: 32px;
-   opacity: .95;
-   backdrop-filter: blur(8px);
- }
-
- .footer span {
-   font-size: 14px;
-   color: #09f;
-   opacity: .8;
- }
-
- .footer h4,
- .footer h5 {
-   display: flex;
- }
+ 

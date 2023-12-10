@@ -1,0 +1,50 @@
+.filters {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    place-content: space-evenly;
+    padding: .5rem;
+    flex: 1 100%;
+    background: #424242;
+   
+    padding: 1rem 0;
+}
+select[name="categories"] {
+    padding: .5rem;
+    border-radius: 4px;
+    border: 1px solid rgb(66, 179, 71);
+}
+
+.sex {
+    display: flex;
+    gap: 1rem;
+    place-items: center;
+    place-content: center;
+}
+
+.sex>label {
+    display: flex;
+    place-items: center;
+    gap: .5rem;
+}
+@media screen and (max-width: 475px) {
+    .filters {
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+        width: 50vw;
+        top: 0;
+        left: -100%;
+        z-index: 9;
+    }
+  }
+ 
+  /* @media screen and (min-width: 1024px) {
+    .filters {
+    }
+  }
+ 
+  @media screen and (min-width: 1280px) {
+    .filters {
+    }
+  } */

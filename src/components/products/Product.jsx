@@ -1,6 +1,7 @@
-import { useCartCtx } from '../context/CartCtx'
-import { CartIcon } from './CartIcon'
-import { DelteToCartIcon } from './DelteTocartIcon'
+import styles from './products.module.css'
+import { useCartCtx } from '../../context/CartCtx'
+import { CartIcon } from '../icons/CartIcon'
+import { DelteToCartIcon } from '../icons/DelteTocartIcon'
 
 export function Product({ product }) {
 
@@ -13,16 +14,16 @@ export function Product({ product }) {
     }
     return (
         <li>
-            <img className='photoProduct' src={product.image} alt={product.title} />
-            <div className='first-child'>
+            <img className={styles.photoProduct} src={product.image} alt={product.title} />
+            <div className={styles.firstChild}>
                 <span>{product.title}</span>
             </div>
-            <div className='midle-child'>
-                <strong>$</strong>&nbsp;<span>{product.price}</span>
+            <div className={styles.midleChild}>
+                <strong>€</strong>&nbsp;<span>{product.price}</span>
             </div>
-            <div className='last-child' >
+            <div className={styles.lastChild} >
                 {cart && cart.find(res => res.id === product.id) ?
-                    <button title='Delete to cart' className='deleteToCart' type='button' onClick={() => handlerDeleteProduct(product)}>
+                    <button title='Delete to cart' className={styles.deleteToCart} type='button' onClick={() => handlerDeleteProduct(product)}>
                         <DelteToCartIcon fill="#fff" />
                     </button> :
                     <button title='Add to cart' type='button' onClick={() => handlerAddCart(product)}>

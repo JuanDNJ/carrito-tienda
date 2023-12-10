@@ -1,0 +1,23 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid orange;
+    background: #333;
+    position: fixed;
+    right: 0;
+    gap: 1rem;
+    overflow: hidden;
+    width: 220px;
+    height: 100%;
+    z-index: 10;
+  }
+  .listCarts {
+    display: flex;
+    overflow: hidden scroll;
+    height: 50%;
+  }
+  .options {
+    background-color: red;
+    display: flex;
+    place-content: flex-end;
+  }

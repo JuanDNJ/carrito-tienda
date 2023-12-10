@@ -1,0 +1,29 @@
+.menu {
+    display: flex;
+    align-items: center;
+    place-content: flex-end;
+    flex: 1;
+    /* background: maroon; */
+  }
+  .buttons {
+    /* background: orange; */
+  }
+  @media screen and (max-width: 475px) {
+    .menu {
+      width: 100%;
+    }
+  }
+ 
+  @media screen and (min-width: 1024px) {
+    .menu {
+      width: 980px;
+    }
+  }
+ 
+  @media screen and (min-width: 1280px) {
+    .menu {
+      width: 1240px;
+    }
+  }
+  
+  

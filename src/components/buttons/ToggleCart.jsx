@@ -1,5 +1,6 @@
-import { useCartCtx } from "../context/CartCtx"
-import { CartIcon } from "./CartIcon"
+import './buttons.module.css'
+import { useCartCtx } from "../../context/CartCtx"
+import { CartIcon } from "../icons/CartIcon"
 export function ToggleCart() {
     const { isToggle, setToggle } = useCartCtx()
     let fill = "#fff"

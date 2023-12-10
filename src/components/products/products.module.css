@@ -1,0 +1,76 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 4rem 1rem;
+}
+
+.photoProduct {
+  width: 100%;
+  height: 375px;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+  background: #fff;
+  grid-area: foto;
+  padding: 1rem;
+}
+
+.products li {
+  display: grid;
+  grid-template-areas: "foto foto" "body body" "price button";
+  grid-template-rows: auto 1fr 100px;
+  color: #333;
+  border: 1px solid rgba(0, 0, 0, .1);
+}
+.products li:hover {
+  background: rgba(0, 0, 0, .1);
+}
+.firstChild,
+.lastChild,
+.midleChild {
+  display: flex;
+  place-items: center;
+  position: relative;
+  padding: 1rem;
+}
+
+.firstChild {
+  grid-area: body;
+  padding: .5rem;
+  text-align: center;
+  place-content: center;
+}
+
+.midleChild {
+  grid-area: price;
+  place-content: center;
+
+}
+
+.lastChild {
+  grid-area: button;
+  place-content: flex-end;
+
+}
+
+.products span {
+  font-size: 1rem;
+  opacity: .9;
+}
+
+.midleChild strong {
+  font-size: 1.1rem;
+  color: rgb(216, 142, 45)
+}
+
+.midleChild span {
+  font-size: 1.3rem;
+
+}
+.deleteToCart{
+  background: rgb(247, 36, 36)
+}

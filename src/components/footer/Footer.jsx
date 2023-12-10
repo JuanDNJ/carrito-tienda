@@ -1,5 +1,6 @@
-import { useCartCtx } from '../context/CartCtx'
-import { useFiltersCtx } from "../context/FilterCtx";
+import styles from './foter.module.css'
+import { useCartCtx } from '../../context/CartCtx'
+import { useFiltersCtx } from "../../context/FilterCtx";
 export function Footer() {
     const { filters } = useFiltersCtx()
     const { cart } = useCartCtx()
