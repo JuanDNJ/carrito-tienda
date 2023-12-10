@@ -1,11 +1,11 @@
 import styles from './menu.module.css'
-import { ToggleCart } from "../buttons/ToggleCart"
+import { ToggleCartButton } from "../buttons/ToggleCartButton"
 export function Menu() {
     return (
         <section className={styles.menu}>
 
             <div className={styles.buttons}>
-                <ToggleCart />
+                <ToggleCartButton />
             </div>
         </section>
     )

@@ -1,31 +1,39 @@
 button {
-    transform: scale(.7);
-    background: rgb(84, 210, 226);
-    width: 44px;
-    height: 44px;
-    display: flex;
-    place-items: center;
-    place-content: center;
-    border: none;
-    border-radius: 50%;
-    border: 1px solid transparent;
-  }
-  
-  button.toggleCartClose {
-    background: rgb(248, 136, 108);
-    border: 1px solid rgb(255, 255, 255);
-  }
- 
-  button.toggleCartOpen {
-    background: rgb(101, 245, 238);
-    border: 1px solid rgb(255, 255, 255);
-  }
-  .deleteToCart{
-    background: rgb(247, 36, 36)
-  }
- 
-  button.deleteToCart:hover {
-    border: 1px solid gray;
-    background: rgb(245, 44, 44);
- 
-  }
+  transform: scale(.8);
+  background: rgb(84, 210, 226);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  border: none;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: 300ms all ease-in-out;
+}
+
+.toggleCartClose {
+  background: rgb(248, 136, 108);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.toggleCartOpen {
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.addToCart {
+  background: rgb(101, 245, 149);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.deleteToCart {
+  background: rgb(247, 36, 36);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.addToCart:active,
+.deleteToCart:active,
+.toggleCartOpen:active,
+.toggleCartClose:active {
+  transform: scale(.6);
+}

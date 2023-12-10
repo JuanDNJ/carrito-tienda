@@ -19,16 +19,16 @@
   padding: 1rem;
 }
 
-.products li {
+.product {
   display: grid;
   grid-template-areas: "foto foto" "body body" "price button";
   grid-template-rows: auto 1fr 100px;
   color: #333;
-  border: 1px solid rgba(0, 0, 0, .1);
+  border: 1px solid rgba(104, 103, 103, 0.37);
+  border-radius: 8px;
+  overflow: hidden;
 }
-.products li:hover {
-  background: rgba(0, 0, 0, .1);
-}
+
 .firstChild,
 .lastChild,
 .midleChild {
@@ -57,20 +57,21 @@
 
 }
 
-.products span {
+.productTitle {
   font-size: 1rem;
   opacity: .9;
 }
 
-.midleChild strong {
+.euro {
   font-size: 1.1rem;
   color: rgb(216, 142, 45)
 }
 
-.midleChild span {
+.productPrice {
   font-size: 1.3rem;
 
 }
-.deleteToCart{
+
+.deleteToCart {
   background: rgb(247, 36, 36)
 }

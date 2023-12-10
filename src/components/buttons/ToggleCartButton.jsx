@@ -1,17 +1,21 @@
 import './buttons.module.css'
 import { useCartCtx } from "../../context/CartCtx"
 import { CartIcon } from "../icons/CartIcon"
-export function ToggleCart() {
+import styles from './buttons.module.css'
+
+export function ToggleCartButton() {
+
     const { isToggle, setToggle } = useCartCtx()
     let fill = "#fff"
-    if (isToggle) fill = "green"
 
     return (
         <button
-            className={`${isToggle ? "toggle-cart-close" : "toggle-cart-open"}`}
+            className={`${isToggle ? styles.toggleCartClose : styles.toggleCartOpen}`}
             onClick={() => setToggle(prev => !prev)}
             type="button"
         >
             <CartIcon fill={fill} />
-        </button>)
+        </button>
+    )
+
 }
