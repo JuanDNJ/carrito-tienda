@@ -1,6 +1,7 @@
 import { useCartCtx } from '../context/CartCtx'
 import { CartIcon } from './CartIcon'
 import { DelteToCartIcon } from './DelteTocartIcon'
+
 export function Product({ product }) {
 
     const { cart, addToCart, deleteToCart } = useCartCtx()

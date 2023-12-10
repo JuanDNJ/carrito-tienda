@@ -2,19 +2,85 @@
     "categories": [
         {
             "id": 1,
-            "name": "men's clothing"
+            "name": "all"
         },
         {
             "id": 2,
-            "name": "jewelery"
+            "name": "clothing"
         },
         {
             "id": 3,
+            "name": "jewelery"
+        },
+        {
+            "id":4,
             "name": "electronics"
+        }
+    ],
+    "electronics": [
+        {
+            "id": 1,
+            "name": "computers"
+        },
+        {
+            "id": 2,
+            "name": "phones"
+        },
+        {
+            "id": 3,
+            "name": "watches"
         },
         {
             "id": 4,
-            "name": "women's clothing"
+            "name": "home appliances"
+        },
+        {
+            "id": 4,
+            "name": "televisions"
+        }
+    ],
+    "clothing": [
+        {
+            "id": 1,
+            "name": "jackets"
+        },
+        {
+            "id": 2,
+            "name": "sweater"
+        },
+        {
+            "id": 3,
+            "name": "pants"
+        },
+        {
+            "id": 4,
+            "name": "socks"
+        },
+        {
+            "id": 5,
+            "name": "shoes"
+        }
+    ],
+    "jewelery": [
+        {
+            "id": 1,
+            "name": "necklaces"
+        },
+        {
+            "id": 2,
+            "name": "rings"
+        },
+        {
+            "id": 3,
+            "name": "earrings"
+        },
+        {
+            "id": 4,
+            "name": "piercing"
+        },
+        {
+            "id": 5,
+            "name": "watches"
         }
     ]
 }
