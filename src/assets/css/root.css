@@ -1,0 +1,48 @@
+:root{
+    --font-race-sport: 'Race Sport';
+    --font-oxanium-light: 'Oxanium Light';
+    --font-oxanium-extralight: 'Oxanium ExtraLight';
+    --font-oxanium-bold: 'Oxanium Bold';
+    --font-oxanium-extrabold: 'Oxanium ExtraBold';
+    --font-oxanium-semibold: 'Oxanium SemiBold';
+    --font-oxanium-medium: 'Oxanium Medium';
+    --font-oxanium-regular: 'Oxanium Regular';
+
+}
+::-webkit-scrollbar {
+    /* 1 */
+    width: 1px;
+  }
+  
+  ::-webkit-scrollbar-button {
+    /* 2 */
+    display: none;
+  }
+  
+  ::-webkit-scrollbar-track {
+    /* 3 */
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-track-piece {
+    /* 4 */
+    box-shadow: inset 0 0 6px olive;
+  
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    /* 5 */
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  ::-webkit-scrollbar-corner {
+    /* 6 */
+    display: none;
+  }
+  
+  ::-webkit-resizer {
+    /* 7 */
+    display: none;
+  }
