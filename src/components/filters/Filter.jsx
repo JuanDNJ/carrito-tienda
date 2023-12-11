@@ -1,7 +1,7 @@
 import styles from './filters.module.css'
 import { categories } from '../../data/cat.json'
 import { useFiltersCtx } from '../../context/FilterCtx'
-import { products } from '@/data/products.json'
+
 export function Filter() {
     const { filters, setFilters, minPriceFilterId, categoryFilterId } = useFiltersCtx()
 
@@ -56,11 +56,6 @@ export function Filter() {
             <section className={styles.rightContent}>
                 {filters.category !== 'all' && (
                     <>
-                        {/* {products.map((product, key) => {
-                            if (product.category === filters.category) {
-                                return (<div key={key}>{product.sex}</div>)
-                            }
-                        })} */}
                         {categories.map((category, key) => {
                             if (category.name === filters.category && category.subcategories.length) {
                                 if (category.sex) {
