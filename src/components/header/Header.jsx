@@ -1,8 +1,9 @@
 import styles from './header.module.css'
 import { MenuIcon } from '../icons/MenuIcon'
-import { Filter } from "../filters/Filter"
+import { Filters } from "../filters/Filters"
 import { Cart } from "../cart/Cart"
 import { Menu } from "../menu/Menu"
+
 export function Header() {
 
     return (
@@ -14,8 +15,9 @@ export function Header() {
                 </div>
                 <Menu />
                 <Cart />
-                <Filter />
+                <Filters />
             </section>
         </header>
     )
+
 }

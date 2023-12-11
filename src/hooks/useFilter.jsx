@@ -1,12 +1,14 @@
 import { useState } from "react";
+
 export function useFilter() {
+
     const [filters, setFilters] = useState({
         category: 'all',
         subcategory: 'all',
         sex: 'all',
-        price: 1
+        price: 0
     })
-    console.log(filters)
+
     const filterdProducts = (products) => {
         return products.filter(product => {
             return product.price >= filters.price &&
@@ -17,5 +19,8 @@ export function useFilter() {
                 )
         })
     }
+
     return { filters, filterdProducts, setFilters }
+
 }
+
