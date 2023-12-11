@@ -1,31 +1,52 @@
 .filters {
     display: flex;
-    flex-direction: row;
-    place-items: center;
-    place-content: space-evenly;
-    padding: .5rem;
     flex: 1 100%;
-    background: #424242;
-   
-    padding: 1rem 0;
+    /* background: #424242; */
+    padding: .5rem;
+}
+.category{
+    display: flex;
+    place-content: space-evenly;
+    place-items: center;
+    flex: 1;
+}
+.rightContent{
+    display: flex;
+    place-items: center;
+    flex: 1;
 }
 select[name="categories"] {
     padding: .5rem;
     border-radius: 4px;
     border: 1px solid rgb(66, 179, 71);
 }
-
-.sex {
+.euro {
+    font-size: 1.2rem;
+    color: rgb(116, 228, 248)
+  }
+.sex ,
+.subcategory,
+.jewelery{
     display: flex;
     gap: 1rem;
     place-items: center;
-    place-content: center;
+    place-content: space-evenly;
+    flex: 1 100%;
+    padding: .5rem;
 }
 
-.sex>label {
+.category>label,
+.sex>label,
+.subcategory>label,
+.jewelery>label {
     display: flex;
     place-items: center;
     gap: .5rem;
+}
+.category>label>strong{
+    width: 100px;
+    display: flex;
+    place-content: flex-start;
 }
 @media screen and (max-width: 475px) {
     .filters {

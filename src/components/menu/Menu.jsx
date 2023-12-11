@@ -1,12 +1,15 @@
 import styles from './menu.module.css'
 import { ToggleCartButton } from "../buttons/ToggleCartButton"
+import { AccountButton } from '../buttons/AccountButton'
+
 export function Menu() {
     return (
-        <section className={styles.menu}>
-
+        <nav className={styles.menu}>
             <div className={styles.buttons}>
+                <AccountButton />
                 <ToggleCartButton />
             </div>
-        </section>
+        </nav>
     )
+
 }

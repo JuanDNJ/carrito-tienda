@@ -7,6 +7,9 @@
   }
   .buttons {
     /* background: orange; */
+    display: flex;
+    gap: .5rem;
+    padding-right: 1rem;
   }
   @media screen and (max-width: 475px) {
     .menu {

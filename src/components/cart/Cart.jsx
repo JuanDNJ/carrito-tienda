@@ -13,10 +13,8 @@ export function Cart() {
         <>
             {isToggle && <div className={styles.cart}>
                 <div className={styles.options}>
+                    {cart && cart.length > 0 && <ClearCartButton />}
                     <ToggleCartButton />
-                    {cart && cart.length > 0 &&
-                        <ClearCartButton />
-                    }
                 </div>
                 <ul className={styles.listCarts}>
                     {cart && cart.map((prod, keyId) => {

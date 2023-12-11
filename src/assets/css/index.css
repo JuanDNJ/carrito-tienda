@@ -14,10 +14,11 @@ html, body{
    width: 100%;
    height: 100vh;
    color: #dbdbdb;
+   overflow: hidden auto;
  }
 
  h1 {
-   font-size: 1.3rem;
+   font-size: 1.2rem;
    font-weight: 900;
    color: rgb(255, 255, 255);
    font-family: var(--font-race-sport);

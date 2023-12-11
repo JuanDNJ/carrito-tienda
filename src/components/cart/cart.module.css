@@ -36,7 +36,11 @@
 .options {
   display: flex;
   place-content: flex-end;
+  gap: .5rem;
+  padding-top: .2rem;
+  padding-right: 1rem;
 }
+
 .quantityCart{
   display: flex;
   place-items: center;
