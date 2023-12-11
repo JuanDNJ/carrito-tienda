@@ -1,5 +1,5 @@
 import styles from './filters.module.css'
-import { categories } from '../../data/cat.json'
+import { categories } from '../../data/categories.json'
 import { useFiltersCtx } from '../../context/FilterCtx'
 
 export function Filter() {
@@ -71,7 +71,6 @@ export function Filter() {
                                             ))}
                                         </div>
                                     }
-
                                     <div className='containerFilterSubcategorie'>
                                         <label htmlFor={'allsubcategory'}>
                                             <span>All Products</span>

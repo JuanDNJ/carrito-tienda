@@ -2,85 +2,60 @@
     "categories": [
         {
             "id": 1,
-            "name": "all"
+            "name": "jewelery",
+            "subcategories": [
+                {
+                    "id": 1,
+                    "name": "silver"
+                },
+                {
+                    "id": 2,
+                    "name": "gold"
+                }
+            ]
         },
         {
             "id": 2,
-            "name": "clothing"
+            "name": "clothing",
+            "subcategories": [
+                {
+                    "id": 1,
+                    "name": "jackets"
+                },
+                {
+                    "id": 2,
+                    "name": "t-shirt"
+                }
+            ],
+            "sex": [
+                {
+                    "id":1,
+                    "name": "men"
+                },
+                {
+                    "id":2,
+                    "name": "women"
+                }
+            ]
         },
         {
             "id": 3,
-            "name": "jewelery"
-        },
-        {
-            "id":4,
-            "name": "electronics"
-        }
-    ],
-    "electronics": [
-        {
-            "id": 1,
-            "name": "computers"
-        },
-        {
-            "id": 2,
-            "name": "phones"
-        },
-        {
-            "id": 3,
-            "name": "watches"
-        },
-        {
-            "id": 4,
-            "name": "home appliances"
-        },
-        {
-            "id": 4,
-            "name": "televisions"
-        }
-    ],
-    "clothing": [
-        {
-            "id": 1,
-            "name": "jackets"
-        },
-        {
-            "id": 2,
-            "name": "sweater"
-        },
-        {
-            "id": 3,
-            "name": "pants"
-        },
-        {
-            "id": 4,
-            "name": "socks"
-        },
-        {
-            "id": 5,
-            "name": "shoes"
-        }
-    ],
-    "jewelery": [
-        {
-            "id": 1,
-            "name": "necklaces"
-        },
-        {
-            "id": 2,
-            "name": "rings"
-        },
-        {
-            "id": 3,
-            "name": "earrings"
-        },
-        {
-            "id": 4,
-            "name": "piercing"
-        },
-        {
-            "id": 5,
-            "name": "watches"
+            "name": "electronics",
+            "subcategories": [
+                {
+                    "id": 1,
+                    "name": "hard drive"
+                },
+                {
+                    "id": 2,
+                    "name": "laptops"
+                },
+                {
+                    "id": 3,
+                    "name": "monitors"
+                }
+                
+            ]
         }
     ]
 }
