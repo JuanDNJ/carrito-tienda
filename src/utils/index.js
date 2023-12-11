@@ -1,7 +1,9 @@
-function ordenarMayorAmenor(a, b) {
-    return b.leaguePoints - a.leaguePoints
+function sortByPriceMinor(productA, productB) {
+    return productA.price - productB.price
 }
-
+function sortByPriceElderly(productA, productB) {
+    return productB.price - productA.price
+}
 function capitalizeWord(word) {
     const letter = word.trim().toLowerCase()
     const firstChar = letter.charAt(0).toUpperCase()
@@ -9,6 +11,7 @@ function capitalizeWord(word) {
 }
 
 export {
-    ordenarMayorAmenor,
+    sortByPriceMinor,
+    sortByPriceElderly,
     capitalizeWord
 }

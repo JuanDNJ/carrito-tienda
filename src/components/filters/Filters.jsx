@@ -8,6 +8,7 @@ export function Filters() {
         <form className={styles.filters}>
             <section className={styles.category}>
                 <FilterCategories />
+
             </section>
             <section className={styles.rightContent}>
                 <ShowSubcateriesByCategory />
