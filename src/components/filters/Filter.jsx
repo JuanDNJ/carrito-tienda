@@ -52,7 +52,10 @@ export function Filter() {
                 </label>
             </section>
             <section className={styles.rightContent}>
-                {/** TODO: Refactorizar */}
+                {/** TODO:
+                 * Crear Componetes nuevos para mejorar el codigo
+                 */}
+
                 {filters.category !== 'all' && (
                     <>
                         {categories.map((category, keyCat) => {
@@ -89,6 +92,7 @@ export function Filter() {
                         })}
                     </>
                 )}
+                {/** FIXME: Refactorizar */}
             </section>
         </form >
     )
