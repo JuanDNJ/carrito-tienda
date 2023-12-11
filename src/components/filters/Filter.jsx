@@ -52,6 +52,7 @@ export function Filter() {
                 </label>
             </section>
             <section className={styles.rightContent}>
+                {/** TODO: Refactorizar */}
                 {filters.category !== 'all' && (
                     <>
                         {categories.map((category, keyCat) => {
@@ -83,7 +84,6 @@ export function Filter() {
                                             </label>
                                         ))}
                                     </div>
-
                                 </>}
                             </div>
                         })}
@@ -92,4 +92,5 @@ export function Filter() {
             </section>
         </form >
     )
+
 }
