@@ -4,9 +4,7 @@ import { useFiltersCtx } from '../../context/FilterCtx'
 
 export function Filter() {
     const { filters, setFilters, minPriceFilterId, categoryFilterId } = useFiltersCtx()
-
     const minPrice = filters.price
-
 
     const handlerChangeMinPrice = (event) => {
         setFilters(prev => ({
@@ -56,48 +54,39 @@ export function Filter() {
             <section className={styles.rightContent}>
                 {filters.category !== 'all' && (
                     <>
-                        {categories.map((category, key) => {
-                            if (category.name === filters.category && category.subcategories.length) {
-                                if (category.sex) {
-                                    return (
-                                        <div key={key}>
-                                            <label htmlFor={'all'}>
-                                                <span>All</span>
-                                                <input type="radio" onChange={handlerChangeSubcategory} id="all" name="subcategory" value={'all'} />
+                        {categories.map((category, keyCat) => {
+                            return <div key={keyCat}>
+                                {category.name === filters.category && category.subcategories.length && <>
+                                    {category.sex &&
+                                        <div className='containerFilterSex'>
+                                            <label htmlFor={'allsex'}>
+                                                <span>All sex</span>
+                                                <input type="radio" onChange={handlerChangeSex} id="allsex" name="sex" value={'all'} />
                                             </label>
-                                            {category.sex.map((s, key) => (<>
-                                                <label htmlFor={s.name}>
+                                            {category.sex.map((s, keySex) => (
+                                                <label key={keySex} htmlFor={s.name}>
                                                     <span>{s.name}</span>
                                                     <input type="radio" onChange={handlerChangeSex} id={s.name} name="sex" value={s.name} />
                                                 </label>
-                                            </>))}
-                                            {category.subcategories.map((subcategory, key) => (<>
-                                                <label htmlFor={subcategory.name}>
-                                                    <span>{subcategory.name}</span>
-                                                    <input type="radio" onChange={handlerChangeSubcategory} id={subcategory.name} name="subcategory" value={subcategory.name} />
-                                                </label>
-                                            </>))}
+                                            ))}
                                         </div>
-                                    )
-                                } else {
-                                    return (
-                                        <div key={key}>
-                                            <label htmlFor={'all'}>
-                                                <span>All</span>
-                                                <input type="radio" onChange={handlerChangeSubcategory} id="all" name="subcategory" value={'all'} />
-                                            </label>
-                                            {category.subcategories.map((subcategory, key) => (<>
-                                                <label htmlFor={subcategory.name}>
-                                                    <span>{subcategory.name}</span>
-                                                    <input type="radio" onChange={handlerChangeSubcategory} id={subcategory.name} name="subcategory" value={subcategory.name} />
-                                                </label>
-                                            </>))}
-                                        </div>
-                                    )
-                                }
+                                    }
 
-                            }
-                            return null
+                                    <div className='containerFilterSubcategorie'>
+                                        <label htmlFor={'allsubcategory'}>
+                                            <span>All Products</span>
+                                            <input type="radio" onChange={handlerChangeSubcategory} id="allsubcategory" name="subcategory" value={'all'} />
+                                        </label>
+                                        {category.subcategories.map((subcategory, keysub) => (
+                                            <label key={keysub} htmlFor={subcategory.name}>
+                                                <span>{subcategory.name}</span>
+                                                <input type="radio" onChange={handlerChangeSubcategory} id={subcategory.name} name="subcategory" value={subcategory.name} />
+                                            </label>
+                                        ))}
+                                    </div>
+
+                                </>}
+                            </div>
                         })}
                     </>
                 )}
