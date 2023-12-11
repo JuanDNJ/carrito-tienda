@@ -2,16 +2,21 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Suspense } from 'react'
 import FilterCtx from '../context/FilterCtx.jsx'
 import CartProvider from '../context/CartCtx.jsx'
-import { App } from './loader'
+import { Layout, App, AccountPage } from './loader'
 
 export default function Router() {
     return (
-        <Suspense fallback={<h1>Loadding ...</h1>}>
+        <Suspense fallback={<h1 style={{ color: '#333' }}>Loadding ...</h1>}>
             <FilterCtx>
                 <CartProvider>
                     <BrowserRouter>
                         <Routes>
-                            <Route path="/" element={<App />} />
+                            <Route path="/" element={<Layout />} >
+                                <Route index element={<App />} />
+                                <Route path="home" element={<App />} />
+                                <Route path="account" element={<AccountPage />} />
+                                <Route path="*" element={<h1 style={{ color: '#333' }}>PAge not found</h1>} />
+                            </Route>
                         </Routes>
                     </BrowserRouter>
                 </CartProvider>

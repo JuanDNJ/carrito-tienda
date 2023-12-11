@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom/client'
 
 import './assets/css/index.css'
 
-
 import Router from './router/index.jsx'
-ReactDOM.createRoot(document.getElementById('root')).render(
-
+const app = ReactDOM.createRoot(document.getElementById('root'))
+app.render(
   <Router />
-  ,
 )
