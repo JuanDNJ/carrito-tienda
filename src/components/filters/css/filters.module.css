@@ -40,16 +40,12 @@ select[name="categories"] {
     flex: 1 100%;
     padding: .5rem;
 }
-
-.category>label,
-.sex>label,
-.subcategory>label,
-.jewelery>label,
-.orderByPrice>label {
+:is(.category,.sex,.subcategory,.jewelery,.orderByPrice)>label {
     display: flex;
     place-items: center;
     gap: .5rem;
 }
+
 .category>label>strong{
     width: 50px;
     display: flex;
