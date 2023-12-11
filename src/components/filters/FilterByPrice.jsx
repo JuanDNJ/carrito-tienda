@@ -1,5 +1,7 @@
+import styles from './css/filters.module.css'
 import { useFiltersCtx } from '@/context/FilterCtx'
 import { capitalizeWord } from '@/utils';
+
 export default function FilterByPrice() {
     const { filters, setFilters } = useFiltersCtx();
     const handlerOrderByMinor = () => {
@@ -21,7 +23,7 @@ export default function FilterByPrice() {
         })
     }
     return (
-        <>
+        <div className={styles.orderByPrice}>
             <label htmlFor={'minor'}>
                 <span>{capitalizeWord('minor')} Price</span>
                 <input type="radio" onChange={handlerOrderByMinor} id="minor" name="orderbyprice" />
@@ -30,6 +32,6 @@ export default function FilterByPrice() {
                 <span>{capitalizeWord('elderly')} Price</span>
                 <input type="radio" onChange={handlerOrderByElderly} id="elderly" name="orderbyprice" />
             </label>
-        </>
+        </div>
     )
 }
