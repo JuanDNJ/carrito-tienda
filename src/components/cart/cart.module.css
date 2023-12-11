@@ -1,7 +1,6 @@
 .cart {
   display: flex;
   flex-direction: column;
-  border-left: 3px solid rgb(177, 31, 31);;
   background: #333;
   position: fixed;
   right: 0;
