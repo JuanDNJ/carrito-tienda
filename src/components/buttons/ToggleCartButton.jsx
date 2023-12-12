@@ -10,7 +10,7 @@ export function ToggleCartButton() {
 
     return (
         <button
-            className={`${isToggle ? styles.toggleCartClose : styles.toggleCartOpen}`}
+            className={`${styles.btn} ${isToggle ? styles.toggleCartClose : styles.toggleCartOpen}`}
             onClick={() => setToggle(prev => !prev)}
             type="button"
         >

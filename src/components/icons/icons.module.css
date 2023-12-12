@@ -2,16 +2,3 @@
    
 }
 
-@media screen and (max-width: 475px) {
-    .menuBars {}
-}
-
-@media screen and (min-width: 1024px) {
-    .menuBars {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    .menuBars {}
-}

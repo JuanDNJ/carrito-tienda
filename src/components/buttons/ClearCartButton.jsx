@@ -6,7 +6,7 @@ export function ClearCartButton() {
     const { clearCart } = useCartCtx()
 
     return (
-        <button className={styles.deleteToCart} onClick={() => clearCart()} type="button">
+        <button className={`${styles.btn} ${styles.deleteToCart}`} onClick={() => clearCart()} type="button">
             <DelteToCartIcon fill="#fff" />
         </button>
     )

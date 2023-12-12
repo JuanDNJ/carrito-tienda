@@ -1,58 +1,146 @@
 {
     "categories": [
         {
-            "id": 1,
+            "id":1,
+            "name": "all",
+            "subcategories":[]
+        },
+        {
+            "id": 2,
             "name": "jewelery",
             "subcategories": [
                 {
                     "id": 1,
-                    "name": "silver"
+                    "name": "all"
                 },
                 {
                     "id": 2,
+                    "name": "silver"
+                },
+                {
+                    "id": 3,
                     "name": "gold"
                 }
             ]
         },
         {
-            "id": 2,
+            "id": 3,
             "name": "clothing",
             "subcategories": [
                 {
                     "id": 1,
-                    "name": "jackets"
+                    "name": "all"
                 },
                 {
                     "id": 2,
+                    "name": "jackets"
+                },
+                {
+                    "id": 3,
                     "name": "t-shirt"
+                },
+                {
+                    "id": 4,
+                    "name": "bags"
                 }
+                
             ],
             "sex": [
                 {
-                    "id":1,
-                    "name": "men"
+                    "id": 1,
+                    "name": "all"
                 },
                 {
                     "id":2,
+                    "name": "men"
+                },
+                {
+                    "id":3,
                     "name": "women"
                 }
             ]
         },
         {
-            "id": 3,
+            "id": 4,
             "name": "electronics",
             "subcategories": [
                 {
                     "id": 1,
-                    "name": "hard drive"
+                    "name": "all"
                 },
                 {
                     "id": 2,
-                    "name": "laptops"
+                    "name": "hard drive"
                 },
                 {
                     "id": 3,
+                    "name": "laptops"
+                },
+                {
+                    "id": 4,
                     "name": "monitors"
+                }
+                
+            ]
+        },
+        {
+            "id": 4,
+            "name": "shoes",
+            "subcategories": [
+                {
+                    "id": 1,
+                    "name": "all"
+                },
+                {
+                    "id": 2,
+                    "name": "sports"
+                },
+                {
+                    "id": 3,
+                    "name": "To wear"
+                },
+                {
+                    "id": 4,
+                    "name": "evening shoes"
+                },
+                {
+                    "id": 5,
+                    "name": "tennis"
+                },
+                {
+                    "id": 6,
+                    "name": "sandals"
+                }
+                
+            ]
+        },
+        {
+            "id": 4,
+            "name": "home appliances",
+            "subcategories": [
+                {
+                    "id": 1,
+                    "name": "all"
+                },
+                {
+                    "id": 2,
+                    "name": "refrigerators"
+                },
+                {
+                    "id": 3,
+                    "name": "toasters"
+                },
+                {
+                    "id": 4,
+                    "name": "blenders"
+                },
+                {
+                    "id": 5,
+                    "name": "washing machines"
+                },
+                {
+                    "id": 6,
+                    "name": "dryers"
                 }
                 
             ]

@@ -5,22 +5,18 @@ import { capitalizeWord } from '@/utils';
 export default function FilterByPrice() {
     const { filters, setFilters } = useFiltersCtx();
     const handlerOrderByMinor = () => {
-        setFilters((prev) => {
-            return ({
-                ...prev,
-                minor: true,
-                elderly: false
-            })
-        })
+        setFilters((prev) => ({
+            ...prev,
+            minor: true,
+            elderly: false
+        }))
     }
     const handlerOrderByElderly = () => {
-        setFilters((prev) => {
-            return ({
-                ...prev,
-                minor: false,
-                elderly: true
-            })
-        })
+        setFilters((prev) => ({
+            ...prev,
+            minor: false,
+            elderly: true
+        }))
     }
     return (
         <div className={styles.orderByPrice}>

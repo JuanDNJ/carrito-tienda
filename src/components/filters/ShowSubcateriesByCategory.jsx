@@ -2,21 +2,20 @@ import { categories } from '@/data/categories.json'
 import { useFiltersCtx } from '@/context/FilterCtx'
 import FilterSex from './FilterSex'
 import FilterSubCategories from './FilterSubCategories'
+import { Fragment } from 'react'
 
 export default function ShowSubcateriesByCategory() {
     const { filters } = useFiltersCtx()
-    return (<>
-        {filters.category !== 'all' && (
-            <>
-                {categories.map((category, keyCat) => {
-                    return <div key={keyCat}>
-                        {category.name === filters.category && category.subcategories.length && <>
-                            {category.sex && <FilterSex sexes={category.sex} />}
-                            <FilterSubCategories subcategories={category.subcategories} />
-                        </>}
-                    </div>
-                })}
-            </>
-        )}
-    </>)
+    return (
+        <>
+            {categories.map((category, keyCat) => {
+                if (category.name === filters.category) {
+                    return <Fragment key={keyCat}>
+                        <FilterSubCategories subcategories={category.subcategories} />
+                        {category.sex ? <FilterSex sexes={category.sex} /> : null}
+                    </Fragment>
+                }
+            })}
+        </>
+    )
 }

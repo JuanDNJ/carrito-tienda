@@ -4,7 +4,7 @@ import styles from './buttons.module.css'
 export function DeleteItemTocartButton({ prod }) {
     const { deleteToCart } = useCartCtx()
     return (
-        <button className={styles.deleteToCart} onClick={() => deleteToCart(prod)} type="button">
+        <button className={`${styles.btn} ${styles.deleteToCart}`} onClick={() => deleteToCart(prod)} type="button">
             <DelteToCartIcon fill="#fff" />
         </button>
     )

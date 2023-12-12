@@ -3,7 +3,7 @@ import styles from './buttons.module.css'
 
 export function AccountButton() {
     return (
-        <button className={styles.accountButton}>
+        <button className={`${styles.btn} ${styles.accountButton}`}>
             <AccountCircleIcon fill='#fff' />
         </button>
     )

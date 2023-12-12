@@ -1,8 +1,9 @@
-.filters {
+/*.filters {
     display: flex;
     flex: 1 100%;
-    /* background: #424242; */
+
     padding: .5rem;
+    position: relative;
 }
 .category{
     display: flex;
@@ -12,8 +13,7 @@
 }
 .rightContent{
     display: flex;
-    place-items: center;
-    flex: 1;
+    flex-direction: column;
 }
 select[name="categories"] {
     padding: .5rem;
@@ -30,45 +30,50 @@ select[name="categories"] {
     font-size: 1.2rem;
     color: rgb(116, 228, 248)
   }
-.sex ,
+ .sex ,
 .subcategory,
-.jewelery{
+.jewelery,
+.containerFilterSubcategorie, 
+.containerFilterSex{
     display: flex;
     gap: 1rem;
     place-items: center;
     place-content: space-evenly;
     flex: 1 100%;
     padding: .5rem;
-}
-:is(.category,.sex,.subcategory,.jewelery,.orderByPrice)>label {
+} */
+/* :is(
+    .category,
+    .sex,
+    .subcategory,
+    .jewelery,
+    .orderByPrice, 
+    .containerFilterSubcategorie,
+    .containerFilterSex
+)>label {
     display: flex;
     place-items: center;
     gap: .5rem;
-}
+} */
 
-.category>label>strong{
+/* .category>label>strong{
     width: 50px;
     display: flex;
     place-content: flex-start;
-}
-@media screen and (max-width: 475px) {
-    .filters {
-        flex-direction: column;
-        position: fixed;
-        height: 100vh;
-        width: 50vw;
-        top: 0;
-        left: -100%;
-        z-index: 9;
-    }
-  }
- 
-  /* @media screen and (min-width: 1024px) {
-    .filters {
-    }
+} */
+
+ /* .absolute{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    background-color: #333;
+ } */
+  @media screen and (max-width: 968px) {
+    
   }
  
   @media screen and (min-width: 1280px) {
-    .filters {
-    }
-  } */
+ 
+    
+  }

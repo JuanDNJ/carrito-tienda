@@ -1,4 +1,4 @@
-button {
+.btn {
   transform: scale(.8);
   background: rgb(84, 210, 226);
   display: flex;

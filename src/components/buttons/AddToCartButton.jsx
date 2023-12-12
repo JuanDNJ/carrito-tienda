@@ -6,7 +6,7 @@ export function AddToCartButton({ prod }) {
     const { addToCart } = useCartCtx()
     return (
         <button type="button"
-            className={styles.addToCart}
+            className={`${styles.btn} ${styles.addToCart}`}
             onClick={() => addToCart(prod)}
         >
             <AddToCartIcon />

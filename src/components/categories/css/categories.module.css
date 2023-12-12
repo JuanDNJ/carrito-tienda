@@ -1,0 +1,48 @@
+.containerCategories{
+    flex: 1 100%;
+    padding-top: .5rem;
+    background: #333;
+    padding-left: 1rem;
+  
+}
+.categories{
+    background: inherit;
+    display: flex;
+    place-items: center;
+    position: relative;
+ 
+}
+.containerOpenFilters{
+    display: flex;
+    align-items: center;
+    padding: 0 .27rem;
+    background-color: rgb(115, 122, 119);
+    border-radius: 3px;
+}
+.containerButtons{
+    width: 325px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1rem;
+    overflow: auto hidden;
+}
+.subcategories{
+    position: absolute;
+    top: 100%;
+    display: flex;
+    width: 325px;
+    padding: 20px 0;
+    overflow:auto hidden;
+}
+@media screen and (min-width: 1024px){
+    .containerButtons{
+        width: 325px;
+    
+      
+    }
+    .subcategories{
+     
+        width: 100%;
+     
+    }
+}

@@ -9,6 +9,8 @@ export default function FilterCtx({ children }) {
     const minPriceFilterId = useId()
     const categoryFilterId = useId()
 
+
+
     const value = {
         filters,
         minPriceFilterId,
