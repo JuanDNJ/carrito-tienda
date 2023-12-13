@@ -316,6 +316,36 @@
                 "rate": 3.6,
                 "count": 145
             }
+        },
+        {
+            "id": 22,
+            "title": "U.S. POLO",
+            "price": 31.20,
+            "description": "zapatilla deportiva con cordones, estampado, detalles en contraste, logotipo.",
+            "category": "shoes",
+            "subcategory": "sports",
+            "sex": "men",
+            "brand": "",
+            "image": "https://cdn.griffeshop.com/gi.php?src=https://cdn.griffeshop.com/catalog/22648/_1.jpg&zc=2&a=t&w=350&h=350",
+            "rating": {
+                "rate": 3.6,
+                "count": 145
+            }
+        },
+        {
+            "id": 23,
+            "title": "LAVADORA SECADORA SERIE 7000 PROSTEAM® DE 9 KG",
+            "price": 876,
+            "description": "",
+            "category": "home appliances",
+            "subcategory": "washing dryers",
+            "sex": "",
+            "brand": "",
+            "image": "https://www.aeg.com.es/remote.jpg.ashx?urlb64=aHR0cHM6Ly9zZXJ2aWNlcy5lbGVjdHJvbHV4LW1lZGlhbGlicmFyeS5jb20vMTE4ZWQ0YzBlZTY1NDZmNGE3Njg0YzdmZWY4Yzk4NWFOclptWWtNODYxZDFmL3ZpZXcvV1NfUE4vUFNBQVdEMjIwUEEwMDAySi5wbmc&hmac=CSbgZaaCkUc&width=1600&quality=70&format=png&mode=crop",
+            "rating": {
+                "rate": 3.6,
+                "count": 145
+            }
         }
     ]
 }

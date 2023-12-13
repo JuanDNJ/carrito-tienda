@@ -1,4 +1,4 @@
-import styles from './products.module.css'
+import styles from '../css/products.module.css'
 import { Product } from "./Product"
 export function Products({ products }) {
 

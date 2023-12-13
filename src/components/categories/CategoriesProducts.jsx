@@ -34,9 +34,12 @@ export default function CategoriesProducts() {
 
 
             <button style={{
+
                 border: '1px solid transparent',
                 fontSize: '.8rem',
-                padding: '.5rem',
+                padding: '.2rem',
+                maxWidth: '150px',
+                textAlign: 'justify',
                 background: category.name === filters.category ? '#fff' : 'transparent',
                 color: category.name === filters.category ? '#333' : 'silver'
             }} type='button' onClick={handlerClicCategorie} key={catKey} value={category.name}>
@@ -55,7 +58,8 @@ export default function CategoriesProducts() {
     const renderSubcategories = category && category.subcategories.map((subcategory, subKey) => {
 
         return <button style={{
-            fontSize: '.8rem'
+            fontSize: '.8rem',
+            textAlign: 'justify',
         }} type='button' onClick={handlerClicSubCategorie} key={subKey} value={subcategory.name}>{capitalizeWord(subcategory.name)}</button>
 
 

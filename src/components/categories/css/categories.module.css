@@ -10,7 +10,7 @@
     display: flex;
     place-items: center;
     position: relative;
- 
+    gap: 1rem;
 }
 .containerOpenFilters{
     display: flex;
@@ -20,29 +20,36 @@
     border-radius: 3px;
 }
 .containerButtons{
-    width: 325px;
+    width: 290px;
     display: flex;
     flex-direction: row;
-    padding-left: 1rem;
-    overflow: auto hidden;
+    overflow: scroll hidden;
+    background: red;
 }
 .subcategories{
     position: absolute;
     top: 100%;
     display: flex;
-    width: 325px;
-    padding: 20px 0;
-    overflow:auto hidden;
+    width: 340px;
+    padding: .5rem 0 .5rem 0;
+    background-color: #223;
+    overflow: scroll hidden;
 }
-@media screen and (min-width: 1024px){
+
+@media screen and (min-width: 475px){
     .containerButtons{
-        width: 325px;
-    
-      
+        width: 390px;
     }
     .subcategories{
-     
+        width: 432px;
+        
+    }
+}
+@media screen and (min-width: 768px){
+    .containerButtons{
         width: 100%;
-     
+    }
+    .subcategories{
+        width: 100%;
     }
 }

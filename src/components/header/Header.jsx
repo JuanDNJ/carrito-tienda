@@ -4,6 +4,8 @@ import { MenuIcon } from '../icons/MenuIcon'
 import { Cart } from "../cart/Cart"
 import { Menu } from "../menu/Menu"
 import CategoriesProducts from '../categories/CategoriesProducts'
+import { Link } from 'react-router-dom'
+import Navigation from '../nav/Navigation'
 export function Header() {
 
     return (
@@ -14,7 +16,8 @@ export function Header() {
                 </div>
                 <Menu />
                 <Cart />
-                <CategoriesProducts />
+                <Navigation />
+                {/* <CategoriesProducts /> */}
                 {/* <Filters /> */}
             </section>
 

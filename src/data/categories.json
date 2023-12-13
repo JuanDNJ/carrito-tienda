@@ -2,12 +2,14 @@
     "categories": [
         {
             "id":1,
-            "name": "all",
+            "name": "home",
+            "url": "http://localhost:5173/",
             "subcategories":[]
         },
         {
             "id": 2,
             "name": "jewelery",
+            "url": "http://localhost:5173/category/jewelery",
             "subcategories": [
                 {
                     "id": 1,
@@ -26,6 +28,7 @@
         {
             "id": 3,
             "name": "clothing",
+            "url": "http://localhost:5173/category/clothing",
             "subcategories": [
                 {
                     "id": 1,
@@ -63,6 +66,7 @@
         {
             "id": 4,
             "name": "electronics",
+            "url": "http://localhost:5173/category/electronics",
             "subcategories": [
                 {
                     "id": 1,
@@ -84,8 +88,9 @@
             ]
         },
         {
-            "id": 4,
+            "id": 5,
             "name": "shoes",
+            "url": "http://localhost:5173/category/shoes",
             "subcategories": [
                 {
                     "id": 1,
@@ -115,8 +120,9 @@
             ]
         },
         {
-            "id": 4,
+            "id": 6,
             "name": "home appliances",
+            "url": "http://localhost:5173/category/home appliances",
             "subcategories": [
                 {
                     "id": 1,
@@ -136,11 +142,15 @@
                 },
                 {
                     "id": 5,
-                    "name": "washing machines"
+                    "name": "washing"
                 },
                 {
                     "id": 6,
                     "name": "dryers"
+                },
+                {
+                    "id": 7,
+                    "name": "washing dryers"
                 }
                 
             ]

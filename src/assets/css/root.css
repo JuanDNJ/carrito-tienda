@@ -10,31 +10,9 @@
 
 }
 ::-webkit-scrollbar {
-    width: 1px;
-    height: 1px;
-    background: blue;
+    width: 0px;
+    height: 0px;
   }
   
-  ::-webkit-scrollbar-button {
-    background: red;
-    height: 1px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    height: 1px;
-  }
-  
-  ::-webkit-scrollbar-track-piece {
-    height: 1px;
-    box-shadow: inset 0 0 6px olive;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    height: 1px;
-  
-    box-shadow: inset 0 0 6px rgb(58, 192, 31);
-  }
-  
+ 
   
