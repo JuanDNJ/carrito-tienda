@@ -1,0 +1,48 @@
+.news{
+    /* background: rgb(250, 250, 142); */
+    background: 
+    linear-gradient( 217deg, rgba(247, 247, 127, .8) , rgb(247, 247, 127) 70%),
+    linear-gradient( 117deg, rgba(34, 204, 153, .8) , rgb(34, 204, 153) 70%),
+    linear-gradient( 336deg, rgba(113, 252, 252, 0.8) , rgb(113, 252, 252) 70%);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .news h3{
+    font-size: 10rem;
+    color: #ffffff;
+    font-family: var(--font-oxanium-extrabold);
+    z-index: 2;
+  }
+  .news .burbuja{
+    width: 500px;
+    height: 500px;
+    border: 2px solid red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 3s ease-in-out;
+    z-index: 1;
+    animation: flotarArriba 2s linear infinite alternate;
+  }
+  @keyframes floatTop {
+    to{
+      transform: translate(100%, 100%);
+    }
+    from {
+  
+    }
+  }
+  @keyframes floatBottom {
+    to{
+      transform: translate(-100%, -100%);
+    }
+    from {
+  
+    }
+  }
