@@ -1,6 +1,6 @@
 .categoryPage{
   /* background: rgb(209, 209, 241); */
-  padding: 2rem 1rem;
+  padding: 1rem 0;
 }
 .gridList {
     display: grid;
@@ -12,4 +12,19 @@
     padding: 1rem;
     overflow: hidden scroll;
   }
+  .subTitle{
+    color: #333;
+    padding: 1rem;
+  }
+  .numProducts{
+    font-size: 6vw;
+    color: rgb(139, 11, 32);
+  }
+ 
   
+  @media screen and (min-width: 1024px) {
+    .numProducts {
+      font-size: 1.1vw;
+    }
+    
+  }

@@ -6,10 +6,11 @@ const Ctx = createContext();
 export default function GlobalCtx({ children }) {
 
     const [isOpenFilters, setIsOpenFilters] = useState(false)
+    const [initialBubbles, setInistalBubbles] = useState(50)
     const toogleOpenFilters = () => {
         setIsOpenFilters(prev => !prev)
     }
-    const value = { isOpenFilters, toogleOpenFilters }
+    const value = { isOpenFilters, initialBubbles, toogleOpenFilters, setInistalBubbles }
 
     return (
         <Ctx.Provider value={value}>

@@ -11,7 +11,7 @@ export default function CategoryPage() {
     console.log(productsCategory)
     return (
         <section className={styles.categoryPage}>
-            <h2 className="subTitle">Category {category && category}</h2>
+            <h2 className={styles.subTitle}>Total products: <span className={styles.numProducts}>{productsCategory && productsCategory.length}</span></h2>
             <section className="viewCategory">
                 <article className="listProducts">
                     <ul className={styles.gridList} >

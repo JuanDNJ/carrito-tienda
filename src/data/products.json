@@ -9,7 +9,9 @@
             "subcategory": "bags",
             "sex": "men",
             "size": "s",
+            "stock": 17,
             "brand": "celio",
+            "offer": false,
             "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
             "rating": {
                 "rate": 3.9,
@@ -25,7 +27,9 @@
             "subcategory": "t-shirt",
             "sex": "men",
             "size": "m",
+            "stock": 33,
             "brand": "celio",
+            "offer": false,
             "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
             "rating": {
                 "rate": 4.1,
@@ -41,7 +45,9 @@
             "subcategory": "jackets",
             "sex": "men",
             "size": "s",
+            "stock": 0,
             "brand": "levis",
+            "offer": true,
             "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
             "rating": {
                 "rate": 4.7,
@@ -57,7 +63,9 @@
             "subcategory": "t-shirt",
             "sex": "men",
             "size": "xxl",
+            "stock": 2,
             "brand": "levis",
+            "offer": true,
             "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
             "rating": {
                 "rate": 2.1,
@@ -72,6 +80,8 @@
             "category": "jewelery",
             "subcategory": "silver",
             "brand": "",
+            "offer": false,
+            "stock": 13,
             "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
             "rating": {
                 "rate": 4.6,
@@ -86,6 +96,8 @@
             "category": "jewelery",
             "subcategory": "silver",
             "brand": "",
+            "offer": true,
+            "stock": 0,
             "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
             "rating": {
                 "rate": 3.9,
@@ -100,6 +112,8 @@
             "category": "jewelery",
             "subcategory": "silver",
             "brand": "",
+            "offer": true,
+            "stock": 4,
             "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
             "rating": {
                 "rate": 3,
@@ -114,6 +128,8 @@
             "category": "jewelery",
             "subcategory": "gold",
             "brand": "",
+            "offer": false,
+            "stock": 3,
             "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
             "rating": {
                 "rate": 1.9,
@@ -128,6 +144,8 @@
             "category": "electronics",
             "subcategory": "hard drive",
             "brand": "Western Digital",
+            "offer": false,
+            "stock": 0,
             "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
             "rating": {
                 "rate": 3.3,
@@ -142,6 +160,8 @@
             "category": "electronics",
             "subcategory": "hard drive",
             "brand": "SanDisk",
+            "offer": false,
+            "stock": 2,
             "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
             "rating": {
                 "rate": 2.9,
@@ -156,6 +176,8 @@
             "category": "electronics",
             "subcategory": "hard drive",
             "brand": "Silicon Power",
+            "offer": false,
+            "stock": 15,
             "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
             "rating": {
                 "rate": 4.8,
@@ -170,6 +192,8 @@
             "category": "electronics",
             "subcategory": "hard drive",
             "brand": "Western Digital",
+            "offer": false,
+            "stock": 10,
             "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
             "rating": {
                 "rate": 4.8,
@@ -184,6 +208,8 @@
             "category": "electronics",
             "subcategory": "monitors",
             "brand": "Acer",
+            "offer": false,
+            "stock": 0,
             "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
             "rating": {
                 "rate": 2.9,
@@ -198,6 +224,8 @@
             "category": "electronics",
             "subcategory": "monitors",
             "brand": "Samsung",
+            "offer": true,
+            "stock": 1,
             "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
             "rating": {
                 "rate": 2.2,
@@ -213,7 +241,9 @@
             "subcategory": "jackets",
             "sex": "women",
             "size": "xl",
+            "stock": 3,
             "brand": "vreska",
+            "offer": false,
             "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
             "categories": [
                 "women"
@@ -232,7 +262,9 @@
             "subcategory": "jackets",
             "sex": "women",
             "size": "m",
+            "stock": 7,
             "brand": "vreska",
+            "offer": false,
             "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
             "rating": {
                 "rate": 2.9,
@@ -248,7 +280,9 @@
             "subcategory": "jackets",
             "sex": "women",
             "size": "s",
+            "stock": 8,
             "brand": "celio",
+            "offer": false,
             "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
             "rating": {
                 "rate": 3.8,
@@ -264,7 +298,9 @@
             "subcategory": "t-shirt",
             "sex": "women",
             "size": "s",
+            "stock": 1,
             "brand": "levis",
+            "offer": true,
             "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
             "rating": {
                 "rate": 4.7,
@@ -280,7 +316,9 @@
             "subcategory": "t-shirt",
             "sex": "women",
             "size": "m",
+            "stock": 5,
             "brand": "celio",
+            "offer": false,
             "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
             "rating": {
                 "rate": 4.5,
@@ -296,7 +334,9 @@
             "subcategory": "t-shirt",
             "sex": "women",
             "size": "l",
+            "stock": 3,
             "brand": "levis",
+            "offer": false,
             "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
             "rating": {
                 "rate": 3.6,
@@ -311,6 +351,8 @@
             "category": "electronics",
             "subcategory": "laptops",
             "brand": "appel",
+            "offer": false,
+            "stock": 20,
             "image": "https://www.macnificos.com/sites/files/styles/product_category/public/images/product/mgn63ya.png?itok=AOqOyMEE",
             "rating": {
                 "rate": 3.6,
@@ -326,6 +368,8 @@
             "subcategory": "sports",
             "sex": "men",
             "brand": "",
+            "stock": 100,
+            "offer": false,
             "image": "https://cdn.griffeshop.com/gi.php?src=https://cdn.griffeshop.com/catalog/22648/_1.jpg&zc=2&a=t&w=350&h=350",
             "rating": {
                 "rate": 3.6,
@@ -341,6 +385,8 @@
             "subcategory": "washing dryers",
             "sex": "",
             "brand": "",
+            "stock": 2,
+            "offer": true,
             "image": "https://www.aeg.com.es/remote.jpg.ashx?urlb64=aHR0cHM6Ly9zZXJ2aWNlcy5lbGVjdHJvbHV4LW1lZGlhbGlicmFyeS5jb20vMTE4ZWQ0YzBlZTY1NDZmNGE3Njg0YzdmZWY4Yzk4NWFOclptWWtNODYxZDFmL3ZpZXcvV1NfUE4vUFNBQVdEMjIwUEEwMDAySi5wbmc&hmac=CSbgZaaCkUc&width=1600&quality=70&format=png&mode=crop",
             "rating": {
                 "rate": 3.6,

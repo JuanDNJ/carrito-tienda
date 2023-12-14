@@ -1,0 +1,11 @@
+ .burbuja {
+   width: 50vw;
+   height: 50vw;
+   border: 1px solid transparent;
+   border-radius: 50%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+ }
+

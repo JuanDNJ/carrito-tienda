@@ -1,38 +1,35 @@
 .mainHeader {
-    background: #333;
-    z-index: 10;
-    width: 100vw;
-  }
-  .logo {
-    flex: 1;
-    display: flex;
-    gap: 1rem;
-    place-content: space-around;
-    place-items: center;
-    /* background-color: blue; */
-  }
-  .containerHeader {
-    display: flex;
-    max-width: 1280px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 0 1rem;
-   
-  }
+  background: #333;
+  z-index: 10;
+  width: 100vw;
+}
 
-  /* @media screen and (max-width: 475px) {
+.logo {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  place-items: center;
+}
+
+.containerHeader {
+  display: flex;
+  max-width: 1280px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* @media screen and (max-width: 475px) {
     .logo {
       
     }
-  } */
+
  
   @media screen and (min-width: 1024px) {
-    .logo {
-      place-content: flex-start;
-    }
+   
   }
-/*  
+ 
   @media screen and (min-width: 1280px) {
     .logo {
     

@@ -1,3 +1,6 @@
+:root {
+    --max-width: 1280px;
+}
 :root{
     --font-race-sport: 'Race Sport';
     --font-oxanium-light: 'Oxanium Light';
@@ -7,7 +10,6 @@
     --font-oxanium-semibold: 'Oxanium SemiBold';
     --font-oxanium-medium: 'Oxanium Medium';
     --font-oxanium-regular: 'Oxanium Regular';
-
 }
 ::-webkit-scrollbar {
     width: 0px;
