@@ -9,9 +9,13 @@ function capitalizeWord(word) {
     const firstChar = letter.charAt(0).toUpperCase()
     return firstChar + letter.slice(1)
 }
-
+function calculateThePorcentage(price, porcentage) {
+    const calc = price * (porcentage / 100)
+    return Math.round(price - calc)
+}
 export {
     sortByPriceMinor,
     sortByPriceElderly,
-    capitalizeWord
+    capitalizeWord,
+    calculateThePorcentage
 }

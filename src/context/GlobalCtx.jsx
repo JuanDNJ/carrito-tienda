@@ -7,10 +7,18 @@ export default function GlobalCtx({ children }) {
 
     const [isOpenFilters, setIsOpenFilters] = useState(false)
     const [initialBubbles, setInistalBubbles] = useState(50)
+    const [initialPorcentage, setInistalPorcentage] = useState(10)
     const toogleOpenFilters = () => {
         setIsOpenFilters(prev => !prev)
     }
-    const value = { isOpenFilters, initialBubbles, toogleOpenFilters, setInistalBubbles }
+    const value = {
+        isOpenFilters,
+        initialBubbles,
+        initialPorcentage,
+        toogleOpenFilters,
+        setInistalBubbles,
+        setInistalPorcentage
+    }
 
     return (
         <Ctx.Provider value={value}>

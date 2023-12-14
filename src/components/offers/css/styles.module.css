@@ -1,0 +1,103 @@
+.offers{
+    /* background: rgb(250, 244, 194); */
+    margin-top: 1rem;
+}
+.containerScroll{
+    width: 340px;
+    /* border: 1px solid #333; */
+    padding: .5rem;
+    height: 320px;
+}
+.listOffers{
+    display: grid;
+    grid-auto-flow: column;
+    height: 100%;
+    gap: .5rem;
+    padding: 0;
+    margin: 0;
+    overflow: auto hidden;
+}
+.itemListOffer{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: auto auto 1fr;
+    /* background: pink; */
+    width: 200px;
+    border: 1px solid rgba(51, 51, 51, 0.267);
+    overflow: hidden;
+}
+.bottomBox{
+    display: flex;
+    place-content: space-between;
+    place-items: center;
+    padding: .5rem 1rem;
+}
+.containerPrice{
+    display: flex;
+    flex-direction: column;
+}
+/* .header{
+    background: maroon;
+  
+} */
+.titleHeader{
+    color: #333;
+    font-size: 6vw;
+    
+}
+.title{
+    color: #333;
+    font-size: 4vw;
+    padding: 0 .2rem;
+    text-align: center;
+}
+.price{
+    color: #333;
+}
+.discount{
+    color: red
+}
+.imageOffer{
+    width: inherit;
+    height: 140px;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    display: block;
+    background: #fff;
+    padding: .5rem .2rem;
+}
+/* @media screen and (min-width: 768px) {
+    .lisOffers{
+        max-width: 768px;
+    }
+} */
+/* @media screen and (min-width: 968px) {
+    .lisOffers{
+        max-width: 968px;
+    }
+}
+ */
+@media screen and (min-width: 1280px) {
+    .listOffers{
+        display: grid;
+        grid-auto-flow: column;
+        height: 100%;
+        gap: .5rem;
+        padding: 0;
+        margin: 0;
+        overflow: auto hidden;
+    }
+    .containerScroll{
+        width: 100%;
+    }
+    .titleHeader{
+      
+        font-size: 2vw;
+        
+    }
+    .title{
+       
+        font-size: 1vw;
+       
+    }
+}
