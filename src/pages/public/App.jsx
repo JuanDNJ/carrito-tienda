@@ -12,7 +12,7 @@ function App() {
 
   return (
 
-    <section className='app'>
+    <section className='initialPage'>
       <h2>Initial Page</h2>
       <WhatsNews />
       <Offers />

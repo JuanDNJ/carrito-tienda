@@ -11,22 +11,31 @@ export default function Product({ product }) {
                 <div className={styles.firstChild}>
                     <span className={styles.productTitle}>{product.title}</span>
                 </div>
-                <div className={styles.midleChild}>
-                    <strong className={styles.euro}>
-                        €
-                    </strong>
-                    &nbsp;
-                    <span className={styles.productPrice}>
-                        {product.price}
-                    </span>
-                </div>
-                <div className={styles.lastChild} >
-                    {cart &&
-                        cart.find(res => res.id === product.id) ?
-                        <DeleteItemTocartButton prod={product} /> :
-                        <AddToCartButton prod={product} />
-                    }
-                </div>
+                <section style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    width: '100%',
+                    gridArea: 'button',
+                    placeItems: 'center'
+
+                }}>
+                    <div className={styles.midleChild}>
+                        <strong className={styles.euro}>
+                            €
+                        </strong>
+                        &nbsp;
+                        <span className={styles.productPrice}>
+                            {product.price}
+                        </span>
+                    </div>
+                    <div className={styles.lastChild} >
+                        {cart &&
+                            cart.find(res => res.id === product.id) ?
+                            <DeleteItemTocartButton prod={product} /> :
+                            <AddToCartButton prod={product} />
+                        }
+                    </div>
+                </section>
             </div>
         </li>
     )

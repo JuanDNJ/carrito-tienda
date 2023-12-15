@@ -3,34 +3,37 @@
     margin-top: 1rem;
 }
 .containerScroll{
-    width: 340px;
+    width: var(--max-width-offers-carrusel-mobile);
     /* border: 1px solid #333; */
-    padding: .5rem;
-    height: 320px;
+    /* padding: .5rem; */
+    position: relative;
+  
 }
 .listOffers{
     display: grid;
     grid-auto-flow: column;
     height: 100%;
-    gap: .5rem;
+    gap: 1rem;
     padding: 0;
     margin: 0;
     overflow: auto hidden;
 }
 .itemListOffer{
     display: grid;
-    grid-auto-flow: row;
-    grid-template-rows: auto auto 1fr;
-    /* background: pink; */
-    width: 200px;
-    border: 1px solid rgba(51, 51, 51, 0.267);
-    overflow: hidden;
+    grid-template-areas: "header" "mid" "bottom";
+    grid-template-rows: var(--max-height-photoProduct) 1fr auto;
+    width: var(--max-width-product);
+    place-content: center;
+    background: #eeeeee;
+    border-radius: 8px;
 }
 .bottomBox{
+    grid-area: bottom;
     display: flex;
     place-content: space-between;
     place-items: center;
-    padding: .5rem 1rem;
+    padding: 1rem;
+    
 }
 .containerPrice{
     display: flex;
@@ -46,6 +49,7 @@
     
 }
 .title{
+    grid-area: mid;
     color: #333;
     font-size: 4vw;
     padding: 0 .2rem;
@@ -58,13 +62,30 @@
     color: red
 }
 .imageOffer{
-    width: inherit;
-    height: 140px;
+  
+    grid-area: header;
+    width: calc(var(--max-width-product) - .5rem);
+    height: var(--max-height-photoProduct);
     aspect-ratio: 16/9;
     object-fit: contain;
-    display: block;
     background: #fff;
-    padding: .5rem .2rem;
+    margin: .5rem .2rem;
+}
+.btnBefore, .btnNext{
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 100px;
+    background: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    box-shadow: 2px 0px 1px #3335;
+}
+.btnNext{
+    right: 0;
+    box-shadow: -2px 0px 1px #3335;
 }
 /* @media screen and (min-width: 768px) {
     .lisOffers{
@@ -77,7 +98,14 @@
     }
 }
  */
+ 
 @media screen and (min-width: 1280px) {
+    .containerScroll{
+       width: var(--max-width-offers-carrusel);
+    }
+    .btnBefore, .btnNext{
+        display: inline-flex;
+    }
     .listOffers{
         display: grid;
         grid-auto-flow: column;
@@ -86,10 +114,12 @@
         padding: 0;
         margin: 0;
         overflow: auto hidden;
+
     }
-    .containerScroll{
-        width: 100%;
+    .itemListOffer{
+        width: 280px;
     }
+   
     .titleHeader{
       
         font-size: 2vw;

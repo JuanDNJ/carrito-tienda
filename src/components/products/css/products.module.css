@@ -4,7 +4,7 @@
 }
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--max-width-product), 1fr));
   justify-content: center;
   gap: 1rem;
   width: 100%;
@@ -13,7 +13,7 @@
 
 .photoProduct {
   width: 100%;
-  height: 375px;
+  height: var(--max-height-photoProduct);
   aspect-ratio: 16/9;
   object-fit: contain;
   display: block;
@@ -25,12 +25,11 @@
 
 .product {
   display: grid;
-  grid-template-areas: "foto foto" "body body" "price button";
-  grid-template-rows: auto 1fr 100px;
+  grid-template-areas: "foto" "body" "button";
+  grid-template-rows: auto 1fr 2fr;
   color: #333;
   border: 1px solid rgba(104, 103, 103, 0.37);
   border-radius: 8px;
-  overflow: hidden;
 }
 
 .firstChild,
@@ -40,6 +39,8 @@
   place-items: center;
   position: relative;
   padding: 1rem;
+  flex: 1;
+
 }
 
 .firstChild {
@@ -47,11 +48,12 @@
   padding: .5rem;
   text-align: center;
   place-content: center;
+  
 }
 
 .midleChild {
   grid-area: price;
-  place-content: center;
+  place-content: flex-start;
 
 }
 

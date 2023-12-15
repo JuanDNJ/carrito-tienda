@@ -16,7 +16,7 @@ export default function WhatsNews() {
         return contBubbles
     }
     const bubbles = initBubbles()
-    console.log(bubbles)
+    // console.log(bubbles)
     return (
         <section className={styles.news}>
             <h3 className={styles.titleNews}>WHAT`S NEW?</h3>

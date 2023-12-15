@@ -1,5 +1,9 @@
 :root {
     --max-width: 1280px;
+    --max-width-product: 270px;
+    --max-height-photoProduct: 275px;
+    --max-width-offers-carrusel: var(--max-width);
+    --max-width-offers-carrusel-mobile: 340px;
 }
 :root{
     --font-race-sport: 'Race Sport';
@@ -11,10 +15,11 @@
     --font-oxanium-medium: 'Oxanium Medium';
     --font-oxanium-regular: 'Oxanium Regular';
 }
-::-webkit-scrollbar {
+
+  
+  ::-webkit-scrollbar {
     width: 0px;
     height: 0px;
+    background: gold;
   }
-  
- 
   
