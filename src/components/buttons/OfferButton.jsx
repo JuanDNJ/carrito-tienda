@@ -1,10 +1,10 @@
-import IsOfferIcon from "../icons/IsOfferIcon"
+import OfferIcon from "../icons/OfferIcon"
 import styles from "./buttons.module.css"
 export default function OfferButton({ fill, porcentage }) {
     const { offerButton } = styles
     return (
         <button className={offerButton}>
-            <IsOfferIcon fill={fill} porcentage={porcentage} />
+            <OfferIcon fill={fill} porcentage={porcentage} />
         </button>
     )
 }

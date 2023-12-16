@@ -8,7 +8,7 @@ export default function CategoryPage() {
     const { category } = useParams()
     const { products } = useProductCtx()
     const productsCategory = products.filter(product => product.category === category)
-    console.log(productsCategory)
+    // console.log(productsCategory)
     return (
         <section className={styles.categoryPage}>
             <h2 className={styles.subTitle}>Total products: <span className={styles.numProducts}>{productsCategory && productsCategory.length}</span></h2>

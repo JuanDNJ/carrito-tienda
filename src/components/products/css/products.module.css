@@ -1,11 +1,11 @@
-.itemGridList{
-  display: flex;
+.itemGridList {
   position: relative;
 }
+
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--max-width-product), 1fr));
-  justify-content: center;
+  justify-items: center;
   gap: 1rem;
   width: 100%;
   padding: 4rem 1rem;
@@ -13,11 +13,10 @@
 
 .photoProduct {
   width: 100%;
-  height: var(--max-height-photoProduct);
+  height: 100%;
   aspect-ratio: 16/9;
   object-fit: contain;
   display: block;
-  border-radius: 4px;
   background: #fff;
   grid-area: foto;
   padding: 1rem;
@@ -26,46 +25,51 @@
 .product {
   display: grid;
   grid-template-areas: "foto" "body" "button";
-  grid-template-rows: auto 1fr 2fr;
+  grid-template-rows: auto 100px 1fr;
   color: #333;
-  border: 1px solid rgba(104, 103, 103, 0.37);
-  border-radius: 8px;
+  place-content: center;
+  background: #eeeeee;
+  position: relative;
+  /* border: 1px solid rgba(104, 103, 103, 0.37); */
 }
 
 .firstChild,
 .lastChild,
 .midleChild {
   display: flex;
-  place-items: center;
   position: relative;
-  padding: 1rem;
-  flex: 1;
-
+  padding: 0 1rem;
+  place-items: center;
 }
 
 .firstChild {
   grid-area: body;
   padding: .5rem;
-  text-align: center;
-  place-content: center;
-  
+  place-items: center;
 }
 
 .midleChild {
   grid-area: price;
   place-content: flex-start;
-
+  display: flex;
+  gap: .5rem;
 }
 
 .lastChild {
   grid-area: button;
   place-content: flex-end;
-
+  width: 100%;
 }
 
 .productTitle {
   font-size: 1rem;
   opacity: .9;
+  width: 300px;
+  padding: 0 1rem;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .euro {
@@ -75,7 +79,6 @@
 
 .productPrice {
   font-size: 1.2rem;
-
 }
 
 .deleteToCart {

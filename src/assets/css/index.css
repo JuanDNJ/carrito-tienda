@@ -39,12 +39,14 @@ a {
 a.navigationLink {
   color: white;
 }
+
 a.navigationLink:active,
 a.navigationLink:hover,
 a.navigationLink:focus {
   color: rgb(76, 76, 77);
   background: white;
 }
+
 h1 {
   font-size: 5vw;
   padding: 0;
@@ -54,11 +56,11 @@ h1 {
   font-family: var(--font-race-sport);
 }
 
-.app{
+.app {
   display: grid;
   max-width: var(--max-width);
   margin: 0 auto;
- 
+  padding: 30px 0;
 }
 
 ul {

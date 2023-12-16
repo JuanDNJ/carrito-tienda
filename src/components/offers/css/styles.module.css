@@ -1,93 +1,53 @@
-.offers{
-    /* background: rgb(250, 244, 194); */
+.offers {
     margin-top: 1rem;
 }
-.containerScroll{
+
+.containerScroll {
     width: var(--max-width-offers-carrusel-mobile);
-    /* border: 1px solid #333; */
-    /* padding: .5rem; */
+    padding: 0 1rem;
     position: relative;
-  
 }
-.listOffers{
+
+.listOffers {
     display: grid;
     grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, 100%);
+    padding: 1rem;
     height: 100%;
     gap: 1rem;
     padding: 0;
     margin: 0;
     overflow: auto hidden;
 }
-.itemListOffer{
-    position: relative;
-    display: grid;
-    grid-template-areas: "header" "mid" "bottom";
-    grid-template-rows: var(--max-height-photoProduct) 1fr auto;
-    width: var(--max-width-product);
-    place-content: center;
-    background: #eeeeee;
-    border-radius: 8px;
-}
-.bottomBox{
-    grid-area: bottom;
-    display: flex;
-    place-content: space-between;
-    place-items: center;
-    padding: 1rem;
-    
-}
-.containerPrice{
-    display: flex;
-    flex-direction: column;
-}
+
 /* .header{
     background: maroon;
   
 } */
-.titleHeader{
+.titleHeader {
     color: #333;
-    font-size: 6vw;
-    
-}
-.title{
-    grid-area: mid;
-    color: #333;
-    font-size: 4vw;
-    padding: 0 .2rem;
+    font-size: 8vw;
+    padding-top: 1rem;
     text-align: center;
 }
-.price{
-    color: #333;
-}
-.discount{
-    color: red
-}
-.imageOffer{
-  
-    grid-area: header;
-    width: calc(var(--max-width-product) - .5rem);
-    height: var(--max-height-photoProduct);
-    aspect-ratio: 16/9;
-    object-fit: contain;
-    background: #fff;
-    margin: .5rem .2rem;
-}
-.btnBefore, .btnNext{
+
+.btnBefore,
+.btnNext {
     position: absolute;
     top: 50%;
-    width: 50px;
-    height: 100px;
-    background: #fff;
+    width: 48px;
+    height: 48px;
+    background: #ffffff41;
     display: none;
     justify-content: center;
     align-items: center;
     z-index: 3;
-    box-shadow: 2px 0px 1px #3335;
 }
-.btnNext{
+
+.btnNext {
     right: 0;
-    box-shadow: -2px 0px 1px #3335;
 }
+
 /* @media screen and (min-width: 768px) {
     .lisOffers{
         max-width: 768px;
@@ -99,36 +59,58 @@
     }
 }
  */
- 
+
 @media screen and (min-width: 1280px) {
-    .containerScroll{
-       width: var(--max-width-offers-carrusel);
+    .containerScroll {
+        width: var(--max-width-offers-carrusel);
+        padding: 0;
     }
-    .btnBefore, .btnNext{
-        display: inline-flex;
-    }
-    .listOffers{
+
+    .listOffers {
         display: grid;
         grid-auto-flow: column;
+        grid-template-columns: none;
         height: 100%;
         gap: .5rem;
         padding: 0;
         margin: 0;
         overflow: auto hidden;
+    }
+
+    .titleHeader {
+        font-size: 1.5vw;
+    }
+
+    .btnBefore,
+    .btnNext {
+        display: inline-flex;
+        cursor: pointer;
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        width: 48px;
+    }
+
+    .btnBefore {
+        border-left: 1px solid transparent;
+        border-right: 1px solid #333;
+    }
+
+    .btnNext {
+        border-right: 1px solid transparent;
+        border-left: 1px solid #333;
 
     }
-    .itemListOffer{
-        width: 280px;
+
+    .btnBefore:hover {
+        border-left: 1px solid transparent;
+        border-right: 1px solid darkred;
     }
-   
-    .titleHeader{
-      
-        font-size: 2vw;
-        
-    }
-    .title{
-       
-        font-size: 1vw;
-       
+
+    .btnNext:hover {
+        border-right: 1px solid transparent;
+        border-left: 1px solid darkred;
+
     }
 }
