@@ -19,6 +19,7 @@
     overflow: auto hidden;
 }
 .itemListOffer{
+    position: relative;
     display: grid;
     grid-template-areas: "header" "mid" "bottom";
     grid-template-rows: var(--max-height-photoProduct) 1fr auto;

@@ -11,30 +11,44 @@
   width: 48px;
   height: 48px;
 }
-.accountButton{
+
+.accountButton {
   background: transparent;
   border: 1px solid rgb(255, 255, 255);
 }
+
 .toggleCartClose {
   background: rgb(248, 136, 108);
   border: 1px solid rgb(255, 255, 255);
 }
+
 .toggleCartOpen {
   border: 1px solid rgb(255, 255, 255);
 }
+
 .addToCart {
   background: rgb(101, 245, 149);
   border: 1px solid rgb(0, 0, 0);
 }
+
 .deleteToCart {
   background: rgb(247, 36, 36);
   border: 1px solid rgb(0, 0, 0);
 }
 
-.addToCart:active, 
+.offerButton {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
+.addToCart:active,
 .deleteToCart:active,
-.toggleCartOpen:active, 
+.toggleCartOpen:active,
 .toggleCartClose:active,
-.accountButton:active{
+.accountButton:active {
   transform: scale(.6);
 }
