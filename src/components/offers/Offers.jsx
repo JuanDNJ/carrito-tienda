@@ -26,7 +26,7 @@ export default function Offers() {
 
     const handlerScroll = (scrollOffset) => {
         if (ul.current) {
-            const w = (offers.length * 32) + (ul.current.clientWidth / refProduct.current.clientWidth)
+            const w = ul.current.clientWidth
             if (scrollOffset === 0) ul.current.scrollLeft -= w
             if (scrollOffset === 1) ul.current.scrollLeft += w
         }

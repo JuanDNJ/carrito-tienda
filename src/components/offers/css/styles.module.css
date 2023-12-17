@@ -3,7 +3,8 @@
 }
 
 .containerScroll {
-    width: var(--max-width-offers-carrusel-mobile);
+    display: grid;
+    width: 100%;
     padding: 0 1rem;
     position: relative;
 }
@@ -11,7 +12,7 @@
 .listOffers {
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: repeat(auto-fill, 100%);
+    grid-template-columns: repeat(auto-fill, 1fr);
     padding: 1rem;
     height: 100%;
     gap: 1rem;
@@ -47,70 +48,50 @@
 .btnNext {
     right: 0;
 }
-
-/* @media screen and (min-width: 768px) {
-    .lisOffers{
-        max-width: 768px;
-    }
-} */
-/* @media screen and (min-width: 968px) {
-    .lisOffers{
-        max-width: 968px;
-    }
+.btnBefore {
+    border-left: 1px solid transparent;
+    border-right: 1px solid #333;
 }
- */
 
-@media screen and (min-width: 1280px) {
-    .containerScroll {
-        width: var(--max-width-offers-carrusel);
-        padding: 0;
-    }
+.btnNext {
+    border-right: 1px solid transparent;
+    border-left: 1px solid #333;
 
-    .listOffers {
-        display: grid;
-        grid-auto-flow: column;
-        grid-template-columns: none;
-        height: 100%;
-        gap: .5rem;
-        padding: 0;
-        margin: 0;
-        overflow: auto hidden;
-    }
+}
 
-    .titleHeader {
-        font-size: 1.5vw;
-    }
+.btnBefore:hover {
+    border-left: 1px solid transparent;
+    border-right: 1px solid darkred;
+}
 
+.btnNext:hover {
+    border-right: 1px solid transparent;
+    border-left: 1px solid darkred;
+
+}
+
+@media screen and (min-width: 425px) {
     .btnBefore,
     .btnNext {
         display: inline-flex;
-        cursor: pointer;
-        border-left: 1px solid #333;
-        border-right: 1px solid #333;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-        width: 48px;
     }
-
-    .btnBefore {
-        border-left: 1px solid transparent;
-        border-right: 1px solid #333;
+    
+}
+@media screen and (min-width: 768px) {
+   
+    .titleHeader {
+        font-size: 3vw;
     }
-
-    .btnNext {
-        border-right: 1px solid transparent;
-        border-left: 1px solid #333;
-
+}
+@media screen and (min-width: 968px) {
+    .titleHeader {
+        font-size: 3vw;
     }
+}
 
-    .btnBefore:hover {
-        border-left: 1px solid transparent;
-        border-right: 1px solid darkred;
-    }
 
-    .btnNext:hover {
-        border-right: 1px solid transparent;
-        border-left: 1px solid darkred;
-
+@media screen and (min-width: 1280px) {
+    .titleHeader {
+        font-size: 1.5vw;
     }
 }
