@@ -11,6 +11,9 @@ export default function CartProvider({ children }) {
     const [state, dispacth] = useReducerCart()
     const cart = state;
 
+    if (cart.length) {
+        console.log(cart.length)
+    }
     const addToCart = (product) => dispacth({
         type: 'ADD_TO_CART',
         payload: product
@@ -29,6 +32,7 @@ export default function CartProvider({ children }) {
         deleteToCart,
         clearCart,
         dispacth
+
     };
 
     return (

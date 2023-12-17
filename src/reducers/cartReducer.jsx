@@ -5,7 +5,8 @@ export const initialState = []
 export const CART_ACTIONS_TYPES = {
     ADD_TO_CART: 'ADD_TO_CART',
     REMOVE_TO_CART: 'REMOVE_TO_CART',
-    CLEAR_CART: 'CLEAR_CART'
+    CLEAR_CART: 'CLEAR_CART',
+    SHOPPING_TOTAL: 'SHOPPING_TOTAL'
 
 }
 
@@ -18,13 +19,16 @@ export const cartReducer = (state, action) => {
             if (productInCartIndex >= 0) {
                 const newCart = structuredClone(state)
                 newCart[productInCartIndex].quantity += 1
+                newCart[productInCartIndex].totalPrice = newCart[productInCartIndex].price * newCart[productInCartIndex].quantity
                 return newCart
             }
+
             return [
                 ...state,
                 {
                     ...actionPayload,
-                    quantity: 1
+                    quantity: 1,
+
                 }
             ]
         }
@@ -37,6 +41,7 @@ export const cartReducer = (state, action) => {
         }
 
     }
+
     return state
 }
 
