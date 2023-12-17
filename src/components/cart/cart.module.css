@@ -32,6 +32,11 @@
   object-fit: contain;
   background-color: red;
 }
+.headerCart{
+  display: flex;
+  flex-direction: column;
+  background: maroon;
+}
 .options {
   display: flex;
   place-content: flex-end;

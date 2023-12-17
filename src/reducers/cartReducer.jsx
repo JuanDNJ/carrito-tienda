@@ -6,7 +6,8 @@ export const CART_ACTIONS_TYPES = {
     ADD_TO_CART: 'ADD_TO_CART',
     REMOVE_TO_CART: 'REMOVE_TO_CART',
     CLEAR_CART: 'CLEAR_CART',
-    SHOPPING_TOTAL: 'SHOPPING_TOTAL'
+    ADD_TO_PRODUCT_QUANTITY: 'ADD_TO_PRODUCT_QUANTITY',
+    DELETE_TO_PRODUCT_QUANTITY: 'DELETE_TO_PRODUCT_QUANTITY'
 
 }
 
@@ -16,10 +17,27 @@ export const cartReducer = (state, action) => {
         case CART_ACTIONS_TYPES.ADD_TO_CART: {
             const { id } = actionPayload
             const productInCartIndex = state.findIndex(item => item.id === id)
+
+            if (productInCartIndex >= 0) {
+                const newCart = structuredClone(state)
+                return newCart
+            }
+            return [
+                ...state,
+                {
+                    ...actionPayload,
+                    quantity: 1
+
+                }
+            ]
+        }
+        case CART_ACTIONS_TYPES.ADD_TO_PRODUCT_QUANTITY: {
+            const { id } = actionPayload
+            const productInCartIndex = state.findIndex(item => item.id === id)
+
             if (productInCartIndex >= 0) {
                 const newCart = structuredClone(state)
                 newCart[productInCartIndex].quantity += 1
-                newCart[productInCartIndex].totalPrice = newCart[productInCartIndex].price * newCart[productInCartIndex].quantity
                 return newCart
             }
 
@@ -27,7 +45,27 @@ export const cartReducer = (state, action) => {
                 ...state,
                 {
                     ...actionPayload,
-                    quantity: 1,
+                    quantity: 1
+
+                }
+            ]
+        }
+        case CART_ACTIONS_TYPES.DELETE_TO_PRODUCT_QUANTITY: {
+            const { id } = actionPayload
+            const productInCartIndex = state.findIndex(item => item.id === id)
+
+            if (productInCartIndex >= 0) {
+                const newCart = structuredClone(state)
+                if (newCart[productInCartIndex].quantity <= 1) return newCart
+                newCart[productInCartIndex].quantity -= 1
+                return newCart
+            }
+
+            return [
+                ...state,
+                {
+                    ...actionPayload,
+                    quantity: 1
 
                 }
             ]

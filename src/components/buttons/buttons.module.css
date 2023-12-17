@@ -8,8 +8,8 @@
   border: 1px solid transparent;
   transition: 300ms all ease-in-out;
   padding: 0;
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
 }
 
 .accountButton {
@@ -35,7 +35,18 @@
   background: rgb(247, 36, 36);
   border: 1px solid rgb(0, 0, 0);
 }
-
+.addProductQuantity {
+  background: rgb(101, 245, 226);
+  border: 1px solid rgb(0, 0, 0);
+  width: 32px;
+  height: 32px;
+}
+.removeProductQuantity {
+  background: rgb(247, 36, 36);
+  border: 1px solid rgb(0, 0, 0);
+  width: 32px;
+  height: 32px;
+}
 .offerButton {
   width: 48px;
   height: 48px;

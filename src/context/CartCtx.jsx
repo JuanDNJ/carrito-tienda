@@ -22,6 +22,14 @@ export default function CartProvider({ children }) {
         type: 'REMOVE_TO_CART',
         payload: product
     })
+    const addProductQuantity = (product) => dispacth({
+        type: 'ADD_TO_PRODUCT_QUANTITY',
+        payload: product
+    })
+    const deleteProductQuantity = (product) => dispacth({
+        type: 'DELETE_TO_PRODUCT_QUANTITY',
+        payload: product
+    })
     const clearCart = () => dispacth({ type: 'CLEAR_CART' })
 
     const values = {
@@ -31,7 +39,9 @@ export default function CartProvider({ children }) {
         addToCart,
         deleteToCart,
         clearCart,
-        dispacth
+        dispacth,
+        deleteProductQuantity,
+        addProductQuantity
 
     };
 
