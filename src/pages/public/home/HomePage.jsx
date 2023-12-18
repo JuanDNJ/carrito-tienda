@@ -1,12 +1,10 @@
-
 import { useGlobalCtx } from '@/context/GlobalCtx'
 import MenuFiltersCloseIcon from '@/components/icons/MenuFiltersCloseIcon'
 import { Filters } from "@/components/filters/Filters"
 import WhatsNews from '@/components/watsnews/WhatsNews'
 import Offers from '@//components/offers/Offers'
-function HomePage() {
 
-
+export default function HomePage() {
 
     const { isOpenFilters, toogleOpenFilters } = useGlobalCtx()
 
@@ -25,6 +23,3 @@ function HomePage() {
     )
 
 }
-
-export default HomePage
-

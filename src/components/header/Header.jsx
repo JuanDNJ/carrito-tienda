@@ -1,11 +1,10 @@
 import styles from './header.module.css'
-import { MenuIcon } from '../icons/MenuIcon'
-// import { Filters } from "../filters/Filters"
 import { Cart } from "../cart/Cart"
 import { Menu } from "../menu/Menu"
-import CategoriesProducts from '../categories/CategoriesProducts'
-import { Link } from 'react-router-dom'
 import Navigation from '../nav/Navigation'
+// import { Filters } from "../filters/Filters"
+// import CategoriesProducts from '../categories/CategoriesProducts'
+
 export function Header() {
 
     return (
@@ -20,8 +19,8 @@ export function Header() {
                 {/* <CategoriesProducts /> */}
                 {/* <Filters /> */}
             </section>
-
-        </header>
+        </header >
     )
 
 }
+

@@ -4,11 +4,9 @@ import { DeleteItemTocartButton } from '../buttons/DeleteItemTocartButton'
 import { AddToCartButton } from '../buttons/AddToCartButton'
 import OfferButton from '@/components/buttons/OfferButton';
 import { calculateThePorcentage } from '@/utils';
+
 export default function Product({ product, refProduct }) {
     const { cart } = useCartCtx()
-
-
-
 
     return (
         <li className={styles.itemGridList} ref={refProduct}>

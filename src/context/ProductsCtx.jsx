@@ -6,7 +6,7 @@ import { useState } from "react";
 const Ctx = createContext()
 
 
-export default function ProductCtx({ children }) {
+export default function ProductsCtx({ children }) {
 
 
     const [products, setProducts] = useState(initialProducts)

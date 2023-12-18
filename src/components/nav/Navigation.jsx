@@ -5,6 +5,7 @@ export default function Navigation() {
     const { prodCategories } = useProductCtx()
 
     return (
+
         <nav style={{
             flex: '1 100%',
             display: 'flex',
@@ -12,5 +13,6 @@ export default function Navigation() {
         }}>
             {prodCategories.map(prodCat => <Link className="navigationLink" key={prodCat.id} to={prodCat.url}>{capitalizeWord(prodCat.name)}</Link>)}
         </nav>
+
     )
 }

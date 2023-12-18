@@ -1,12 +1,12 @@
-import styles from './cart.module.css'
-import { useCartCtx } from "../../context/CartCtx"
-import { ToggleCartButton } from "../buttons/ToggleCartButton"
-import { ClearCartButton } from '../buttons/ClearCartButton'
-import { DeleteItemTocartButton } from '../buttons/DeleteItemTocartButton'
-import TotalPriceCart from './TotalPriceCart'
+import styles from '@/components/cart/cart.module.css'
+import { useCartCtx } from "@/context/CartCtx"
+import { ToggleCartButton } from "@/components/buttons/ToggleCartButton"
+import { ClearCartButton } from '@/components/buttons/ClearCartButton'
+import { DeleteItemTocartButton } from '@/components/buttons/DeleteItemTocartButton'
+import TotalPriceCart from '@/components/cart/TotalPriceCart'
 import { totalPriceProduc } from '@/utils'
-import AddProductQuantityButton from '../buttons/AddProductQuantityButton'
-import SubtractProductQuantityButton from '../buttons/SubtractProductQuantityButton'
+import AddProductQuantityButton from '@/components/buttons/AddProductQuantityButton'
+import SubtractProductQuantityButton from '@/components/buttons/SubtractProductQuantityButton'
 
 export function Cart() {
 
@@ -18,7 +18,9 @@ export function Cart() {
                 <header className={styles.headerCart}>
                     <div className={styles.options}>
                         {cart && cart.length > 0 && <ClearCartButton />}
+
                         <ToggleCartButton />
+
                     </div>
                     <TotalPriceCart />
                 </header>
