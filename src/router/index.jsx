@@ -17,7 +17,7 @@ export default function Router() {
                                 <Routes>
                                     <Route path="/carrito-tienda" element={<Layout />} >
                                         <Route index element={<App />} />
-                                        <Route path="home" element={<Home />} />
+                                        <Route path="home" element={<App />} />
                                         <Route path="account" element={<AccountPage />} />
                                         <Route path="category/:category" element={<Category />} />
                                         <Route path="*" element={<h1 style={{ color: '#333' }}>PAge not found</h1>} />
