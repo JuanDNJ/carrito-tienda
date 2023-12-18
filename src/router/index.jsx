@@ -15,7 +15,7 @@ export default function Router() {
                         <ProductCtx>
                             <BrowserRouter>
                                 <Routes>
-                                    <Route path="/" element={<Layout />} >
+                                    <Route path="/carrito-tienda" element={<Layout />} >
                                         <Route index element={<App />} />
                                         <Route path="home" element={<Home />} />
                                         <Route path="account" element={<AccountPage />} />

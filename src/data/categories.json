@@ -3,13 +3,13 @@
         {
             "id":1,
             "name": "home",
-            "url": "/",
+            "url": "/carrito-tienda",
             "subcategories":[]
         },
         {
             "id": 2,
             "name": "jewelery",
-            "url": "/category/jewelery",
+            "url": "/carrito-tienda/category/jewelery",
             "subcategories": [
                 {
                     "id": 1,
@@ -28,7 +28,7 @@
         {
             "id": 3,
             "name": "clothing",
-            "url": "/category/clothing",
+            "url": "/carrito-tienda/category/clothing",
             "subcategories": [
                 {
                     "id": 1,
@@ -66,7 +66,7 @@
         {
             "id": 4,
             "name": "electronics",
-            "url": "/category/electronics",
+            "url": "/carrito-tienda/category/electronics",
             "subcategories": [
                 {
                     "id": 1,
@@ -90,7 +90,7 @@
         {
             "id": 5,
             "name": "shoes",
-            "url": "/category/shoes",
+            "url": "/carrito-tienda/category/shoes",
             "subcategories": [
                 {
                     "id": 1,
@@ -122,7 +122,7 @@
         {
             "id": 6,
             "name": "home appliances",
-            "url": "/category/home appliances",
+            "url": "/carrito-tienda/category/home appliances",
             "subcategories": [
                 {
                     "id": 1,
