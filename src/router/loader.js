@@ -5,11 +5,12 @@ const App = lazy(() => import('../pages/public/App.jsx'))
 const AccountPage = lazy(() => import('../pages/private/AccountPage.jsx'))
 const Category = lazy(() => import('../pages/public/category/CategoryPage.jsx'))
 const Home = lazy(() => import('../pages/public/home/HomePage.jsx'))
-
+const PageNotFound = lazy(() => import('../pages/PageNotFound'))
 export {
     Layout,
     App,
     AccountPage,
     Category,
-    Home
+    Home,
+    PageNotFound
 }

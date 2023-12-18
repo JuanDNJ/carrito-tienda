@@ -5,7 +5,7 @@ import GlobalCtx from '@/context/GlobalCtx.jsx'
 import CartProvider from '@/context/CartCtx.jsx'
 import ProductCtx from '@/context/ProductsCtx.jsx'
 
-import { Layout, App, AccountPage, Category, Home } from './loader'
+import { Layout, AccountPage, Category, Home, PageNotFound } from './loader'
 
 export default function Router() {
     return (
@@ -17,14 +17,11 @@ export default function Router() {
                             <BrowserRouter>
                                 <Routes>
                                     <Route path="/carrito-tienda" element={<Layout />} >
-                                        <Route index element={<App />} />
-                                        <Route path="home" element={<App />} />
+                                        <Route index element={<Home />} />
+                                        <Route path="home" element={<Home />} />
                                         <Route path="account" element={<AccountPage />} />
                                         <Route path="category/:category" element={<Category />} />
-                                        <Route path="*" element={<section>
-                                            <h1 style={{ color: '#333' }}>Page not found</h1>
-
-                                        </section>} />
+                                        <Route path="*" element={<PageNotFound />} />
                                     </Route>
                                 </Routes>
                             </BrowserRouter>

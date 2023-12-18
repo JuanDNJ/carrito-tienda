@@ -1,17 +1,30 @@
-import { products as initialProducts } from '@/data/products.json'
-import { Fragment, useState } from "react";
-import { Products } from '@/components/products/old/Products'
-import { useFiltersCtx } from '@/context/FilterCtx'
 
-export default function HomePage() {
-    const { filterdProducts } = useFiltersCtx()
-    const [allProducts] = useState(initialProducts)
-    const filteredProducts = filterdProducts(allProducts)
+import { useGlobalCtx } from '@/context/GlobalCtx'
+import MenuFiltersCloseIcon from '@/components/icons/MenuFiltersCloseIcon'
+import { Filters } from "@/components/filters/Filters"
+import WhatsNews from '@/components/watsnews/WhatsNews'
+import Offers from '@//components/offers/Offers'
+function HomePage() {
+
+
+
+    const { isOpenFilters, toogleOpenFilters } = useGlobalCtx()
+
     return (
-        <Fragment>
-            <h2>Home page</h2>
-            <Products products={filteredProducts} />
-        </Fragment>
+
+        <section className='initialPage'>
+            <h2>Initial Page</h2>
+            <WhatsNews />
+            <Offers />
+            {isOpenFilters && <div className='modalFilters'>
+                <div className='containerCloseFilters' onClick={toogleOpenFilters}> <MenuFiltersCloseIcon fill={'#9009'} /></div>
+                <Filters />
+            </div>}
+        </section>
+
     )
 
 }
+
+export default HomePage
+
