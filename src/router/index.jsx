@@ -1,9 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { Suspense } from 'react'
 import FilterCtx from '@/context/FilterCtx.jsx'
 import GlobalCtx from '@/context/GlobalCtx.jsx'
 import CartProvider from '@/context/CartCtx.jsx'
 import ProductCtx from '@/context/ProductsCtx.jsx'
+
 import { Layout, App, AccountPage, Category, Home } from './loader'
 
 export default function Router() {
@@ -20,7 +21,10 @@ export default function Router() {
                                         <Route path="home" element={<App />} />
                                         <Route path="account" element={<AccountPage />} />
                                         <Route path="category/:category" element={<Category />} />
-                                        <Route path="*" element={<h1 style={{ color: '#333' }}>PAge not found</h1>} />
+                                        <Route path="*" element={<section>
+                                            <h1 style={{ color: '#333' }}>Page not found</h1>
+
+                                        </section>} />
                                     </Route>
                                 </Routes>
                             </BrowserRouter>

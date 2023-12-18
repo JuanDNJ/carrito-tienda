@@ -4,6 +4,6 @@ import styles from './buttons.module.css'
 
 export function AccountButton() {
     return (
-        <Link className={`${styles.btn} ${styles.accountButton}`} to="/carrito-tienda/account"><AccountCircleIcon fill='#fff' /></Link>
+        <Link className={`${styles.btn} ${styles.accountButton}`} to="account"><AccountCircleIcon fill='#fff' /></Link>
     )
 }
