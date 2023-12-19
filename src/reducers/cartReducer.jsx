@@ -13,31 +13,32 @@ export const CART_ACTIONS_TYPES = {
 
 export const cartReducer = (state, action) => {
     const { type: actionType, payload: actionPayload } = action
-    switch (actionType) {
-        case CART_ACTIONS_TYPES.ADD_TO_CART: {
-            const { id } = actionPayload
-            const productInCartIndex = state.findIndex(item => item.id === id)
 
-            if (productInCartIndex >= 0) {
-                const newCart = structuredClone(state)
-                return newCart
-            }
+
+
+    switch (actionType) {
+
+        case CART_ACTIONS_TYPES.ADD_TO_CART: {
+
             return [
                 ...state,
                 {
                     ...actionPayload,
-                    quantity: 1
-
+                    quantity: 1,
+                    stock: actionPayload.stock <= 1 ? 0 : actionPayload.stock -= 1
                 }
             ]
         }
         case CART_ACTIONS_TYPES.ADD_TO_PRODUCT_QUANTITY: {
-            const { id } = actionPayload
+            const { id, stock } = actionPayload
             const productInCartIndex = state.findIndex(item => item.id === id)
 
             if (productInCartIndex >= 0) {
                 const newCart = structuredClone(state)
+
+                if (newCart[productInCartIndex].stock === 0) return newCart
                 newCart[productInCartIndex].quantity += 1
+                newCart[productInCartIndex].stock -= 1
                 return newCart
             }
 
@@ -58,6 +59,7 @@ export const cartReducer = (state, action) => {
                 const newCart = structuredClone(state)
                 if (newCart[productInCartIndex].quantity <= 1) return newCart
                 newCart[productInCartIndex].quantity -= 1
+                newCart[productInCartIndex].stock += 1
                 return newCart
             }
 

@@ -12,8 +12,8 @@ export default function Router() {
         <Suspense fallback={<h1 style={{ color: '#333' }}>Loadding ...</h1>}>
             <GlobalCtx>
                 <FilterCtx>
-                    <CartProvider>
-                        <ProductCtx>
+                    <ProductCtx>
+                        <CartProvider>
                             <BrowserRouter>
                                 <Routes>
                                     <Route path="/carrito-tienda" element={<Layout />} >
@@ -25,8 +25,8 @@ export default function Router() {
                                     </Route>
                                 </Routes>
                             </BrowserRouter>
-                        </ProductCtx>
-                    </CartProvider>
+                        </CartProvider>
+                    </ProductCtx>
                 </FilterCtx>
             </GlobalCtx>
         </Suspense>

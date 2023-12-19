@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import { Header } from '@/components/header/Header'
-import { IS_DEVELOPMENT } from "@/config";
+// import { IS_DEVELOPMENT } from "@/config";
 import { Fragment } from 'react';
 // import { Footer } from '@/components/footer/Footer'
 export default function Layout() {
@@ -9,7 +9,7 @@ export default function Layout() {
             <Header />
             <section className="app">
                 <Outlet />
-                {/* {IS_DEVELOPMENT && <Footer filters={filters} />} */}
+                {/* {IS_DEVELOPMENT && <Footer />} */}
             </section>
         </Fragment>
     )

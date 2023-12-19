@@ -4,6 +4,7 @@ import { DeleteItemTocartButton } from '../buttons/DeleteItemTocartButton'
 import { AddToCartButton } from '../buttons/AddToCartButton'
 import OfferButton from '@/components/buttons/OfferButton';
 import { calculateThePorcentage } from '@/utils';
+import NoProductsInStockIcon from '@/components/icons/NoProductsInStockIcon'
 export default function Product({ product, refProduct }) {
     const { cart } = useCartCtx()
 
@@ -34,6 +35,7 @@ export default function Product({ product, refProduct }) {
                             </strong>
                             {product.price}
                         </span>
+
                         <span>
                             {product.offer && (<>
                                 <strong className={styles.euro}>
@@ -44,11 +46,15 @@ export default function Product({ product, refProduct }) {
                         </span>
                     </div>
                     <div className={styles.lastChild} >
-                        {cart &&
-                            cart.find(res => res.id === product.id) ?
-                            <DeleteItemTocartButton prod={product} /> :
-                            <AddToCartButton prod={product} />
-                        }
+                        {product.stock >= 1 && (<span>Stock: {product.stock}</span>)}
+                        {product.stock >= 1 ? <>
+                            {cart &&
+                                cart.find(res => res.id === product.id) ?
+                                <DeleteItemTocartButton prod={product} /> :
+                                <AddToCartButton prod={product} />
+                            }
+                        </> : <button onClick={() => alert('Empty Stock')} title='Empty Stock'><NoProductsInStockIcon fill={'red'} /></button>}
+
 
                     </div>
                 </section>

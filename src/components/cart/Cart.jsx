@@ -30,7 +30,7 @@ export function Cart() {
                                 <img className={styles.imgItemCart} src={prod.image} alt="Image item cart" />
                                 <span className={styles.titleCart}>{prod.title}</span>
                                 <span className={styles.titleCart}>Total € {totalPriceProduc(prod.price, prod.quantity)}</span>
-
+                                <span className={styles.titleCart}>Stock: {prod.stock}</span>
                                 <div className={styles.actions}>
                                     <DeleteItemTocartButton prod={prod} />
                                     <span className={styles.quantityCart}>{prod.quantity}</span>
