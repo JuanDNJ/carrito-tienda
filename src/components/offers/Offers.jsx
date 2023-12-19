@@ -44,10 +44,10 @@ export default function Offers() {
                         {renderOffers}
                     </ul>
                     <button className={btnBefore} onClick={() => handlerScroll(0)}>
-                        <NavigateBeforeIcon fill="darkred" />
+                        <NavigateBeforeIcon fill="silver" />
                     </button>
                     <button className={btnNext} onClick={() => handlerScroll(1)}>
-                        <NavigateNextIcon fill="darkred" />
+                        <NavigateNextIcon fill="silver" />
                     </button>
                 </section>
             </article>

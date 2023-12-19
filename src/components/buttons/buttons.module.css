@@ -8,24 +8,18 @@
   border: 1px solid transparent;
   transition: 300ms all ease-in-out;
   padding: 0;
-  width: 36px;
-  height: 36px;
+ 
 }
 
 .accountButton {
+  border: 1px solid rgb(255, 255, 255);
+}
+
+:is(.toggleCartClose,.toggleCartOpen){
   background: transparent;
-  border: 1px solid rgb(255, 255, 255);
-}
+  cursor: pointer;
 
-.toggleCartClose {
-  background: rgb(248, 136, 108);
-  border: 1px solid rgb(255, 255, 255);
 }
-
-.toggleCartOpen {
-  border: 1px solid rgb(255, 255, 255);
-}
-
 .addToCart {
   background: rgb(101, 245, 149);
   border: 1px solid rgb(0, 0, 0);
@@ -38,14 +32,17 @@
 .addProductQuantity {
   background: rgb(101, 245, 226);
   border: 1px solid rgb(0, 0, 0);
-  width: 32px;
-  height: 32px;
+  cursor: pointer;
+  transition: scale 600ms ease-in-out;
 }
 .removeProductQuantity {
   background: rgb(247, 36, 36);
   border: 1px solid rgb(0, 0, 0);
-  width: 32px;
-  height: 32px;
+  transition: scale 600ms ease-in-out;
+  cursor: pointer;
+}
+:is(.removeProductQuantity,.addProductQuantity):active{
+  transform: scale(.5);
 }
 .offerButton {
   width: 48px;
@@ -55,11 +52,13 @@
   top: 10px;
   left: 5px;
 }
-
+.disabledAddProductQuantity, .disabledRemoveProductQuantity{
+  opacity: .5;
+  background: rgb(240, 122, 122);
+}
 .addToCart:active,
 .deleteToCart:active,
-.toggleCartOpen:active,
-.toggleCartClose:active,
 .accountButton:active {
   transform: scale(.6);
+ 
 }

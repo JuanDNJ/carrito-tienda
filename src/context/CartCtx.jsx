@@ -4,19 +4,12 @@ import { useReducerCart } from "../reducers/cartReducer";
 
 const Ctx = createContext()
 
-import { useProductCtx } from "./ProductsCtx";
 export default function CartProvider({ children }) {
 
     const { isToggle, setToggle } = useToggle()
     const [state, dispacth] = useReducerCart()
-    const { addProductToStock, deleteProductToStock } = useProductCtx()
-    const cart = state;
 
-    if (cart.length) {
-        console.log(cart.length)
-    }
     const addToCart = (product) => {
-
         dispacth({
             type: 'ADD_TO_CART',
             payload: product
@@ -27,23 +20,23 @@ export default function CartProvider({ children }) {
         payload: product
     })
     const addProductQuantity = (product) => {
-        addProductToStock(product)
         dispacth({
             type: 'ADD_TO_PRODUCT_QUANTITY',
             payload: product
         })
     }
     const deleteProductQuantity = (product) => {
-        deleteProductToStock(product)
         dispacth({
             type: 'DELETE_TO_PRODUCT_QUANTITY',
             payload: product
         })
     }
-    const clearCart = () => dispacth({ type: 'CLEAR_CART' })
+    const clearCart = (products) => {
+        dispacth({ type: 'CLEAR_CART' })
+    }
 
     const values = {
-        cart,
+        cart: state,
         isToggle,
         setToggle,
         addToCart,

@@ -29,17 +29,20 @@ body {
 a {
   color: rgb(80, 78, 78);
   text-decoration: none;
-  display: inline-flex;
-  place-content: center;
-  place-items: center;
-  padding: .5vw .7vw;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 a.navigationLink {
+  padding: .5vw .7vw;
   color: white;
 }
-
+a.navigationLinkCustomer {
+  color: gold;
+}
+a.navigationLinkCustomer:hover{
+  text-decoration: underline;
+  color: rgb(255, 230, 87);
+}
 a.navigationLink:active,
 a.navigationLink:hover,
 a.navigationLink:focus {
@@ -76,7 +79,6 @@ button {
 
 button:hover {
   color: rgb(84, 210, 226);
-  border: 1px solid transparent;
 }
 
 .modalFilters {

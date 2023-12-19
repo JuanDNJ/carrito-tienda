@@ -4,8 +4,15 @@ import styles from './buttons.module.css'
 export default function AddProductQuantityButton({ prod }) {
     const { addProductQuantity } = useCartCtx()
     return (
-        <button onClick={() => addProductQuantity(prod)} className={`${styles.btn} ${styles.addProductQuantity}`}>
-            <AddToCartIcon fill="#fff" />
-        </button>
+        <>
+            {
+                prod.stock === 0 ? <button disabled className={`${styles.btn} ${styles.disabledAddProductQuantity}`}>
+                    <AddToCartIcon fill="#333" />
+                </button> : <button onClick={() => addProductQuantity(prod)} className={`${styles.btn} ${styles.addProductQuantity}`}>
+                    <AddToCartIcon fill="#333" />
+                </button>
+            }
+        </>
+
     )
 }

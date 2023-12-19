@@ -4,8 +4,13 @@ import { RemoveIcon } from "../icons/RemoveIcon"
 export default function SubtractProductQuantityButton({ prod }) {
     const { deleteProductQuantity } = useCartCtx()
     return (
-        <button onClick={() => deleteProductQuantity(prod)} className={`${styles.btn} ${styles.removeProductQuantity}`}>
-            <RemoveIcon fill="#fff" />
-        </button>
+        <>
+            {prod.quantity > 1 ? <button onClick={() => deleteProductQuantity(prod)} className={`${styles.btn} ${styles.removeProductQuantity}`}>
+                <RemoveIcon fill="#fff" />
+            </button> : <button className={`${styles.btn} ${styles.disabledRemoveProductQuantity}`}>
+                <RemoveIcon fill="#fff" />
+            </button>}
+        </>
+
     )
 }

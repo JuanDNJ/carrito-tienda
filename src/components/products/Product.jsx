@@ -5,20 +5,43 @@ import { AddToCartButton } from '../buttons/AddToCartButton'
 import OfferButton from '@/components/buttons/OfferButton';
 import { calculateThePorcentage } from '@/utils';
 import NoProductsInStockIcon from '@/components/icons/NoProductsInStockIcon'
+import { Link } from 'react-router-dom';
 export default function Product({ product, refProduct }) {
     const { cart } = useCartCtx()
 
 
-
+    const isItemTOCart = cart.length ? cart.map(itemCart => itemCart) : false;
+    console.log(isItemTOCart)
 
     return (
-        <li className={styles.itemGridList} ref={refProduct}>
-            <div className={styles.product}>
+        <li className={`${styles.itemGridList} ${styles.hoverAnimation}`} ref={refProduct}>
+            <article className={`${styles.product} `}>
                 <img className={styles.photoProduct} src={product.image} alt="" width={120} />
-                <div className={styles.firstChild}>
-                    <span className={styles.productTitle}>{product.title}</span>
-                </div>
-                <section style={{
+                <section className={`${styles.bodyProduct}`}>
+                    <h2 className={styles.productTitle}>
+                        <Link className={styles.linkProductTitle} to={`product/${product.id}`}>{product.title}</Link>
+                    </h2>
+                    <div className={styles.contentBody}>
+                        <span className={styles.productPrice} style={{
+                            textDecoration: product.offer && 'line-through wavy red',
+                        }}>
+                            <strong className={styles.euro}>
+                                €
+                            </strong>
+                            {product.price}
+                        </span>
+
+                        <span>
+                            {product.offer && (<>
+                                <strong className={styles.euro}>
+                                    €
+                                </strong>
+                                {calculateThePorcentage(product.price, 10)}
+                            </>)}
+                        </span>
+                    </div>
+                </section>
+                {/* <section style={{
                     display: 'flex',
                     flexDirection: 'row',
                     width: '100%',
@@ -46,19 +69,19 @@ export default function Product({ product, refProduct }) {
                         </span>
                     </div>
                     <div className={styles.lastChild} >
+
                         {product.stock >= 1 && (<span>Stock: {product.stock}</span>)}
-                        {product.stock >= 1 ? <>
-                            {cart &&
-                                cart.find(res => res.id === product.id) ?
-                                <DeleteItemTocartButton prod={product} /> :
-                                <AddToCartButton prod={product} />
-                            }
-                        </> : <button onClick={() => alert('Empty Stock')} title='Empty Stock'><NoProductsInStockIcon fill={'red'} /></button>}
+                        {product.stock >= 1 ?
+                            <>
+                                {cart && cart.find(itemCart => itemCart.id === product.id) ? <DeleteItemTocartButton prod={product} /> : <AddToCartButton prod={product} />}
+                            </> :
+                            <button onClick={() => alert('Empty Stock')} title='Empty Stock'><NoProductsInStockIcon fill={'red'} /></button>
+                        }
 
 
                     </div>
-                </section>
-            </div>
+                </section> */}
+            </article>
             {product.offer && <OfferButton porcentage={'10'} />}
         </li>
     )

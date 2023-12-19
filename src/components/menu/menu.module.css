@@ -9,6 +9,10 @@
   .buttons {
     /* background: orange; */
     display: flex;
+    align-items: center;
+  }
+  .small{
+    font-size: small;
   }
   @media screen and (max-width: 475px) {
     .menu {

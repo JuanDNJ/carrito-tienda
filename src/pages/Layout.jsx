@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom'
 import { Header } from '@/components/header/Header'
-// import { IS_DEVELOPMENT } from "@/config";
+import { IS_DEVELOPMENT } from "@/config";
 import { Fragment } from 'react';
-// import { Footer } from '@/components/footer/Footer'
+import { Footer } from '@/components/footer/Footer'
 export default function Layout() {
     return (
         <Fragment>

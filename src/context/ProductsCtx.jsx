@@ -9,7 +9,7 @@ const Ctx = createContext()
 export default function ProductCtx({ children }) {
 
     const [prodCategories, setProdCategories] = useState(initialCategories)
-    const [state, dispatch] = useProductReducer(initialProducts)
+    const [state, dispatch] = useProductReducer()
 
 
     const addProductToStock = (product) => {
@@ -24,12 +24,18 @@ export default function ProductCtx({ children }) {
             payload: product
         })
     }
+    const resetProductToStock = (products) => {
+        dispatch({
+            type: "USE_STOCK_INITIAL", payload: products
+        })
+    }
     const value = {
         products: state,
         prodCategories,
         addProductToStock,
         setProdCategories,
-        deleteProductToStock
+        deleteProductToStock,
+        resetProductToStock
     }
 
     return (

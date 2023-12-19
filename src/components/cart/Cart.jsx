@@ -17,7 +17,7 @@ export function Cart() {
             {isToggle && <div className={styles.cart}>
                 <header className={styles.headerCart}>
                     <div className={styles.options}>
-                        {cart && cart.length > 0 && <ClearCartButton />}
+                        {cart && cart.length > 0 && <ClearCartButton carts={cart} />}
                         <ToggleCartButton />
                     </div>
                     <TotalPriceCart />

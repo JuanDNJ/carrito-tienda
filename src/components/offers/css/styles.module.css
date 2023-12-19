@@ -12,11 +12,10 @@
 .listOffers {
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-auto-columns: 100%;
     padding: 1rem;
-    height: 100%;
     gap: 1rem;
-    padding: 0;
+   
     margin: 0;
     overflow: auto hidden;
 }
@@ -36,9 +35,9 @@
 .btnNext {
     position: absolute;
     top: 50%;
-    width: 48px;
-    height: 48px;
-    background: #ffffff41;
+    width: 36px;
+    height: 36px;
+    background: #2b2a2a;
     display: none;
     justify-content: center;
     align-items: center;
@@ -48,6 +47,7 @@
 .btnNext {
     right: 0;
 }
+
 .btnBefore {
     border-left: 1px solid transparent;
     border-right: 1px solid #333;
@@ -71,19 +71,27 @@
 }
 
 @media screen and (min-width: 425px) {
+
     .btnBefore,
     .btnNext {
         display: inline-flex;
     }
-    
+
 }
+
 @media screen and (min-width: 768px) {
-   
+
     .titleHeader {
         font-size: 3vw;
     }
 }
+
 @media screen and (min-width: 968px) {
+    .listOffers {
+        grid-auto-columns: 15vw;
+        padding: 1rem 3rem;
+    }
+
     .titleHeader {
         font-size: 3vw;
     }
