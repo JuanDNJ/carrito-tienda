@@ -4,11 +4,16 @@ import { capitalizeWord } from '@/utils'
 import styles from './nav.module.css'
 export default function Navigation() {
     const { prodCategories } = useProductCtx()
+    const renderLinks = prodCategories && prodCategories.map(prodCat =>
+        <Link className={styles.navigationLink} key={prodCat.id} to={prodCat.url}>
+            {capitalizeWord(prodCat.name)}
+        </Link>)
 
     return (
         <nav className={styles.naviation}>
-            {prodCategories.map(prodCat => <Link className="navigationLink" key={prodCat.id} to={prodCat.url}>{capitalizeWord(prodCat.name)}</Link>)}
+            <section className={styles.container}>
+                {renderLinks}
+            </section>
         </nav>
-
     )
 }

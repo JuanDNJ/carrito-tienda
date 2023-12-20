@@ -16,10 +16,9 @@
   
 }
 .containerHeader {
-
   display: grid;
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: var(--max-width);
+  margin: var(--center-container);
 }
 
 .top {
@@ -39,20 +38,3 @@
   place-content: space-between;
   padding-right: 1rem;
 }
-
-/* @media screen and (max-width: 475px) {
-    .logo {
-      
-    }
-
- 
-  @media screen and (min-width: 1024px) {
-   
-  }
- 
-  @media screen and (min-width: 1280px) {
-    .logo {
-    
-    }
-  }
-   */

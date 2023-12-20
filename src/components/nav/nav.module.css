@@ -1,6 +1,17 @@
 .naviation {
-    
     overflow: auto hidden;
-  
-   
+}
+
+.container{
+    max-width: var(--max-width);
+    margin: var(--center-container);
+}
+a.navigationLink {
+    display: inline-block;
+    padding: .5rem .7rem;
+    color: rgb(17, 17, 17);
+}
+.navigationLink:hover{
+    background: #333;
+    color: #ffffff;
 }

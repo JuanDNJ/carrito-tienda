@@ -33,7 +33,7 @@ a {
 }
 
 a.navigationLink {
-  padding: .5vw .7vw;
+  padding: .5rem .7rem;
   color: white;
 }
 a.navigationLinkCustomer {
@@ -60,7 +60,7 @@ h1 {
 }
 
 .app {
- 
+
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 30px 0;

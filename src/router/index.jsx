@@ -5,7 +5,24 @@ import GlobalCtx from '@/context/GlobalCtx.jsx'
 import CartProvider from '@/context/CartCtx.jsx'
 import ProductCtx from '@/context/ProductsCtx.jsx'
 
-import { Layout, LayoutCustomers, LayoutHome, ProductHome, ProductPage, LayoutCategories, AccountPage, Category, Home, About, ShopAll, Signin, Create, PageNotFound } from './loader'
+import {
+    Layout,
+    LayoutCustomers,
+    LayoutHome,
+    ProductHome,
+    ProductPage,
+    LayoutCategories,
+    AccountPage,
+    Category,
+    Home,
+    About,
+    ShopAll,
+    Signin,
+    Create,
+    ViewMyCart,
+    CheckOutMyCart,
+    PageNotFound
+} from './loader'
 
 export default function Router() {
     return (
@@ -33,6 +50,8 @@ export default function Router() {
                                             <Route path=":category" element={<Category />} />
                                             <Route path=":category/product/:product" element={<ProductPage />} />
                                         </Route>
+                                        <Route path="view-my-cart" element={<ViewMyCart />} />
+                                        <Route path="checkout-my-cart" element={<CheckOutMyCart />} />
                                         <Route path="*" element={<PageNotFound />} />
                                     </Route>
                                 </Routes>

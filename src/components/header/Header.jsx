@@ -1,6 +1,4 @@
 import styles from './header.module.css'
-import Navigation from '../nav/Navigation'
-import { Cart } from "../cart/Cart"
 import { Menu } from "../menu/Menu"
 import { Link } from 'react-router-dom'
 import { ToggleCartButton } from "../buttons/ToggleCartButton"
@@ -22,10 +20,7 @@ export function Header() {
                         <ToggleCartButton />
                     </section>
                 </article>
-                <Cart />
-                <Navigation />
             </section>
-
         </header >
     )
 

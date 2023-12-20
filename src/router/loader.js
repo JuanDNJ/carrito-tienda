@@ -9,7 +9,8 @@ const ProductHome = lazy(() => import('../pages/public/home/ProductHome.jsx'))
 const AccountPage = lazy(() => import('../pages/private/AccountPage.jsx'))
 const Category = lazy(() => import('../pages/public/category/CategoryPage.jsx'))
 const ProductPage = lazy(() => import('../pages/public/category/ProductPage.jsx'))
-
+const ViewMyCart = lazy(() => import('../pages/public/view-cart/ViewCart.jsx'))
+const CheckOutMyCart = lazy(() => import('../pages/public/checkout-my-cart/CheckOutMyCart.jsx'))
 const PageNotFound = lazy(() => import('../pages/PageNotFound'))
 const Signin = lazy(() => import('../pages/public/customers/Signin.jsx'))
 const Create = lazy(() => import('../pages/public/customers/Create.jsx'))
@@ -30,5 +31,7 @@ export {
     ShopAll,
     Signin,
     Create,
+    ViewMyCart,
+    CheckOutMyCart,
     PageNotFound
 }
