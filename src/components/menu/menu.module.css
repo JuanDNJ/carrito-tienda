@@ -1,20 +1,14 @@
+
 .menu {
-    display: flex;
-    align-items: center;
-    place-content: flex-end;
-    flex: 1;
-    padding:  .5rem 0;
-    /* background: maroon; */
-  }
-  .buttons {
-    /* background: orange; */
-    display: flex;
-    align-items: center;
-  }
-  .small{
-    font-size: small;
-  }
-  @media screen and (max-width: 475px) {
+  display: flex;
+  align-items: center;
+}
+
+.small {
+  font-size: small;
+}
+
+/* @media screen and (max-width: 475px) {
     .menu {
       width: 100%;
     }
@@ -30,6 +24,4 @@
     .menu {
       width: 1240px;
     }
-  }
-  
-  
+  } */

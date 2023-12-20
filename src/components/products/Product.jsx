@@ -1,11 +1,9 @@
 import styles from './css/products.module.css'
 import { useCartCtx } from '@/context/CartCtx'
-import { DeleteItemTocartButton } from '../buttons/DeleteItemTocartButton'
-import { AddToCartButton } from '../buttons/AddToCartButton'
 import OfferButton from '@/components/buttons/OfferButton';
 import { calculateThePorcentage } from '@/utils';
-import NoProductsInStockIcon from '@/components/icons/NoProductsInStockIcon'
 import { Link } from 'react-router-dom';
+
 export default function Product({ product, refProduct }) {
     const { cart } = useCartCtx()
 
