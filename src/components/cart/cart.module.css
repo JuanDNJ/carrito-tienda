@@ -2,14 +2,18 @@
   display: grid;
   grid-template-rows: auto 1fr auto auto;
   position: fixed;
-  right: 0;
+  right: -420px;
   background: white;
+  border-left: 2px solid #4b4b4b;;
   overflow: hidden;
   width: 420px;
   height: 100%;
   z-index: 11;
+  transition: right 300ms ease-in-out;
 }
-
+.toggleCart{
+  right: 0;
+}
 .imgItemCart {
   width: 100%;
   object-fit: contain;
@@ -19,9 +23,14 @@
 .headerCart {
   display: flex;
   flex-direction: column;
-  background: #333;
+  background: #4b4b4b;
+  padding: 1rem;
 }
-
+.options {
+  display: flex;
+  place-content: flex-end;
+  gap: .5rem;
+}
 .body {
   display: grid;
 }
@@ -95,13 +104,7 @@
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, .5);
 }
 
-.options {
-  display: flex;
-  place-content: flex-end;
-  gap: .5rem;
-  padding-top: .2rem;
-  padding-right: 1rem;
-}
+
 
 .quantityCart {
   display: flex;

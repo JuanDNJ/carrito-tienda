@@ -6,12 +6,24 @@
     max-width: var(--max-width);
     margin: var(--center-container);
 }
+.submenu{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0;
+}
 a.navigationLink {
     display: inline-block;
     padding: .5rem .7rem;
     color: rgb(17, 17, 17);
 }
-.navigationLink:hover{
+a.navigationLink:hover{
     background: #333;
     color: #ffffff;
+}
+:is(.submenu a.navigationLink ){
+    color: #ffffff;
+}
+:is(.submenu a.navigationLink ):hover{
+    color: gold;
 }

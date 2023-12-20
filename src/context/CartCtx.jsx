@@ -34,7 +34,12 @@ export default function CartProvider({ children }) {
     const clearCart = (products) => {
         dispacth({ type: 'CLEAR_CART' })
     }
-
+    const toggleCart = () => {
+        setToggle(prev => !prev)
+    }
+    const closeCart = () => {
+        setToggle(prev => false)
+    }
     const values = {
         cart: state,
         isToggle,
@@ -44,8 +49,9 @@ export default function CartProvider({ children }) {
         clearCart,
         dispacth,
         deleteProductQuantity,
-        addProductQuantity
-
+        addProductQuantity,
+        toggleCart,
+        closeCart
     };
 
     return (

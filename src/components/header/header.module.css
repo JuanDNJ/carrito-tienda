@@ -13,7 +13,7 @@
   max-width: var(--max-width);
   margin: var(--center-container);
   padding: .5rem 1rem;
-  
+  color: #fff;
 }
 .containerHeader {
   display: grid;

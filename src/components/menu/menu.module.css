@@ -7,7 +7,53 @@
 .small {
   font-size: small;
 }
+a.navigationLink {
+  display: inline-block;
+  padding: .5rem .7rem;
+  color: #ffffff;
+}
+a.navigationLink:hover{
 
+  color: gold;
+}
+a.submenuLink{
+  display: inline-block;
+  padding: .5rem .7rem;
+  color: #ffffff;
+}
+a.submenuLink:hover{
+  
+  color: gold;
+}
+.toggleSubmenu{
+  position: relative;
+  z-index: 10;
+}
+.openSubmenu{
+  position: absolute;
+  background: #333;
+  color: #333;
+  width: 0px;
+  height: 0px;
+  left: 0px;
+  top: 0px;
+  font-size: 0;
+  z-index: 1;
+  display: flex;
+  transition: all 300ms ease-in-out;
+  visibility: hidden;
+}
+.toggleSubmenu:hover .openSubmenu{
+  flex-direction: column;
+  left: 0px;
+  top: 100%;
+  width: 220px;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #707070;
+  visibility: visible;
+  font-size: 1rem;
+}
 /* @media screen and (max-width: 475px) {
     .menu {
       width: 100%;
