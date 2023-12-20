@@ -1,9 +1,9 @@
 .news {
-    /* background: rgb(250, 250, 142); */
+   
     background:
-        linear-gradient(217deg, rgba(247, 247, 127, .8), rgb(247, 247, 127) 70%),
-        linear-gradient(117deg, rgba(34, 204, 153, .8), rgb(34, 204, 153) 70%),
-        linear-gradient(336deg, rgba(113, 252, 252, 0.8), rgb(113, 252, 252) 70%);
+        linear-gradient(217deg, rgba(78, 216, 221, 0.3), rgb(78, 216, 221, 127) 70%),
+        linear-gradient(117deg, rgba(170, 34, 204, 0.4),rgb(170, 34, 204) 70%),
+        linear-gradient(336deg, rgba(119, 32, 86, 0.5), rgb(119, 32, 86) 70%);
     height: 33vh;
     display: flex;
     min-width: calc(375px - 2rem);

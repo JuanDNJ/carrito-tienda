@@ -8,7 +8,7 @@ export function Header() {
     return (
         <header className={styles.mainHeader}>
             <section className={styles.customers}>
-                <span className={styles.small}> Welcome to the shop <Link className='navigationLinkCustomer' to="customers/signin">Signin</Link> or <Link className='navigationLinkCustomer' to="customers/create">Create an account</Link></span>
+                <span className={styles.small}> Welcome to the <i>Nerea`s</i> shop <Link className='navigationLinkCustomer' to="customers/signin">Signin</Link> or <Link className='navigationLinkCustomer' to="customers/create">Create an account</Link></span>
             </section>
             <section className={styles.containerHeader}>
                 <article className={styles.top}>

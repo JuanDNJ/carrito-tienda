@@ -28,3 +28,29 @@ export default function Bubble({ top }) {
         <span style={animationStyle} className={styles.burbuja}></span>
     )
 }
+
+/* Para usarlo 
+const { initialBubbles } = useGlobalCtx();
+
+const initBubbles = () => {
+    let contBubbles = []
+    for (let i = 0; i < initialBubbles; i++) {
+        contBubbles = [...contBubbles, {
+            id: i, Bubble
+        }]
+    }
+    return contBubbles
+}
+
+const bubbles = initBubbles()
+console.log(bubbles)
+
+ {bubbles.map((rec, idKey) => {
+        const { id, Bubble } = rec
+        return (
+            <Fragment key={idKey}>
+                <Bubble top={'-'} />
+            </Fragment>
+        )
+})} }
+*/
