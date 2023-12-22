@@ -1,0 +1,47 @@
+.containerPage{
+    padding: 1rem;
+}
+.titlePage{
+    font-size: 3vw;
+}
+.containerCustomers{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13.5rem, 1fr));
+    gap: 60px;
+}
+.customerLogin{
+   display: flex;
+   flex-direction: column;
+}
+.newCustomers{
+    display: flex;
+    flex-direction: column;
+}
+.customerTitle{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
+.formControl{
+    display: flex;
+    flex-direction: column;
+}
+.paragraf{
+    font-variant: small-caps slashed-zero;
+}
+a.linkFormCreateCustomers{
+    text-decoration: underline;
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    width: 50%;
+}
+@media screen and (min-width: 1280px){
+    .containerPage{
+        padding: 0;
+    }
+    .containerCustomers{
+        grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+    }
+}

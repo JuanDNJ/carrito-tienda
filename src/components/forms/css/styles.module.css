@@ -1,0 +1,75 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+}
+.formCheckout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.formLogin{
+    display: grid;
+    gap: 1rem;
+}
+:is(.formControl,.formControlRow){
+    display: flex;
+}
+.formControl{
+    flex-direction: column;
+}
+.formControlRow{
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1rem;
+    place-content: flex-start;
+}
+.formControl label{
+    padding: .5rem;
+}
+.formControl input{
+    padding: .8rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+.formControl select {
+    padding: .8rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+.email{
+    grid-column: span 2;
+
+}
+.firstname{
+    grid-column: span 1;
+}
+.lastname{
+    grid-column: span 1;
+}
+.countryname{
+    grid-column: span 2;
+}
+.address{
+    grid-column: span 2;
+}
+.city{
+    grid-column: span 2;
+}
+a.linkForm{
+    text-decoration: underline;
+}
+
+.region{grid-column: span 2;}
+.state{grid-column: span 2;}
+.phone{grid-column: span 2;}
+.btnsubmit{
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+}
+.btnslogin{
+    width: 33%;
+    cursor: pointer;
+}

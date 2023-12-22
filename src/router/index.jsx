@@ -19,6 +19,7 @@ import {
     ShopAll,
     Signin,
     Create,
+    ForgotPassword,
     ViewMyCart,
     CheckOutMyCart,
     PageNotFound
@@ -44,6 +45,7 @@ export default function Router() {
                                         <Route path="customers" element={<LayoutCustomers />} >
                                             <Route path="signin" element={<Signin />} />
                                             <Route path="create" element={<Create />} />
+                                            <Route path="forgot-password" element={<ForgotPassword />} />
                                         </Route>
                                         <Route path="account" element={<AccountPage />} />
                                         <Route path="category" element={<LayoutCategories />} >

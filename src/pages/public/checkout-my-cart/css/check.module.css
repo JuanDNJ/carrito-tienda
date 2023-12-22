@@ -3,62 +3,6 @@
     grid-auto-flow: row;
     grid-template-rows: auto 1fr auto auto;
 }
-.grid{
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 4rem;
-}
 .containerForm{
     width: 50vw;
-}
-.formCheckout{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-.formControl{
-    display: flex;
-    flex-direction: column;
-}
-.formControl label{
-    padding: .5rem;
-  
-}
-.formControl input{
-    padding: .8rem;
-    border-radius: 5px;
-    border: 1px solid #333;
-}
-.formControl select {
-    padding: .8rem;
-    border-radius: 5px;
-    border: 1px solid #333;
-}
-.email{
-    grid-column: span 2;
-
-}
-.firstname{
-    grid-column: span 1;
-}
-.lastname{
-    grid-column: span 1;
-}
-.countryname{
-    grid-column: span 2;
-}
-.address{
-    grid-column: span 2;
-}
-.city{
-    grid-column: span 2;
-}
-.region{grid-column: span 2;}
-.state{grid-column: span 2;}
-.phone{grid-column: span 2;}
-.btnsubmit{
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    border-radius: 4px;
 }
