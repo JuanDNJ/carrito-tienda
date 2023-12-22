@@ -6,11 +6,13 @@ export function Menu() {
     const { closeCart } = useCartCtx()
     return (
         <nav className={styles.menu}>
-            <Link className={`${styles.navigationLink} ${styles.toggleSubmenu}`} onClick={closeCart} to='shop-all'>Shop All
+            <div className={`${styles.toggleSubmenu}`} onClick={closeCart}>
+                <Link className={`${styles.navigationLink} ${styles.navigationLink}`} to='shop-all'>Shop All</Link>
                 <section className={styles.openSubmenu}>
                     <Navigation submenu />
                 </section>
-            </Link>
+            </div>
+
             <Link className={styles.navigationLink} onClick={closeCart} to='about'>About</Link>
         </nav>
     )

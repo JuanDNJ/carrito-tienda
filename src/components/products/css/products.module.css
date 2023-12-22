@@ -1,14 +1,19 @@
 .itemGridList {
   position: relative;
 }
-
+.shopAll{
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.filterProducts{
+  padding: 1rem;
+}
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(341px, 1fr));
-
   gap: 1rem;
   width: 100%;
-  padding: 4rem 1rem;
+  padding: 1rem;
 }
 
 .photoProduct {
@@ -58,7 +63,10 @@
   place-content: center;
   gap: 1rem;
 }
-
+.titlePage{
+  font-size: 3rem;
+  grid-column: span 2;
+}
 .productTitle {
   font-size: 1rem;
   padding: 0;
@@ -72,7 +80,6 @@
 a.linkProductTitle {
   display: inline-block;
   font-size: 1rem;
-
   width: 100%;
   padding: .5vw .7vw;
   margin: 0;

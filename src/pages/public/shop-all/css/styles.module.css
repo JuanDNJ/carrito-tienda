@@ -1,0 +1,21 @@
+.shopAll {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.titlePage {
+    font-size: 3rem;
+    grid-column: span 2;
+}
+
+.filterProducts {
+    padding: 1rem;
+}
+
+.renderPagination {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(341px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+}

@@ -3,6 +3,7 @@ import {
     sortByPriceMinor,
     sortByPriceElderly
 } from "../utils";
+
 export function useFilter() {
 
     const [filters, setFilters] = useState({
@@ -15,7 +16,8 @@ export function useFilter() {
     })
 
     const filterdProducts = (products) => {
-        const filterProducts = products.filter(product => {
+        const clone = structuredClone(products)
+        const filterProducts = clone.filter(product => {
             return product.price >= filters.price &&
                 (
                     filters.category === 'all' || product.category === filters.category &&

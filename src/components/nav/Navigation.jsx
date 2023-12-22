@@ -8,12 +8,12 @@ export default function Navigation({ submenu }) {
     const { closeCart } = useCartCtx()
     const { prodCategories } = useProductCtx()
     const renderLinks = prodCategories && prodCategories.map(prodCat =>
-        <Link className={styles.navigationLink} onClick={closeCart} key={prodCat.id} to={prodCat.url}>
+        <Link className={styles.navigationLink} key={prodCat.id} to={prodCat.url}>
             {capitalizeWord(prodCat.name)}
         </Link>)
 
     return (
-        <nav className={styles.naviation}>
+        <nav className={styles.navigation} onClick={closeCart}>
             <section className={`${styles.container} ${submenu && styles.submenu}`}>
                 {renderLinks}
             </section>

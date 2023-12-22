@@ -3,16 +3,16 @@ import ShowSubcateriesByCategory from './ShowSubcateriesByCategory'
 import FilterCategories from './FilterCategories'
 
 
-export function Filters() {
+export default function Filters() {
 
     return (
         <section className={styles.filters}>
             {<section className={styles.category}>
                 <FilterCategories />
             </section>}
-            {/* <section className={styles.rightContent}>
+            <section className={styles.rightContent}>
                 <ShowSubcateriesByCategory />
-            </section> */}
+            </section>
         </section >
     )
 

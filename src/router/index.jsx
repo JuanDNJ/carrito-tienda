@@ -28,8 +28,8 @@ export default function Router() {
     return (
         <Suspense fallback={<h1 style={{ color: '#333' }}>Loadding ...</h1>}>
             <GlobalCtx>
-                <FilterCtx>
-                    <ProductCtx>
+                <ProductCtx>
+                    <FilterCtx>
                         <CartProvider>
                             <BrowserRouter>
                                 <Routes>
@@ -57,8 +57,8 @@ export default function Router() {
                                 </Routes>
                             </BrowserRouter>
                         </CartProvider>
-                    </ProductCtx>
-                </FilterCtx>
+                    </FilterCtx>
+                </ProductCtx>
             </GlobalCtx>
         </Suspense>
     )

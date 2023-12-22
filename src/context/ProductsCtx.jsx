@@ -1,15 +1,17 @@
-import { useContext, createContext } from "react";
-import { products as initialProducts } from '@/data/products.json';
+import { useContext, createContext, useEffect } from "react";
+// import { products as initialProducts } from '@/data/products.json';
 import { categories as initialCategories } from '@/data/categories.json';
 import { useState } from "react";
 import { useProductReducer } from "../reducers/productReducer";
+
 const Ctx = createContext()
 
 
 export default function ProductCtx({ children }) {
-
     const [prodCategories, setProdCategories] = useState(initialCategories)
     const [state, dispatch] = useProductReducer()
+    const products = state
+
 
 
     const addProductToStock = (product) => {
@@ -29,8 +31,11 @@ export default function ProductCtx({ children }) {
             type: "USE_STOCK_INITIAL", payload: products
         })
     }
+
+
+
     const value = {
-        products: state,
+        products,
         prodCategories,
         addProductToStock,
         setProdCategories,

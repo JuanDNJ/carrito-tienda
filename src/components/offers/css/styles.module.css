@@ -28,7 +28,7 @@
     color: #333;
     font-size: 8vw;
     padding-top: 1rem;
-    text-align: center;
+    
 }
 
 .btnBefore,
@@ -100,6 +100,6 @@
 
 @media screen and (min-width: 1280px) {
     .titleHeader {
-        font-size: 1.5vw;
+        font-size: 3erm;
     }
 }

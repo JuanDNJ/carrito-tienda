@@ -5,6 +5,7 @@ import { capitalizeWord } from '@/utils';
 export default function FilterByPrice() {
     const { filters, setFilters } = useFiltersCtx();
     const handlerOrderByMinor = () => {
+        console.log(filters)
         setFilters((prev) => ({
             ...prev,
             minor: true,
@@ -12,6 +13,7 @@ export default function FilterByPrice() {
         }))
     }
     const handlerOrderByElderly = () => {
+        console.log(filters)
         setFilters((prev) => ({
             ...prev,
             minor: false,

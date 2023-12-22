@@ -68,12 +68,14 @@ export function productReducer(state, action) {
                 }
 
             });
-            console.log(actionPayload)
-            console.log(red)
-            console.log(producsTemporal)
+
+            // console.log(actionPayload)
+            // console.log(red)
+            // console.log(producsTemporal)
             // return producsTemporal
             // return products
         }
+
     }
 
 

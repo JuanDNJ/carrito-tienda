@@ -12,18 +12,22 @@ export default function FilterCategories() {
     const minPrice = filters.price
 
     const handlerChangeMinPrice = (event) => {
+
+        console.log(filters)
         setFilters(prev => ({
             ...prev,
             price: event.target.value,
         }))
+
     }
 
     const handlerChangeCategory = (event) => {
         setCatSelected(() => event.target.value)
-
+        console.log(filters)
 
     }
     useEffect(() => {
+
         setFilters(prev => ({
             ...prev,
             category: catSelected,
@@ -37,12 +41,12 @@ export default function FilterCategories() {
                 <span className={styles.euro}>€</span><strong>{minPrice}</strong>
             </label>
             <FilterByPrice />
-            {/* <label htmlFor={categoryFilterId}>
+            <label htmlFor={categoryFilterId}>
                 <select id={categoryFilterId} name="categories" defaultValue={'all'} onChange={handlerChangeCategory}>
                     <option value={'all'}>All</option>
                     {categories.map((category, key) => <option value={category.name} key={key}>{capitalizeWord(category.name)}</option>)}
                 </select>
-            </label> */}
+            </label>
         </>
     )
 

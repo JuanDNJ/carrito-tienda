@@ -1,15 +1,9 @@
 import styles from './css/products.module.css'
-import { useCartCtx } from '@/context/CartCtx'
 import OfferButton from '@/components/buttons/OfferButton';
 import { calculateThePorcentage } from '@/utils';
 import { Link } from 'react-router-dom';
 
 export default function Product({ product, refProduct }) {
-    const { cart } = useCartCtx()
-
-
-    const isItemTOCart = cart.length ? cart.map(itemCart => itemCart) : false;
-    console.log(isItemTOCart)
 
     return (
         <li className={`${styles.itemGridList} ${styles.hoverAnimation}`} ref={refProduct}>
@@ -39,49 +33,51 @@ export default function Product({ product, refProduct }) {
                         </span>
                     </div>
                 </section>
-                {/* <section style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    width: '100%',
-                    gridArea: 'button',
-                    placeItems: 'center'
-
-                }}>
-                    <div className={styles.midleChild}>
-                        <span className={styles.productPrice} style={{
-                            textDecoration: product.offer && 'line-through wavy red',
-                        }}>
-                            <strong className={styles.euro}>
-                                €
-                            </strong>
-                            {product.price}
-                        </span>
-
-                        <span>
-                            {product.offer && (<>
-                                <strong className={styles.euro}>
-                                    €
-                                </strong>
-                                {calculateThePorcentage(product.price, 10)}
-                            </>)}
-                        </span>
-                    </div>
-                    <div className={styles.lastChild} >
-
-                        {product.stock >= 1 && (<span>Stock: {product.stock}</span>)}
-                        {product.stock >= 1 ?
-                            <>
-                                {cart && cart.find(itemCart => itemCart.id === product.id) ? <DeleteItemTocartButton prod={product} /> : <AddToCartButton prod={product} />}
-                            </> :
-                            <button onClick={() => alert('Empty Stock')} title='Empty Stock'><NoProductsInStockIcon fill={'red'} /></button>
-                        }
-
-
-                    </div>
-                </section> */}
             </article>
             {product.offer && <OfferButton porcentage={'10'} />}
         </li>
     )
 
 }
+
+
+
+// import { useCartCtx } from '@/context/CartCtx'
+// const { cart } = useCartCtx()
+// const isItemTOCart = cart.length ? cart.map(itemCart => itemCart) : false;
+{/* <section style={{
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+    gridArea: 'button',
+    placeItems: 'center'
+
+}}>
+    <div className={styles.midleChild}>
+        <span className={styles.productPrice} style={{
+            textDecoration: product.offer && 'line-through wavy red',
+        }}>
+            <strong className={styles.euro}>
+                €
+            </strong>
+            {product.price}
+        </span>
+        <span>
+            {product.offer && (<>
+                <strong className={styles.euro}>
+                    €
+                </strong>
+                {calculateThePorcentage(product.price, 10)}
+            </>)}
+        </span>
+    </div>
+    <div className={styles.lastChild} >
+        {product.stock >= 1 && (<span>Stock: {product.stock}</span>)}
+        {product.stock >= 1 ?
+            <>
+                {cart && cart.find(itemCart => itemCart.id === product.id) ? <DeleteItemTocartButton prod={product} /> : <AddToCartButton prod={product} />}
+            </> :
+            <button onClick={() => alert('Empty Stock')} title='Empty Stock'><NoProductsInStockIcon fill={'red'} /></button>
+        }
+    </div>
+</section> */}

@@ -1,16 +1,13 @@
 import { useContext, createContext, useId } from "react";
-import { useFilter as hook } from "../hooks/useFilter";
+import { useFilter } from "../hooks/useFilter";
 
 const Ctx = createContext()
 
 export default function FilterCtx({ children }) {
 
-    const { filters, filterdProducts, setFilters } = hook()
+    const { filters, filterdProducts, setFilters } = useFilter()
     const minPriceFilterId = useId()
     const categoryFilterId = useId()
-
-
-
     const value = {
         filters,
         minPriceFilterId,
