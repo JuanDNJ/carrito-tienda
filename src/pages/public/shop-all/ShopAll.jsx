@@ -53,7 +53,7 @@ export default function ShopAll() {
     const renderButtons = buttons.map((btn, key) => {
         return (
             <Fragment key={key}>
-                <button onClick={() => page(btn.id)}>{btn.page}</button>
+                <button className={styles.btnRender} onClick={() => page(btn.id)}>{btn.page}</button>
             </Fragment>
         )
     })
@@ -68,14 +68,19 @@ export default function ShopAll() {
                 <Filters />
             </aside>
             <ul className={styles.renderPagination}>
-                {renderPagination.map((product, key) => {
+                {renderPagination && renderPagination.map((product, key) => {
                     return (
                         <Product key={key} product={product} />
                     )
                 })}
 
             </ul>
-            <div>{renderButtons}</div>
+            <div className={styles.containerButtonPages}>
+                <strong>Pages: {renderButtons.length}</strong>
+                <div className={styles.renderButtons}>
+                    {renderButtons}
+                </div>
+            </div>
         </article>
     )
 
