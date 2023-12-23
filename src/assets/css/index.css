@@ -14,6 +14,7 @@
 html,
 body {
   font-family: var(--font-oxanium-bold);
+  color: var(--color-default);
 }
 
 body {
@@ -22,27 +23,33 @@ body {
   place-content: center;
   width: 100%;
   min-height: 100vh;
-  color: #333;
   overflow-x: hidden;
 }
 
 a {
-  color: rgb(80, 78, 78);
+  color: var(--color-dark);
   text-decoration: none;
   font-weight: 600;
 }
 
+a.linkLogo {
+  background: transparent;
+}
+
 a.navigationLink {
   padding: .5rem .7rem;
-  color: white;
+  color: var(--color-link);
 }
+
 a.navigationLinkCustomer {
-  color: gold;
+  color: var(--color-link-customers);
 }
-a.navigationLinkCustomer:hover{
+
+a.navigationLinkCustomer:hover {
   text-decoration: underline;
-  color: rgb(255, 230, 87);
+  color: var(--color-link-customers-hover);
 }
+
 a.navigationLink:active,
 a.navigationLink:hover,
 a.navigationLink:focus {
@@ -55,14 +62,12 @@ h1 {
   padding: 0;
   margin: 0;
   font-weight: 900;
-  color: rgb(255, 255, 255);
   font-family: var(--font-race-sport);
 }
 
 .app {
-
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: var(--center-container);
   padding: 30px 0;
 }
 
@@ -95,7 +100,7 @@ button:hover {
   display: flex;
   align-items: center;
   padding: 0 .27rem;
-  background-color: rgb(115, 122, 119);
+  background-color: rgb(57, 153, 111);
   border-radius: 3px;
   position: absolute;
   top: 0;
@@ -107,7 +112,6 @@ button:hover {
   h1 {
     font-size: 2vw;
   }
-
 }
 
 @media screen and (min-width: 1024px) {

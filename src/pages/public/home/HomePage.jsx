@@ -9,7 +9,7 @@ function HomePage() {
         <section className='initialPage'>
             <h2 className={styles.titlePage}>Home</h2>
             <WhatsNews />
-            <section className={styles.gridHomeCategories}>
+            {/* <section className={styles.gridHomeCategories}>
                 <article className={styles.itemGridCat}>
                     <Link className={styles.ImgLink} to='/'>
                         <img className={styles.img} src="https://img.freepik.com/premium-photo/golden-bracelets-earrings-rings-jewelery-gold-water-background-luxury-glamour-holiday-beauty-design-jewelry-brand-ads_360074-54396.jpg?w=2000" alt="" />
@@ -40,7 +40,7 @@ function HomePage() {
                     </Link>
                     <Link className={styles.link} to='/'>Home Appliances</Link>
                 </article>
-            </section>
+            </section> */}
             <Offers />
             <ShopAll />
         </section>

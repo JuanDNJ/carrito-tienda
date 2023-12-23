@@ -1,0 +1,10 @@
+.orderByPrice{
+    display: flex;
+    flex-direction: column;
+    background: rgb(247, 137, 137);
+    gap:.5rem;
+}
+.orderByPrice strong{
+    border-bottom: 1px solid var(--color-dark);
+    padding-bottom: .5rem;
+}

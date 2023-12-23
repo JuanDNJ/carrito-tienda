@@ -1,0 +1,15 @@
+
+.tspan {
+    fill: var(--color-dark);
+    font: var(--font-offertspan-svg);
+}
+.text {
+    font: var(--font-offertext-svg);
+    fill: var(--color-light);
+}
+.nerea {
+    font: var(--font-nerea-svg);
+}
+.shoptspan {
+    font: var(--font-shoptspan-svg);
+}

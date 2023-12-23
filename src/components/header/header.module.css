@@ -1,10 +1,9 @@
 .mainHeader {
-  background: #333;
-  z-index: 10;
+  background: var(--header-bg-color);
   width: 100vw;
   position: sticky;
   top: 0;
-
+  z-index: 10;
 }
 .customers{
   display: flex;
@@ -13,7 +12,7 @@
   max-width: var(--max-width);
   margin: var(--center-container);
   padding: .5rem 1rem;
-  color: #fff;
+  color: var(--color-light);
 }
 .containerHeader {
   display: grid;

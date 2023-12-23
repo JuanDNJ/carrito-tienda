@@ -1,6 +1,6 @@
 import { useFiltersCtx } from '@/context/FilterCtx'
 import { capitalizeWord } from '@/utils'
-import styles from './css/filters.module.css'
+import styles from './css/filters-subcategory.module.css'
 import { useEffect, useState } from 'react'
 import { useRef } from 'react'
 export default function FilterSubCategories({ subcategories }) {
@@ -30,6 +30,7 @@ export default function FilterSubCategories({ subcategories }) {
 
     return (
         <div className={styles.containerFilterSubcategorie}>
+            <strong>Filter by SubCategory</strong>
             <label htmlFor={filters.category}>
                 <span>All {capitalizeWord(filters.category)}</span>
                 <input ref={refSub} type="radio" onChange={handlerChangeSubcategory} id={filters.category} name="select" value={'all'} />

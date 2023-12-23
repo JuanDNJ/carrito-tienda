@@ -1,0 +1,10 @@
+.filterSearchPrice{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: goldenrod;
+}
+.filterSearchPrice strong{
+    border-bottom: 1px solid var(--color-dark);
+    padding-bottom: .5rem;
+}

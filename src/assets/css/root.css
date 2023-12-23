@@ -1,26 +1,47 @@
 :root {
-    --max-width: 1400px;
-    --max-width-product:341px;
-    --max-height-photoProduct: 321px;
-    --max-width-offers-carrusel: var(--max-width);
-    --max-width-offers-carrusel-mobile: 354px;
-    --center-container: 0 auto;
-}
-:root{
-    --font-race-sport: 'Race Sport';
-    --font-oxanium-light: 'Oxanium Light';
-    --font-oxanium-extralight: 'Oxanium ExtraLight';
-    --font-oxanium-bold: 'Oxanium Bold';
-    --font-oxanium-extrabold: 'Oxanium ExtraBold';
-    --font-oxanium-semibold: 'Oxanium SemiBold';
-    --font-oxanium-medium: 'Oxanium Medium';
-    --font-oxanium-regular: 'Oxanium Regular';
+  --max-width: 1400px;
+  --max-width-product: 341px;
+  --max-height-photoProduct: 321px;
+  --max-width-offers-carrusel: var(--max-width);
+  --max-width-offers-carrusel-mobile: 354px;
+  --center-container: 0 auto;
 }
 
-  
-  ::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-    background: gold;
-  }
-  
+/* FONTS */
+:root {
+  --font-race-sport: 'Race Sport';
+  --font-oxanium-light: 'Oxanium Light';
+  --font-oxanium-extralight: 'Oxanium ExtraLight';
+  --font-oxanium-bold: 'Oxanium Bold';
+  --font-oxanium-extrabold: 'Oxanium ExtraBold';
+  --font-oxanium-semibold: 'Oxanium SemiBold';
+  --font-oxanium-medium: 'Oxanium Medium';
+  --font-oxanium-regular: 'Oxanium Regular';
+  --font-nerea-svg: italic 1.5rem var(--font-oxanium-extralight);
+  --font-shoptspan-svg: italic 1rem var(--font-oxanium-extralight);
+  --font-offertext-svg: italic 180px sans-serif;
+  --font-offertspan-svg: italic 200px sans-serif;
+}
+
+/* COLORS */
+:root {
+  --color-default: rgba(34, 34, 34, 1);
+  --color-dark: rgba(80, 78, 78, 1);
+  --color-light: rgba(255, 255, 255, 1);
+  --color-gold: rgb(255, 217, 0);
+  --color-delete: rgba(247, 36, 36, 1);
+  --color-disabled: rgba(240, 122, 122, 1);
+  --color-send: rgba(101, 245, 149, 1);
+  --color-add: rgba(101, 245, 226, 1);
+  /*  */
+  --color-link: rgba(255, 255, 255, 1);
+  --color-link-customers: rgba(255, 241, 163, 1);
+  --color-link-customers-hover: rgba(182, 253, 180, 1);
+  --header-bg-color: rgb(65, 65, 65);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: var(--color-gold);
+}

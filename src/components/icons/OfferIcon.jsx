@@ -1,4 +1,4 @@
-import styles from './icons.module.css'
+import styles from './css/icons.module.css'
 
 export default function OfferIcon({ fill, porcentage }) {
     const { text, tspan } = styles

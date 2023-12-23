@@ -63,24 +63,26 @@ export default function ShopAll() {
             <h2 className={styles.titlePage}>Shop All</h2>
             <aside className={styles.filterProducts}>
                 <div>
-                    <input type="range" name="limit" min="1" max="20" onInput={changeLimit} value={settingsPagination.limit} /> Limit: {settingsPagination.limit}
+                    <input type="range" name="limit" min="5" max="20" onInput={changeLimit} value={settingsPagination.limit} /> Limit: {settingsPagination.limit}
                 </div>
                 <Filters />
             </aside>
-            <ul className={styles.renderPagination}>
-                {renderPagination && renderPagination.map((product, key) => {
-                    return (
-                        <Product key={key} product={product} />
-                    )
-                })}
+            <section className={styles.areaProducts}>
+                <ul className={styles.renderPagination}>
+                    {renderPagination && renderPagination.map((product, key) => {
+                        return (
+                            <Product key={key} product={product} />
+                        )
+                    })}
 
-            </ul>
-            <div className={styles.containerButtonPages}>
+                </ul>
+            </section>
+            <section className={styles.containerButtonPages}>
                 <strong>Pages: {renderButtons.length}</strong>
                 <div className={styles.renderButtons}>
                     {renderButtons}
                 </div>
-            </div>
+            </section>
         </article>
     )
 

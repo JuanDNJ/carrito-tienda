@@ -1,4 +1,4 @@
-import styles from './css/filters.module.css'
+import styles from './css/filtersex.module.css'
 import { useFiltersCtx } from '@/context/FilterCtx'
 import { capitalizeWord } from '@/utils';
 import { useEffect, useState, useRef } from 'react';
@@ -6,37 +6,38 @@ import { useEffect, useState, useRef } from 'react';
 export default function FilterSex({ sexes }) {
 
     const { setFilters } = useFiltersCtx();
-    const refSexSub = useRef();
     const [subCatSex, setSubCatSex] = useState('all')
-
+    const spaceBlank = '\r'
     const handlerChangeSex = (event) => {
         setSubCatSex(prev => event.target.value)
 
 
     }
-    useEffect(() => {
-        if (subCatSex === 'all') {
-            refSexSub.current.checked = true
-        } else {
-            refSexSub.current.checked = false
+    const renderSex = sexes.map((sex, keySex) => {
+        let sexName = capitalizeWord(sex.name);
+        let sexCapitalize = capitalizeWord('sex')
+        if (sex.name === 'all') {
+            sexName += spaceBlank + sexCapitalize
         }
+        return (
+            <label key={keySex} htmlFor={sexName}>
+                <span>{sexName}</span>
+                <input type="radio" onChange={handlerChangeSex} id={sexName} name="sex" value={sex.name} />
+            </label>
+        )
+    })
+
+    useEffect(() => {
         setFilters(prev => ({
             ...prev,
             sex: subCatSex
         }))
     }, [subCatSex])
+
     return (
         <div className={styles.containerFilterSex}>
-            <label htmlFor={'allsex'}>
-                <span>{capitalizeWord('all')} {capitalizeWord('sex')}</span>
-                <input ref={refSexSub} type="radio" onChange={handlerChangeSex} id="allsex" name="sex" value={'all'} />
-            </label>
-            {sexes.map((sex, keySex) => (
-                <label key={keySex} htmlFor={sex.name}>
-                    <span>{capitalizeWord(sex.name)}</span>
-                    <input type="radio" onChange={handlerChangeSex} id={sex.name} name="sex" value={sex.name} />
-                </label>
-            ))}
+            <strong>Filter Sex Product</strong>
+            {renderSex}
         </div>
     )
 

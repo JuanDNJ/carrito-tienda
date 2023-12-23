@@ -1,0 +1,11 @@
+ 
+.containerFilterSubcategorie{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    background: yellow;
+}
+.containerFilterSubcategorie strong{
+    border-bottom: 1px solid var(--color-dark);
+    padding-bottom: .5rem;
+}

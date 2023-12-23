@@ -1,6 +1,5 @@
 .btn {
   transform: scale(.8);
-  background: rgb(84, 210, 226);
   display: flex;
   place-items: center;
   place-content: center;
@@ -8,18 +7,19 @@
   border: 1px solid transparent;
   transition: 300ms all ease-in-out;
   padding: 0;
- 
+
 }
 
 .accountButton {
   border: 1px solid rgb(255, 255, 255);
 }
 
-:is(.toggleCartClose,.toggleCartOpen){
-  background: transparent;
+:is(.toggleCartClose, .toggleCartOpen) {
+
   cursor: pointer;
 
 }
+
 .addToCart {
   background: rgb(101, 245, 149);
   border: 1px solid rgb(0, 0, 0);
@@ -29,21 +29,26 @@
   background: rgb(247, 36, 36);
   border: 1px solid rgb(0, 0, 0);
 }
+
 .addProductQuantity {
   background: rgb(101, 245, 226);
   border: 1px solid rgb(0, 0, 0);
   cursor: pointer;
   transition: scale 600ms ease-in-out;
 }
+
 .removeProductQuantity {
   background: rgb(247, 36, 36);
   border: 1px solid rgb(0, 0, 0);
   transition: scale 600ms ease-in-out;
   cursor: pointer;
 }
-:is(.removeProductQuantity,.addProductQuantity):active{
+
+:is(.removeProductQuantity,
+  .addProductQuantity):active {
   transform: scale(.5);
 }
+
 .offerButton {
   width: 48px;
   height: 48px;
@@ -52,13 +57,16 @@
   top: 10px;
   left: 5px;
 }
-.disabledAddProductQuantity, .disabledRemoveProductQuantity{
+
+.disabledAddProductQuantity,
+.disabledRemoveProductQuantity {
   opacity: .5;
   background: rgb(240, 122, 122);
 }
+
 .addToCart:active,
 .deleteToCart:active,
 .accountButton:active {
   transform: scale(.6);
- 
+
 }

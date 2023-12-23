@@ -1,0 +1,12 @@
+.containerFilterSex{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* Borrar border cuando no lo estes probando */
+    border: 1px dashed var(--color-dark);
+    background: pink;
+}
+.containerFilterSex strong{
+    border-bottom: 1px solid var(--color-dark);
+    padding-bottom: .5rem;
+}

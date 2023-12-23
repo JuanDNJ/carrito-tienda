@@ -1,23 +1,32 @@
 .shopAll {
     display: grid;
     grid-template-columns: auto 1fr;
+    grid-template-areas: 
+    "title title"
+    "aside aside"
+    "products products"
+    "pagination pagination"; 
 }
 
 .titlePage {
-    font-size: 3rem;
-    grid-column: span 2;
+    font-size: 3rem; 
+    grid-area: title;
 }
 
 .filterProducts {
     padding: 1rem;
+    grid-area: aside;
+  
 }
-
+.areaProducts{
+    grid-area: products;
+}
 .renderPagination {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(341px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
     gap: 1rem;
     width: 100%;
-    padding: 1rem;
+  
 }
 
 .containerButtonPages{
@@ -28,7 +37,7 @@
     border-bottom: 2px solid rgb(61, 61, 61);
     padding: 1rem;
     gap: 1rem;
-    grid-column: span 2;
+    grid-area: pagination;
 }
 .renderButtons{
     display: flex;
@@ -48,4 +57,17 @@
 .btnRender:hover{
     background: skyblue;
     color: #333;
+}
+@media screen and (min-width: 768px){
+    .filterProducts {
+        display: grid;
+        align-content: start;
+    }
+    .shopAll {
+        display: grid;
+        grid-template-areas: 
+        "title title"
+        "aside products"
+        "pagination pagination"; 
+    }
 }
