@@ -4,9 +4,16 @@ import Product from '@/components/products/Product'
 import { Fragment, useState } from 'react'
 import { useProductCtx } from '@/context/ProductsCtx'
 import { useFiltersCtx } from '@/context/FilterCtx'
+import FilterByLimitProducts from '@/components/filters/FilterByLimitProducts'
+import PaginationProducts from '@/components/pagination/PaginationProducts'
+
 export default function ShopAll() {
     const { products } = useProductCtx()
     const { filterdProducts } = useFiltersCtx()
+    const [settingsPagination, setSettingsPagination] = useState({
+        limit: 20,
+        page: 0
+    })
 
     const pagination = (limit, page) => {
         const pages = filterdProducts(products).reduce((accumulator, currentElement, currentIndex) => {
@@ -20,51 +27,20 @@ export default function ShopAll() {
         return pages[page]
     }
 
-
-    const [settingsPagination, setSettingsPagination] = useState({
-        limit: 20,
-        page: 0
-    })
-
-
-
     const page = (newPage) => {
         setSettingsPagination(prev => ({ ...prev, page: newPage }))
     }
     const changeLimit = (event) => {
+        console.log(event)
         setSettingsPagination(prev => ({ ...prev, limit: event.target.value }))
     }
     const renderPagination = pagination(settingsPagination.limit, settingsPagination.page)
-
-    const createButtons = () => {
-        const pages = filterdProducts(products).length / settingsPagination.limit
-        let buttons = []
-        for (let i = 0; i < pages; i++) {
-            buttons = [...buttons, {
-                id: i,
-                page: i + 1
-            }]
-        }
-        return buttons
-    }
-
-    // Create an render buttons
-    const buttons = createButtons()
-    const renderButtons = buttons.map((btn, key) => {
-        return (
-            <Fragment key={key}>
-                <button className={styles.btnRender} onClick={() => page(btn.id)}>{btn.page}</button>
-            </Fragment>
-        )
-    })
 
     return (
         <article className={styles.shopAll}>
             <h2 className={styles.titlePage}>Shop All</h2>
             <aside className={styles.filterProducts}>
-                <div>
-                    <input type="range" name="limit" min="5" max="20" onInput={changeLimit} value={settingsPagination.limit} /> Limit: {settingsPagination.limit}
-                </div>
+                <FilterByLimitProducts initialLimit={settingsPagination.limit} limit={changeLimit} />
                 <Filters />
             </aside>
             <section className={styles.areaProducts}>
@@ -77,12 +53,7 @@ export default function ShopAll() {
 
                 </ul>
             </section>
-            <section className={styles.containerButtonPages}>
-                <strong>Pages: {renderButtons.length}</strong>
-                <div className={styles.renderButtons}>
-                    {renderButtons}
-                </div>
-            </section>
+            <PaginationProducts page={page} limit={settingsPagination.limit} />
         </article>
     )
 
