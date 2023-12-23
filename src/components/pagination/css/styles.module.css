@@ -1,4 +1,4 @@
-.containerButtonPages{
+.containerButtonPages {
     display: flex;
     place-content: center;
     place-items: center;
@@ -8,13 +8,14 @@
     gap: 1rem;
     grid-area: pagination;
 }
-.renderButtons{
+
+.renderButtons {
     display: flex;
     place-content: center;
     gap: .5rem;
-    
 }
-.btnRender{
+
+.btnRender {
     display: flex;
     place-content: center;
     place-items: center;
@@ -23,7 +24,8 @@
     padding: 5px 10px;
     border-radius: 5px;
 }
-.btnRender:hover{
+
+.btnRender:hover {
     background: skyblue;
     color: #333;
 }

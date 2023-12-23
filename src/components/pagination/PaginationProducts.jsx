@@ -2,10 +2,10 @@ import styles from './css/styles.module.css'
 import { useFiltersCtx } from '@/context/FilterCtx'
 import { useProductCtx } from '@/context/ProductsCtx'
 import { Fragment } from 'react'
+
 export default function PaginationProducts({ limit, page }) {
     const { products } = useProductCtx()
     const { filterdProducts } = useFiltersCtx()
-
 
     const createButtons = () => {
         const pages = filterdProducts(products).length / limit

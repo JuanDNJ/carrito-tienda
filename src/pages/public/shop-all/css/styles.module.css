@@ -16,7 +16,6 @@
 .filterProducts {
     padding: 1rem;
     grid-area: aside;
-  
 }
 .areaProducts{
     grid-area: products;
@@ -26,38 +25,8 @@
     grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
     gap: 1rem;
     width: 100%;
-  
 }
 
-.containerButtonPages{
-    display: flex;
-    place-content: center;
-    place-items: center;
-    flex-direction: column;
-    border-bottom: 2px solid rgb(61, 61, 61);
-    padding: 1rem;
-    gap: 1rem;
-    grid-area: pagination;
-}
-.renderButtons{
-    display: flex;
-    place-content: center;
-    gap: .5rem;
-    
-}
-.btnRender{
-    display: flex;
-    place-content: center;
-    place-items: center;
-    background: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-.btnRender:hover{
-    background: skyblue;
-    color: #333;
-}
 @media screen and (min-width: 768px){
     .filterProducts {
         display: grid;
