@@ -1,10 +1,10 @@
-import { Fragment } from 'react'
 import { Outlet } from 'react-router-dom'
 
 export default function LayoutCustomers() {
     return (
-        <Fragment>
+        <section>
+            <h2>Customers</h2>
             <Outlet />
-        </Fragment>
+        </section>
     )
 }

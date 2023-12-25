@@ -51,7 +51,7 @@ export function Cart() {
                 <div className={styles.viewCart}>
                     <Link className={styles.linkViewCart} onClick={toggleCart} to="view-my-cart">View and edit cart</Link>
                 </div>
-                <Link className={styles.linkCheckOut} onClick={toggleCart} to="checkout-my-cart">Go to checkout</Link>
+                <Link className={styles.linkCheckOut} onClick={toggleCart} to="customers/checkout-my-cart">Go to checkout</Link>
             </footer>
         </section>
     )

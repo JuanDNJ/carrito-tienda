@@ -48,9 +48,10 @@ a.linkForm{
     text-decoration: underline;
 }
 
-.region{grid-column: span 2;}
+.region{grid-column: span 1;}
 .state{grid-column: span 2;}
 .phone{grid-column: span 2;}
+.postalCode{grid-column: span 1;}
 .btnsubmit{
     background: #333;
     color: #fff;

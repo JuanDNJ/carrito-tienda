@@ -1,34 +1,56 @@
-.containerPage{
-    padding: 1rem;
-}
-.titlePage{
+.titlePage {
     font-size: 3vw;
 }
-.containerCustomers{
+.containerCustomers {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(13.5rem, 1fr));
+    grid-template-columns: 1fr;
+    grid-template-areas: "columnOne" "columnTwo";
     gap: 60px;
+    padding: 0 1rem;
 }
-.customerLogin{
-   display: flex;
-   flex-direction: column;
+
+.createCustomers {
+    grid-area: columnOne;
 }
-.newCustomers{
+
+.customerLogin {
+    grid-area: columnOne;
     display: flex;
     flex-direction: column;
 }
-.customerTitle{
+.customerCheckout{
+    grid-area: columnOne;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: auto 1fr auto auto;
+}
+.checkout{
+ 
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: auto 1fr auto auto;
+}
+.newCustomers {
+    grid-area: columnTwo;
+    display: flex;
+    flex-direction: column;
+}
+
+.customerTitle {
     border-bottom: 1px solid #ccc;
     padding-bottom: 1rem;
 }
-.formControl{
+
+.formControl {
     display: flex;
     flex-direction: column;
 }
-.paragraf{
+
+.paragraf {
     font-variant: small-caps slashed-zero;
 }
-a.linkFormCreateCustomers{
+
+a.linkFormCreateCustomers {
     text-decoration: underline;
     background: #333;
     color: #fff;
@@ -37,11 +59,16 @@ a.linkFormCreateCustomers{
     text-align: center;
     width: 50%;
 }
-@media screen and (min-width: 1280px){
-    .containerPage{
+
+
+
+@media screen and (min-width: 1280px) {
+    .containerPage {
         padding: 0;
     }
-    .containerCustomers{
-        grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+    .containerCustomers {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "columnOne columnTwo";
+        padding: 0;
     }
 }

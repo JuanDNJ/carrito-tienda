@@ -46,6 +46,7 @@ export default function Router() {
                                             <Route path="signin" element={<Signin />} />
                                             <Route path="create" element={<Create />} />
                                             <Route path="forgot-password" element={<ForgotPassword />} />
+                                            <Route path="checkout-my-cart" element={<CheckOutMyCart />} />
                                         </Route>
                                         <Route path="account" element={<AccountPage />} />
                                         <Route path="category" element={<LayoutCategories />} >
@@ -53,7 +54,7 @@ export default function Router() {
                                             <Route path=":category/product/:product" element={<ProductPage />} />
                                         </Route>
                                         <Route path="view-my-cart" element={<ViewMyCart />} />
-                                        <Route path="checkout-my-cart" element={<CheckOutMyCart />} />
+
                                         <Route path="*" element={<PageNotFound />} />
                                     </Route>
                                 </Routes>

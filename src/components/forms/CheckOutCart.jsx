@@ -33,9 +33,9 @@ export default function CheckOutCart() {
                 <label htmlFor="region">Region</label>
                 <input type="text" autoComplete="region" id="region" name="region" required />
             </div>
-            <div className={`${styles.formControl}  ${styles.state}`}>
-                <label htmlFor="state">Zip or Postal Code*</label>
-                <input type="text" autoComplete="postal-code" id="state" name="state" required />
+            <div className={`${styles.formControl}  ${styles.postalCode}`}>
+                <label htmlFor="postalcode">Zip or Postal Code*</label>
+                <input type="text" autoComplete="postal-code" id="postalcode" name="postalcode" required />
             </div>
             <div className={`${styles.formControl}  ${styles.phone}`}>
                 <label htmlFor="phone">Phone Number*</label>

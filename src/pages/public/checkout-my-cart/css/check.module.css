@@ -1,8 +1,0 @@
-.chekout{
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-rows: auto 1fr auto auto;
-}
-.containerForm{
-    width: 50vw;
-}
