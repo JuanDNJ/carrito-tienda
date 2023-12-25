@@ -67,7 +67,10 @@ h1 {
   font-size: 5vw;
   font-family: var(--font-race-sport);
 }
-
+.titlePage{
+  padding: 1rem 0;
+  font-size: 3rem;
+}
 .app {
   max-width: var(--max-width);
   margin: var(--center-container);
