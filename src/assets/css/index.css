@@ -71,6 +71,7 @@ h1 {
 .app {
   max-width: var(--max-width);
   margin: var(--center-container);
+  padding: 2rem 0;
 }
 
 ul {
@@ -82,10 +83,16 @@ ul {
 button {
   border: 1px solid transparent;
   background: transparent;
+ 
 }
-
+form button{
+  background: #333;
+  padding: 1rem;
+  color: var(--color-light);
+  border-radius: 4px;
+}
 button:hover {
-  color: rgb(84, 210, 226);
+  color: var(--color-add);
 }
 
 .modalFilters {
@@ -128,6 +135,9 @@ form select {
 
 form label {
   padding: .5rem 0;
+}
+label.showpassword{
+  flex-direction: row;
 }
 span {
   color: silver;

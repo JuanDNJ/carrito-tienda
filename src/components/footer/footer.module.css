@@ -52,6 +52,10 @@ a{
   background: var(--color-light);
   padding: .5rem;
   border-radius: 4px;
+  color: var(--color-dark)
+}
+.notificationsActive button:hover{
+  color: var(--color-add)
 }
 label{
   display: flex;
