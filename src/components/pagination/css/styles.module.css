@@ -5,6 +5,7 @@
     flex-direction: column;
     border-bottom: 2px solid rgb(61, 61, 61);
     padding: 1rem;
+    margin-bottom: 1rem;
     gap: 1rem;
     grid-area: pagination;
 }

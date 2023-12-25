@@ -50,7 +50,6 @@ export default function ShopAll() {
                             <Product key={key} product={product} />
                         )
                     })}
-
                 </ul>
             </section>
             <PaginationProducts page={page} limit={settingsPagination.limit} />

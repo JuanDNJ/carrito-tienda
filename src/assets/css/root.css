@@ -26,7 +26,7 @@
 /* COLORS */
 :root {
   --color-default: rgba(34, 34, 34, 1);
-  --color-dark: rgba(80, 78, 78, 1);
+  --color-dark: rgb(54, 54, 54);
   --color-light: rgba(255, 255, 255, 1);
   --color-gold: rgb(255, 217, 0);
   --color-delete: rgba(247, 36, 36, 1);
@@ -37,7 +37,6 @@
   --color-link: rgba(255, 255, 255, 1);
   --color-link-customers: rgba(255, 241, 163, 1);
   --color-link-customers-hover: rgba(182, 253, 180, 1);
-  --header-bg-color: rgb(65, 65, 65);
 }
 
 ::-webkit-scrollbar {

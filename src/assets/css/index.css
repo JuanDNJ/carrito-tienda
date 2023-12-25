@@ -32,43 +32,45 @@ a {
   font-weight: 600;
 }
 
+a:hover {
+  color: rgb(131, 131, 247);
+}
+
 a.linkLogo {
   background: transparent;
 }
 
 a.navigationLink {
+  display: inline-block;
   padding: .5rem .7rem;
-  color: var(--color-link);
+  color: var(--color-light);
+  background: transparent;
 }
 
-a.navigationLinkCustomer {
-  color: var(--color-link-customers);
+a.navigationLink:hover {
+  color: gold;
 }
 
-a.navigationLinkCustomer:hover {
-  text-decoration: underline;
-  color: var(--color-link-customers-hover);
-}
-
-a.navigationLink:active,
-a.navigationLink:hover,
-a.navigationLink:focus {
-  color: rgb(76, 76, 77);
-  background: white;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: 900;
+  font-family: var(--font-oxanium-bold);
 }
 
 h1 {
   font-size: 5vw;
-  padding: 0;
-  margin: 0;
-  font-weight: 900;
   font-family: var(--font-race-sport);
 }
 
 .app {
   max-width: var(--max-width);
   margin: var(--center-container);
-  padding: 30px 0;
 }
 
 ul {
@@ -108,6 +110,28 @@ button:hover {
   top: 12.5px;
 }
 
+form input {
+  padding: .8rem;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+:is(form input[type="checkbox"]) {
+  margin-right: .5rem;
+}
+
+form select {
+  padding: .8rem;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+form label {
+  padding: .5rem 0;
+}
+span {
+  color: silver;
+}
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 2vw;

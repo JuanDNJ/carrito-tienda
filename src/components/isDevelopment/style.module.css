@@ -1,0 +1,28 @@
+.dialog {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  background: rgba(0, 0, 0.7);
+  padding: 8px 24px;  
+  border-radius: 32px;
+  opacity: .95;
+  backdrop-filter: blur(8px);
+  height: 400px;
+  width: 400px;
+  overflow: hidden auto;
+  font-size: .8rem;
+  color: rgb(243, 243, 142);
+  border: 2px solid rgb(247, 154, 154);
+  z-index: 11;
+}
+
+.dialog  span {
+  font-size: 14px;
+  color: #09f;
+  opacity: .8;
+}
+
+.dialog  h4,
+.dialog  h5 {
+  display: flex;
+}

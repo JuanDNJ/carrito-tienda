@@ -1,28 +1,84 @@
 .footer {
-  position: fixed;
-  left: 1rem;
-  bottom: 1rem;
-  background: rgba(0, 0, 0.7);
-  padding: 8px 24px;  
-  border-radius: 32px;
-  opacity: .95;
-  backdrop-filter: blur(8px);
-  height: 400px;
-  width: 400px;
-  overflow: hidden auto;
-  font-size: .8rem;
-  color: rgb(243, 243, 142);
-  border: 2px solid rgb(247, 154, 154);
-  z-index: 11;
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding: 1rem 0;
+}
+footer h2 {
+  padding-top: 1rem 
+}
+a{
+  color: white;
+}
+.containerFooter{
+  max-width: var(--max-width);
+  margin: var(--center-container);
+  display: grid;
+
+  grid-template-areas: "logo" "categories" "customer" "fack";
+  gap: 1rem;
+}
+.logo{
+  grid-area: logo;
+}
+.categories{
+  grid-area: categories;
+}
+.customer{
+  grid-area: customer;
+}
+.fack{
+  grid-area: fack;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.customerLink{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .footer span {
   font-size: 14px;
-  color: #09f;
-  opacity: .8;
 }
-
-.footer h4,
-.footer h5 {
+.notificationsActive{
   display: flex;
+  flex-direction: column;
+  place-items: flex-start;
+  gap: 1rem;
+}
+.notificationsActive button{
+  background: var(--color-light);
+  padding: .5rem;
+  border-radius: 4px;
+}
+label{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+:is(.logo,.categories,.customer,.fack){
+  padding-left: 1rem;
+}
+.containerFooter details summary{
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+address{
+  display: flex;
+  place-content: space-around;
+  place-items: center;
+}
+@media screen and (min-width: 768px){
+ 
+  .containerFooter{
+    grid-template-columns: .2fr 1fr 1fr 2fr;
+    grid-template-areas: "logo categories customer fack";
+  }
+  
+  :is(.logo,.categories,.customer,.fack){
+    padding: 0rem;
+   
+  }
 }

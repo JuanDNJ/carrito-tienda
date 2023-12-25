@@ -1,5 +1,5 @@
 .mainHeader {
-  background: var(--header-bg-color);
+  background: var(--color-dark);
   width: 100vw;
   position: sticky;
   top: 0;
