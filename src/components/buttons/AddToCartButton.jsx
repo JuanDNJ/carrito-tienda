@@ -1,14 +1,12 @@
-import { useCartCtx } from "../../context/CartCtx"
-
-import { CartIcon } from "../icons/CartIcon"
+import { CartIcon } from "@/components/icons/CartIcon"
 import styles from './buttons.module.css'
 
-export function AddToCartButton({ prod }) {
-    const { addToCart } = useCartCtx()
+export function AddToCartButton({ clickAddToCart }) {
+
     return (
         <button type="button"
             className={`${styles.btn} ${styles.addToCart}`}
-            onClick={() => addToCart(prod)}
+            onClick={clickAddToCart}
         >
             <CartIcon />
         </button>

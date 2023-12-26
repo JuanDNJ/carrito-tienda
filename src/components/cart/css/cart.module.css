@@ -4,20 +4,22 @@
   position: fixed;
   right: -420px;
   background: white;
-  border-left: 2px solid #4b4b4b;;
+  border-left: 2px solid #4b4b4b;
+  ;
   overflow: hidden;
-  width: 420px;
+  width: 100vw;
   height: 100%;
   z-index: 11;
   transition: right 300ms ease-in-out;
 }
-.toggleCart{
+
+.toggleCart {
   right: 0;
 }
+
 .imgItemCart {
   width: 100%;
   object-fit: contain;
-  background-color: red;
 }
 
 .headerCart {
@@ -26,21 +28,37 @@
   background: #4b4b4b;
   padding: 1rem;
 }
+
 .options {
   display: flex;
   place-content: flex-end;
   gap: .5rem;
 }
+
 .body {
   display: grid;
+  overflow: hidden;
 }
 
 .listCarts {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-rows: 96px;
   overflow: hidden scroll;
   padding: 1rem;
   gap: 1rem;
+}
+
+.listCarts::-webkit-scrollbar {
+  width: 10px;
+  background: #333;
+}
+
+.listCarts::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+}
+
+.listCarts::-webkit-scrollbar-button {
+  background: #a5a5a5;
 }
 
 .titleCart {
@@ -51,7 +69,8 @@
 .itemCart {
   display: flex;
   flex-direction: column;
-  border: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding-bottom: 1rem;
 }
 
 .subtotal {
@@ -104,28 +123,15 @@
   color: #333;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, .5);
 }
-
-
-
-.quantityCart {
-  display: flex;
-  place-items: center;
-  place-content: center;
-  border: 1px solid gold;
-  padding: .5rem;
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  font-size: small;
+.clearCart{
+  display: inline-flex;
+  align-items: center;
 }
 
-.deleteToCart {
-  background: rgb(247, 36, 36)
-}
-
-.actions {
-  display: flex;
-  place-content: space-around;
-  padding: .5rem;
-  place-items: center;
+@media screen and (min-width: 1280px) {
+  .cart {
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    max-width: 420px;
+  }
 }

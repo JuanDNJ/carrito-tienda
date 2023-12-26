@@ -2,8 +2,15 @@ import styles from './css/products.module.css'
 import OfferButton from '@/components/buttons/OfferButton';
 import { calculateThePorcentage } from '@/utils';
 import { Link } from 'react-router-dom';
-
+import { useCartCtx } from "@/context/CartCtx"
+import { AddToCartButton } from '@/components/buttons/AddToCartButton';
 export default function Product({ product, refProduct }) {
+    const { addToCart } = useCartCtx()
+
+    const andlerAddToCart = (product) => {
+        console.log(product)
+        addToCart(product)
+    }
 
     return (
         <li className={`${styles.itemGridList} ${styles.hoverAnimation}`} ref={refProduct}>
@@ -30,7 +37,9 @@ export default function Product({ product, refProduct }) {
                                 </strong>
                                 {calculateThePorcentage(product.price, 10)}
                             </>)}
+                            <AddToCartButton clickAddToCart={() => andlerAddToCart(product)} />
                         </span>
+
                     </div>
                 </section>
             </article>

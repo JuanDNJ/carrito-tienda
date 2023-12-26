@@ -61,6 +61,7 @@
 .contentBody {
   display: flex;
   place-content: center;
+  align-items: center;
   gap: 1rem;
 }
 .titlePage{

@@ -7,33 +7,22 @@
   border: 1px solid transparent;
   transition: 300ms all ease-in-out;
   padding: 0;
-
 }
 
 .accountButton {
   border: 1px solid rgb(255, 255, 255);
 }
 
-:is(.toggleCartClose, .toggleCartOpen) {
-
+:is(.toggleCartClose,
+  .toggleCartOpen,
+  .deleteToCart,
+  .removeProductQuantity,
+  .addProductQuantity,
+  .addToCart) {
   cursor: pointer;
-
-}
-
-.addToCart {
-  background: rgb(101, 245, 149);
-  border: 1px solid rgb(0, 0, 0);
-}
-
-.deleteToCart {
-  background: rgb(247, 36, 36);
-  border: 1px solid rgb(0, 0, 0);
 }
 
 .addProductQuantity {
-  background: rgb(101, 245, 226);
-  border: 1px solid rgb(0, 0, 0);
-  cursor: pointer;
   transition: scale 600ms ease-in-out;
 }
 
@@ -41,7 +30,6 @@
   background: rgb(247, 36, 36);
   border: 1px solid rgb(0, 0, 0);
   transition: scale 600ms ease-in-out;
-  cursor: pointer;
 }
 
 :is(.removeProductQuantity,
@@ -58,7 +46,6 @@
   left: 5px;
 }
 
-.disabledAddProductQuantity,
 .disabledRemoveProductQuantity {
   opacity: .5;
   background: rgb(240, 122, 122);
@@ -68,5 +55,4 @@
 .deleteToCart:active,
 .accountButton:active {
   transform: scale(.6);
-
 }

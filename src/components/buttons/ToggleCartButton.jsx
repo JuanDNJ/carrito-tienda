@@ -1,5 +1,5 @@
 import './buttons.module.css'
-import { useCartCtx } from "../../context/CartCtx"
+import { useCartCtx } from "@/context/CartCtx"
 import { CartIcon } from "../icons/CartIcon"
 import styles from './buttons.module.css'
 
