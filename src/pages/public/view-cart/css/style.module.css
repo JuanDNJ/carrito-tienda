@@ -1,10 +1,35 @@
-.containerShopping{
-    background: silver;
+.containerShopping {
+  
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
 }
-.titlePage{
+
+.titlePage {
     padding: 1rem 0;
     font-size: 3rem;
+    grid-column: span 2;
 }
-.containerImg{
-    background: gray;
+
+.cartProducts {
+    display: flex;
+    flex-direction: column;
+}
+
+.bodyTable {
+    background: white;
+}
+
+.listCartProduct {
+    display: grid;
+}
+
+/*  */
+.summary {
+    width: 22vw;
+    background: rgb(32, 218, 184);
+}
+
+.firstChildSummary {
+    color: var(--color-dark);
 }

@@ -1,0 +1,43 @@
+/* HEADER TABLE */
+.headerTable {
+    display: grid;
+    grid-template-areas: "colItem colItem colPrice colQuantity colSubtotal";
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+    border-bottom: 1px solid #333;
+   
+}
+
+.headerTable strong {
+    text-align: right;
+    padding: 1rem 0;
+}
+
+.headerTable strong:first-child {
+    color: rgb(73, 68, 68);
+    text-align: left;
+}
+
+.strongItems {
+    grid-area: colItem;
+   
+}
+
+.strongPrice {
+    grid-area: colPrice;
+ 
+}
+
+.strongQuantity {
+    grid-area: colQuantity;
+ 
+
+}
+
+.strongSubtotal {
+    grid-area: colSubtotal;
+  
+}
+
+.headerCartProducts strong {
+    color: var(--color-dark);
+}

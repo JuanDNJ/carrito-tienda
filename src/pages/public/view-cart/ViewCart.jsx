@@ -1,28 +1,21 @@
-import { Link } from 'react-router-dom'
 import styles from './css/style.module.css'
+import ViewCartProduct from './components/ViewCartProduct'
+import ViewHeaderTable from './components/ViewHeaderTable'
 export default function ViewCart() {
     return (
         <section className={styles.containerShopping}>
             <h2 className={styles.titlePage}>Shopping Cart</h2>
-            <section>
-                <span>Items</span>
-                <ul>
-                    <article>
-                        <section className={styles.containerLeft}>
-                            <div className={styles.containerImg}>
-                                <img src="" alt="" />
-                            </div>
-                            <div>
-                                <Link to="">Título de la imagen</Link>
-                            </div>
-                        </section>
-                        <section className={styles.containerLeft}>
-                            Summary
-                        </section>
-                    </article>
-                </ul>
+            <article className={styles.cartProducts}>
+                <ViewHeaderTable />
+                <section className={styles.bodyTable}>
+                    <ul className={styles.listCartProduct}>
+                        <ViewCartProduct />
+                    </ul>
+                </section>
+            </article>
+            <section className={styles.summary}>
+                <span className={styles.firstChildSummary}>Summary</span>
             </section>
-
         </section>
     )
 }
