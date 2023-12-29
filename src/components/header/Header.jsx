@@ -7,7 +7,7 @@ import NereaShopIcon from '@/components/icons/NereaShopIcon'
 export function Header() {
 
     return (
-        <header className={styles.mainHeader}>
+        <header className={'mainHeader'}>
             <section className={styles.customers}>
                 <span className={styles.small}>
                     Welcome to the <i>Nerea`s</i> &nbsp;shop
@@ -20,15 +20,15 @@ export function Header() {
                         <Link className='linkLogo' to="home">
                             <NereaShopIcon
                                 nereaColor='var(--color-gold)'
-                                nereaStroke='var(--color-light)'
-                                shopColor='var(--color-light)'
+                                nereaStroke='var(--color-logo-nerea)'
+                                shopColor='var(--color-logo-shop)'
                                 shopStroke='var(--color-gold)'
                             />
                         </Link>
                     </section>
                     <section className={styles.containerMenu}>
                         <Menu />
-                        <ToggleCartButton fill='var(--color-light)' />
+                        <ToggleCartButton fill='var(--color-icon-fill-toggle)' />
                     </section>
                 </article>
             </section>

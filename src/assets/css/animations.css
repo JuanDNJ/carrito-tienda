@@ -1,9 +1,28 @@
+
+@keyframes scroll {
+   
+    to {
+        --color-main-header: var(--color-dark);
+        --color-icon-fill-toggle: var(--color-light);
+        --color-logo-nerea: var(--color-light);
+        --color-logo-shop: var(--color-dark);
+    }
+}
+@keyframes linkScroll {
+    to {
+        --color-link: var(--color-link-light);
+       color: var(--color-link)
+    }
+}
+
 @keyframes BubblefloatTop {
     to {
         transform: translate(100%, 100%);
     }
 
-    from { transform: translate(-100%, -100%);}
+    from {
+        transform: translate(-100%, -100%);
+    }
 }
 
 @keyframes BubblefloatBottom {
@@ -11,5 +30,7 @@
         transform: translate(-100%, -100%);
     }
 
-    from {transform: translate(100%, 100%);}
+    from {
+        transform: translate(100%, 100%);
+    }
 }

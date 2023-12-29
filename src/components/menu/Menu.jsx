@@ -7,13 +7,13 @@ export function Menu() {
     return (
         <nav className={styles.menu}>
             <div className={`${styles.toggleSubmenu}`} onClick={closeCart}>
-                <Link className={`${styles.navigationLink} ${styles.navigationLink}`} to='shop-all'>Shop All</Link>
+                <Link className={`navigationLink`} to='shop-all'>Shop All</Link>
                 <section className={styles.openSubmenu}>
                     <Navigation submenu />
                 </section>
             </div>
 
-            <Link className={styles.navigationLink} onClick={closeCart} to='about'>About</Link>
+            <Link className={'navigationLink'} onClick={closeCart} to='about'>About</Link>
         </nav>
     )
 

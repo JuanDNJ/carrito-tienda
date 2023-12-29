@@ -1,21 +1,17 @@
 import styles from './css/style.module.css'
-import ViewCartProduct from './components/ViewCartProduct'
-import ViewHeaderTable from './components/ViewHeaderTable'
+import ViewTableProducts from './components/ViewTableProducts'
 export default function ViewCart() {
     return (
         <section className={styles.containerShopping}>
             <h2 className={styles.titlePage}>Shopping Cart</h2>
             <article className={styles.cartProducts}>
-                <ViewHeaderTable />
-                <section className={styles.bodyTable}>
-                    <ul className={styles.listCartProduct}>
-                        <ViewCartProduct />
-                    </ul>
-                </section>
+                <ViewTableProducts />
             </article>
-            <section className={styles.summary}>
-                <span className={styles.firstChildSummary}>Summary</span>
-            </section>
+            <aside className={styles.containerSummary}>
+                <article className={styles.summary}>
+                    <h2 className={styles.titleSummary}>Summary</h2>
+                </article>
+            </aside>
         </section>
     )
 }

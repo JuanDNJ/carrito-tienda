@@ -1,10 +1,14 @@
-.mainHeader {
-  background: var(--color-dark);
+/* .mainHeader {
+  background: var(--color-light);
   width: 100vw;
   position: sticky;
   top: 0;
   z-index: 10;
-}
+  animation: scroll linear both;
+  animation-timeline: scroll();
+  animation-range: 0 200; 
+} */
+
 .customers{
   display: flex;
   place-content: flex-end;

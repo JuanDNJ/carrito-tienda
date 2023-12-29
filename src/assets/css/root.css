@@ -34,9 +34,20 @@
   --color-send: rgba(101, 245, 149, 1);
   --color-add: rgba(101, 245, 226, 1);
   /*  */
-  --color-link: rgba(255, 255, 255, 1);
+  --color-main-header: var(--color-light);
+  --color-main-footer: var(--color-dark);
+  /*LINKS*/
+  --color-link-dark: var(--color-dark);
+  --color-link-light: var(--color-light);
+  --color-link-hover: rgba(63, 199, 253, 0.849);
   --color-link-customers: rgba(255, 241, 163, 1);
   --color-link-customers-hover: rgba(182, 253, 180, 1);
+  /*LOGO*/
+  --color-logo-nerea: var(--color-dark);
+  --color-logo-shop: var(--color-dark);
+  /* ICONS */
+  --color-icon-fill-toggle: var(--color-dark);
+
 }
 
 ::-webkit-scrollbar {

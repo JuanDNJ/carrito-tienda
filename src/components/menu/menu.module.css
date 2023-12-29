@@ -7,31 +7,13 @@
 .small {
   font-size: small;
 }
-a.navigationLink {
-  display: inline-block;
-  padding: .5rem .7rem;
-  color: #ffffff;
-}
-a.navigationLink:hover{
-
-  color: gold;
-}
-a.submenuLink{
-  display: inline-block;
-  padding: .5rem .7rem;
-  color: #ffffff;
-}
-a.submenuLink:hover{
-  
-  color: gold;
-}
 .toggleSubmenu{
   position: relative;
   z-index: 10;
 }
 .openSubmenu{
   position: absolute;
-  background: #333;
+  background: var(--color-light);
   color: #333;
   width: 0px;
   height: 0px;

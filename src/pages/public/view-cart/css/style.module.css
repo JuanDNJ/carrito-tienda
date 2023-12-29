@@ -1,5 +1,4 @@
 .containerShopping {
-  
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 1rem;
@@ -16,20 +15,14 @@
     flex-direction: column;
 }
 
-.bodyTable {
-    background: white;
-}
 
-.listCartProduct {
-    display: grid;
-}
-
-/*  */
 .summary {
     width: 22vw;
-    background: rgb(32, 218, 184);
+    background: rgb(245, 245, 245);
+    min-height: 33vh;
+}
+.titleSummary{
+    border-bottom: 2px solid #ccc;
+    padding: 22px 11px 8px;
 }
 
-.firstChildSummary {
-    color: var(--color-dark);
-}

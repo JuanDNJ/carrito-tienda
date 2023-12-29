@@ -27,9 +27,10 @@ body {
 }
 
 a {
-  color: var(--color-dark);
+  color: var(--color-link);
   text-decoration: none;
   font-weight: 600;
+  
 }
 
 a:hover {
@@ -43,12 +44,26 @@ a.linkLogo {
 a.navigationLink {
   display: inline-block;
   padding: .5rem .7rem;
-  color: var(--color-light);
+  color: var(--color-link-dark);
   background: transparent;
+  animation: linkScroll linear both;
+  animation-timeline: scroll();
+  animation-range: 0 500;
 }
 
 a.navigationLink:hover {
-  color: gold;
+  color: var(--color-link-hover);
+ 
+}
+
+a.submenuLink {
+  display: inline-block;
+  padding: .5rem .7rem;
+  color: var(--color-link-dark);
+}
+
+a.submenuLink:hover {
+  color: var(--color-link-hover);
 }
 
 h1,
@@ -67,10 +82,24 @@ h1 {
   font-size: 5vw;
   font-family: var(--font-race-sport);
 }
-.titlePage{
+
+.mainHeader {
+  background: var(--color-main-header);
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid rgba(226, 226, 226, 0.397);
+  z-index: 10;
+  animation: scroll linear both;
+  animation-timeline: scroll();
+  animation-range: 0 500;
+}
+
+.titlePage {
   padding: 1rem 0;
   font-size: 3rem;
 }
+
 .app {
   max-width: var(--max-width);
   margin: var(--center-container);
@@ -86,14 +115,16 @@ ul {
 button {
   border: 1px solid transparent;
   background: transparent;
- 
+
 }
-form button{
+
+form button {
   background: #333;
   padding: 1rem;
   color: var(--color-light);
   border-radius: 4px;
 }
+
 button:hover {
   color: var(--color-add);
 }
@@ -139,12 +170,15 @@ form select {
 form label {
   padding: .5rem 0;
 }
-label.showpassword{
+
+label.showpassword {
   flex-direction: row;
 }
+
 span {
   color: silver;
 }
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 2vw;
