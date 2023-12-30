@@ -2,10 +2,9 @@
   display: grid;
   grid-template-rows: auto 1fr auto auto;
   position: fixed;
-  right: -420px;
+  right: -100%;
   background: white;
   border-left: 2px solid #4b4b4b;
-  ;
   overflow: hidden;
   width: 100vw;
   height: 100%;
@@ -128,7 +127,7 @@
   align-items: center;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .cart {
     display: grid;
     grid-template-rows: auto 1fr auto auto;

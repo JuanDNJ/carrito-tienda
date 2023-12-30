@@ -6,6 +6,8 @@
         --color-icon-fill-toggle: var(--color-light);
         --color-logo-nerea: var(--color-light);
         --color-logo-shop: var(--color-dark);
+        background: var(--color-main-header);
+      
     }
 }
 @keyframes linkScroll {

@@ -6,7 +6,7 @@ const Ctx = createContext()
 
 export default function CartProvider({ children }) {
 
-    const { isToggle, setToggle } = useToggle()
+    const { toggle, setToggle } = useToggle()
     const [state, dispacth] = useReducerCart()
 
     const addToCart = (product) => {
@@ -42,7 +42,7 @@ export default function CartProvider({ children }) {
     }
     const values = {
         cart: state,
-        isToggle,
+        isToggle: toggle,
         setToggle,
         addToCart,
         deleteToCart,

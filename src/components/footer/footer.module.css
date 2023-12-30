@@ -38,6 +38,13 @@ a{
   gap: 1rem;
   padding: 1rem;
 }
+.navigationLink{
+  color: var(--color-link-light);
+  margin-bottom: .5rem;
+  &:hover{
+    color: var(--color-link-hover);
+  }
+}
 
 .footer span {
   font-size: 14px;

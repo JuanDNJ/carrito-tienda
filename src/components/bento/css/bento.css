@@ -1,0 +1,63 @@
+.bentoGrid {
+
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-auto-rows: 22rem;
+    grid-gap: 1rem;
+    padding: 1rem;
+    background-color: var(--grid-bg);
+}
+.bento-item{
+    border: 3px solid rgba(73, 73, 73, 0.349);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.grid-cols-10 {
+    --grid-cols: 10;
+}
+
+/* S */
+
+.small {
+    grid-column: span 10;
+    
+}
+.img-bento-item{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* MD */
+@media screen and (min-width: 768px) {
+    .md-col-2 {
+        grid-column: span 2;
+    }
+    .md-col-3 {
+        grid-column: span 3;
+    }
+    .md-col-4 {
+        grid-column: span 4;
+    }
+    .md-col-5 {
+        grid-column: span 5;
+    }
+}
+
+/* Large */
+@media screen and (min-width: 1280px) {
+    .large-col-2 {
+        grid-column: span 2;
+    }
+    .large-col-3 {
+        grid-column: span 3;
+    }
+    .large-col-4 {
+        grid-column: span 4;
+    }
+    .large-col-5 {
+        grid-column: span 5;
+    }
+}

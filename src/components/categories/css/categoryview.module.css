@@ -25,9 +25,10 @@
     border-radius: 20px;
 }
 .link {
+    color: var( --color-link-dark);
     text-decoration: underline;
     padding: 1.2rem;
 }
 .link:hover {
-   color: goldenrod;
+    color: var(--color-link-hover);
 }

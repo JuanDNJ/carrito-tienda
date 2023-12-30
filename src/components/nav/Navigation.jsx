@@ -8,7 +8,7 @@ export default function Navigation({ children, submenu, subFooter }) {
     const { closeCart } = useCartCtx()
     const { prodCategories } = useProductCtx()
     const renderLinks = prodCategories && prodCategories.map(prodCat =>
-        <Link className={'navigationLink'} key={prodCat.id} to={prodCat.url}>
+        <Link className={subFooter ? styles.navigationLink : 'navigationLink'} key={prodCat.id} to={prodCat.url}>
             {capitalizeWord(prodCat.name)}
         </Link>)
     return (

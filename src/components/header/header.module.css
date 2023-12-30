@@ -17,11 +17,13 @@
   margin: var(--center-container);
   padding: .5rem 1rem;
   color: var(--color-light);
+  z-index: 11;
 }
 .containerHeader {
   display: grid;
   max-width: var(--max-width);
   margin: var(--center-container);
+  z-index: 11;
 }
 
 .top {
@@ -40,6 +42,7 @@
   display: flex;
   place-content: space-between;
   padding-right: 1rem;
+  z-index: 11;
 }
 .small{
   font-size: small;

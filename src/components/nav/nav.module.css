@@ -2,13 +2,23 @@
     overflow: auto hidden;
 }
 
-.container{
+.container {
     display: flex;
     max-width: var(--max-width);
     margin: var(--center-container);
 }
-.submenu{
+
+.submenu {
     flex-direction: column;
     padding: 1rem;
     margin: 0;
+}
+
+.navigationLink {
+    color: var(--color-link-light);
+    margin-bottom: .5rem;
+    &:hover {
+        color: var(--color-link-hover);
+
+    }
 }
