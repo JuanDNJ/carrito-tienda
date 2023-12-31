@@ -38,7 +38,7 @@ export default function ShopAll() {
 
     return (
         <article className={styles.shopAll}>
-            <h2 className={styles.titlePage}>Shop All</h2>
+            <h2 className={'titleXL'}>Shop All</h2>
             <aside className={styles.filterProducts}>
                 <FilterByLimitProducts initialLimit={settingsPagination.limit} limit={changeLimit} />
                 <Filters />

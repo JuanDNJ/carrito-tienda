@@ -31,7 +31,7 @@ export default function CreateNewAccount() {
     }, [showPasswords.confirm, showPasswords.pass])
     return (
         <article className={`${styles.createNewAccount}`}>
-            <h2>Create New Customer Account</h2>
+            <h2 className='titleMD'>Create New Customer Account</h2>
             <form>
 
                 <label>

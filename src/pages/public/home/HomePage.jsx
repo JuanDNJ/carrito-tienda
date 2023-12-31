@@ -22,7 +22,7 @@ export default function HomePage() {
 
     return (
         <section >
-            <h2 className={styles.titlePage}>Home</h2>
+            <h2 className={'titleXL'}>Home</h2>
             <article className={styles.initialPage}>
                 <WhatsNews />
                 <Bento className={`bentoGrid grid-cols-10`} >

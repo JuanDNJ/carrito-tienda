@@ -37,7 +37,7 @@ export default function Offers() {
         <section className={styles.offers}>
             <article>
                 <header className={header}>
-                    <h2 className={titleHeader}>Offers of the day</h2>
+                    <h2 className={'titleXL'}>Offers of the day</h2>
                 </header>
                 <section className={containerScroll}>
                     <ul ref={ul} className={listOffers}>

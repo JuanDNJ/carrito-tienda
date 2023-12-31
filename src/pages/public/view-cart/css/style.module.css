@@ -4,9 +4,7 @@
     gap: 1rem;
 }
 
-.titlePage {
-    padding: 1rem 0;
-    font-size: 3rem;
+.titleSpan {
     grid-column: span 2;
 }
 

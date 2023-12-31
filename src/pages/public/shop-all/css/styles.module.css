@@ -8,11 +8,6 @@
     "pagination pagination"; 
 }
 
-.titlePage {
-    font-size: 3rem; 
-    grid-area: title;
-}
-
 .filterProducts {
     padding: 1rem;
     grid-area: aside;

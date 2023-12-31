@@ -6,11 +6,11 @@ import shopEnvironmet from '@/assets/images/shop-environmet.jpg'
 export default function About() {
     return (
         <section className={styles}>
-            <h2 className='titlePage'>About</h2>
+            <h2 className='titleXL'>About</h2>
             <section className={styles.containerAbout}>
                 <article className={styles.infoAbout}>
                     <section className={styles.containerInfo}>
-                        <h2>About the Shop</h2>
+                        <h2 className='titleMD'>About the Shop</h2>
                         <p>
                             Anim elit qui occaecat ad voluptate veniam pariatur ex occaecat nisi aliquip elit anim sint.
                             Et elit aute in ex et tempor aliqua sunt qui eu veniam consectetur ex. Ex ad voluptate laborum ullamco est.
@@ -28,7 +28,7 @@ export default function About() {
                 </article>
                 <article className={styles.infoCommunity}>
                     <section className={styles.containerInfo}>
-                        <h2>Connetc to the Community</h2>
+                        <h2 className='titleMD'>Connetc to the Community</h2>
                         <p>
                             Anim elit qui occaecat ad voluptate veniam pariatur ex occaecat nisi aliquip elit anim sint.
                             Et elit aute in ex et tempor aliqua sunt qui eu veniam consectetur ex. Ex ad voluptate laborum ullamco est.
@@ -47,7 +47,7 @@ export default function About() {
                 <article className={styles.infoEnvironmet}>
                     <section className={styles.containerInfo}>
 
-                        <h2>Let`s take care of the environmet</h2>
+                        <h2 className='titleMD'>Let`s take care of the environmet</h2>
                         <p>
                             Anim elit qui occaecat ad voluptate veniam pariatur ex occaecat nisi aliquip elit anim sint.
                             Et elit aute in ex et tempor aliqua sunt qui eu veniam consectetur ex. Ex ad voluptate laborum ullamco est.

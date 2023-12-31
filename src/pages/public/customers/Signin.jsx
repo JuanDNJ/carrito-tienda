@@ -6,14 +6,14 @@ export default function Signin() {
         <section className={styles.containerCustomers}>
             <article className={styles.customerLogin}>
                 <div className={styles.customerTitle}>
-                    <strong>Login Customers</strong>
+                    <h2 className='titleMD'>Login Customers</h2>
                 </div>
                 <p className={styles.paragraf}>If you have an account, login in with your email and password.</p>
                 <SigninForm />
             </article>
             <article className={styles.newCustomers}>
                 <div className={styles.customerTitle}>
-                    <strong>New Customers</strong>
+                    <h2 className='titleMD'>New Customers</h2>
                 </div>
                 <p className={styles.paragraf}>If you have not created an account yet, you will not get the benefits such as gifts, receiving offers only for customers and many more benefits. What are you waiting for, create your account.</p>
                 <div className={styles.formControl}>
