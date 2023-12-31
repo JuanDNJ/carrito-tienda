@@ -14,6 +14,7 @@ export default function Navigation({ children, submenu, subFooter }) {
     return (
         <nav className={styles.navigation} onClick={closeCart}>
             <section className={`${styles.container} ${submenu && styles.submenu}`}>
+                <Link className={`navigationLink`} to='shop-all'>Shop All</Link>
                 {children ? children : renderLinks}
             </section>
         </nav>
