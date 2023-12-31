@@ -8,13 +8,11 @@ import ProductCtx from '@/context/ProductsCtx.jsx'
 import {
     Layout,
     LayoutCustomers,
-    LayoutHome,
-    ProductHome,
-    ProductPage,
     LayoutCategories,
     AccountPage,
     Category,
     Home,
+    ViewProduct,
     About,
     ContactUs,
     ShopAll,
@@ -49,7 +47,7 @@ export default function Router() {
                                         <Route path="privacy-policy" element={<PrivacyPolicy />} />
                                         <Route path="terms-and-conditions" element={<TermsAndConditions />} />
                                         <Route path="shop-all" element={<ShopAll />} />
-                                        <Route path="product/:product" element={<ProductHome />} />
+                                        <Route path="view-product/:product" element={<ViewProduct />} />
                                         {/* /////////////////////////////////////// */}
                                         <Route path="customers" element={<LayoutCustomers />} >
                                             <Route path="signin" element={<Signin />} />

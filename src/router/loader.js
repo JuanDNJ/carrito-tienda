@@ -1,14 +1,14 @@
 import { lazy } from "react";
 
 const Layout = lazy(() => import('../pages/Layout.jsx'))
-const LayoutHome = lazy(() => import('../pages/public/home/LayoutHome.jsx'))
+
 const LayoutCustomers = lazy(() => import('../pages/public/customers/LayoutCustomers.jsx'))
 const LayoutCategories = lazy(() => import('../pages/public/category/LayoutCategories.jsx'))
 const Home = lazy(() => import('../pages/public/home/HomePage.jsx'))
-const ProductHome = lazy(() => import('../pages/public/home/ProductHome.jsx'))
+
 const AccountPage = lazy(() => import('../pages/private/AccountPage.jsx'))
 const Category = lazy(() => import('../pages/public/category/CategoryPage.jsx'))
-const ProductPage = lazy(() => import('../pages/public/category/ProductPage.jsx'))
+const ViewProduct = lazy(() => import('../pages/public/view-product/ViewProduct.jsx'))
 const ViewMyCart = lazy(() => import('../pages/public/view-cart/ViewCart.jsx'))
 const CheckOutMyCart = lazy(() => import('../pages/public/customers/CheckOutMyCart.jsx'))
 const PageNotFound = lazy(() => import('../pages/PageNotFound'))
@@ -23,14 +23,12 @@ const PrivacyPolicy = lazy(() => import('../pages/public/privacy-policy/PrivacyP
 const TermsAndConditions = lazy(() => import('../pages/public/terms/TermsAndConditions.jsx'))
 export {
     Layout,
-    LayoutHome,
     LayoutCustomers,
     LayoutCategories,
     AccountPage,
     Category,
-    ProductPage,
+    ViewProduct,
     Home,
-    ProductHome,
     About,
     ContactUs,
     ShopAll,

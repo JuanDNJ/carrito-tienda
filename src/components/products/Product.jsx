@@ -18,7 +18,7 @@ export default function Product({ product, refProduct }) {
                 <img className={styles.photoProduct} src={product.image} alt="" width={120} />
                 <section className={`${styles.bodyProduct}`}>
                     <h2 className={styles.productTitle}>
-                        <Link className={styles.linkProductTitle} to={`/carrito-tienda/product/${product.id}`}>{product.title}</Link>
+                        <Link className={styles.linkProductTitle} to={`/carrito-tienda/view-product/${product.id}`}>{product.title}</Link>
                     </h2>
                     <div className={styles.contentBody}>
                         <span className={styles.productPrice} style={{
