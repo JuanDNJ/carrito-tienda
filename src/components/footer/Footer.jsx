@@ -24,11 +24,11 @@ export function Footer() {
                 <details open className={styles.customer}>
                     <summary>Customers</summary>
                     <Navigation submenu >
-                        <Link className={styles.navigationLink} to=''>Cart</Link>
-                        <Link className={styles.navigationLink} to=''>Contact us</Link>
-                        <Link className={styles.navigationLink} to=''>Info</Link>
-                        <Link className={styles.navigationLink} to=''>Privacy policy</Link>
-                        <Link className={styles.navigationLink} to=''>Terms & conditions</Link>
+                        <Link className={styles.navigationLink} to='view-my-cart'>Cart</Link>
+                        <Link className={styles.navigationLink} to='contact'>Contact us</Link>
+                        <Link className={styles.navigationLink} to='info-shop'>Info</Link>
+                        <Link className={styles.navigationLink} to='privacy-policy'>Privacy policy</Link>
+                        <Link className={styles.navigationLink} to='terms-and-conditions'>Terms & conditions</Link>
                     </Navigation>
                 </details>
                 <details open className={styles.fack}>

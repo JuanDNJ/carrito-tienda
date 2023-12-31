@@ -17,7 +17,10 @@ const Create = lazy(() => import('../pages/public/customers/Create.jsx'))
 const ForgotPassword = lazy(() => import('../pages/public/customers/ForgotPassword.jsx'))
 const ShopAll = lazy(() => import('../pages/public/shop-all/ShopAll.jsx'))
 const About = lazy(() => import('../pages/public/about/About.jsx'))
-
+const ContactUs = lazy(() => import('../pages/public/contact/ContactUs.jsx'))
+const InfoShop = lazy(() => import('../pages/public/info-shop/InfoShop.jsx'))
+const PrivacyPolicy = lazy(() => import('../pages/public/privacy-policy/PrivacyPolicy.jsx'))
+const TermsAndConditions = lazy(() => import('../pages/public/terms/TermsAndConditions.jsx'))
 export {
     Layout,
     LayoutHome,
@@ -29,11 +32,15 @@ export {
     Home,
     ProductHome,
     About,
+    ContactUs,
     ShopAll,
     Signin,
     Create,
     ForgotPassword,
     ViewMyCart,
     CheckOutMyCart,
+    InfoShop,
+    PrivacyPolicy,
+    TermsAndConditions,
     PageNotFound
 }

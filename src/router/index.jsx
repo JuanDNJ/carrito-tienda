@@ -16,12 +16,16 @@ import {
     Category,
     Home,
     About,
+    ContactUs,
     ShopAll,
     Signin,
     Create,
     ForgotPassword,
     ViewMyCart,
     CheckOutMyCart,
+    InfoShop,
+    PrivacyPolicy,
+    TermsAndConditions,
     PageNotFound
 } from './loader'
 
@@ -54,7 +58,10 @@ export default function Router() {
                                             <Route path=":category/product/:product" element={<ProductPage />} />
                                         </Route>
                                         <Route path="view-my-cart" element={<ViewMyCart />} />
-
+                                        <Route path="contact" element={<ContactUs />} />
+                                        <Route path="info-shop" element={<InfoShop />} />
+                                        <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                                        <Route path="terms-and-conditions" element={<TermsAndConditions />} />
                                         <Route path="*" element={<PageNotFound />} />
                                     </Route>
                                 </Routes>
