@@ -40,6 +40,7 @@ export default function Router() {
                                 <Routes>
                                     <Route path="/carrito-tienda" element={<Layout />} >
                                         <Route index element={<Home />} />
+                                        <Route path="home" element={<Home />} />
                                         <Route path="about" element={<About />} />
                                         <Route path="account" element={<AccountPage />} />
                                         <Route path="view-my-cart" element={<ViewMyCart />} />
@@ -48,11 +49,8 @@ export default function Router() {
                                         <Route path="privacy-policy" element={<PrivacyPolicy />} />
                                         <Route path="terms-and-conditions" element={<TermsAndConditions />} />
                                         <Route path="shop-all" element={<ShopAll />} />
+                                        <Route path="product/:product" element={<ProductHome />} />
                                         {/* /////////////////////////////////////// */}
-                                        <Route path="home" element={<LayoutHome />}>
-                                            <Route index element={<Home />} />
-                                            <Route path="product/:product" element={<ProductHome />} />
-                                        </Route>
                                         <Route path="customers" element={<LayoutCustomers />} >
                                             <Route path="signin" element={<Signin />} />
                                             <Route path="create" element={<Create />} />
@@ -61,7 +59,6 @@ export default function Router() {
                                         </Route>
                                         <Route path="category" element={<LayoutCategories />} >
                                             <Route path=":category" element={<Category />} />
-                                            <Route path=":category/product/:product" element={<ProductPage />} />
                                         </Route>
                                         <Route path="*" element={<PageNotFound />} />
                                     </Route>
