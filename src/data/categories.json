@@ -1,16 +1,11 @@
 {
     "categories": [
         {
-            "id":1,
-            "name": "home",
-            "url": "home",
-            "subcategories":[]
-        },
-        {
-            "id": 2,
+            "id": 1,
             "name": "jewelery",
             "url": "category/jewelery",
             "photoUrl": "https://img.freepik.com/premium-photo/golden-bracelets-earrings-rings-jewelery-gold-water-background-luxury-glamour-holiday-beauty-design-jewelry-brand-ads_360074-54396.jpg?w=2000",
+            "bentoColumn": 5,
             "subcategories": [
                 {
                     "id": 1,
@@ -27,10 +22,11 @@
             ]
         },
         {
-            "id": 3,
+            "id": 2,
             "name": "clothing",
             "url": "category/clothing",
             "photoUrl": "https://media.burford.co.uk/images/SNY04089.jpg_edit.width-1440_05001m7uKQ0crRoI.jpg",
+            "bentoColumn": 5,
             "subcategories": [
                 {
                     "id": 1,
@@ -66,10 +62,11 @@
             ]
         },
         {
-            "id": 4,
+            "id": 3,
             "name": "electronics",
             "url": "category/electronics",
             "photoUrl": "https://d2csxpduxe849s.cloudfront.net/media/E32629C6-9347-4F84-81FEAEF7BFA342B3/C0DBF8AC-DB0E-4621-96C05D3B6E366D02/E142C7C6-62EF-4320-A6C2DB6EB2B3F4E1/WebsiteJpg_XL-FELEC_Main%20Visual_Purple_Website.jpg",
+            "bentoColumn": 3,
             "subcategories": [
                 {
                     "id": 1,
@@ -91,10 +88,11 @@
             ]
         },
         {
-            "id": 5,
+            "id": 4,
             "name": "shoes",
             "url": "category/shoes",
             "photoUrl": "https://hips.hearstapps.com/hmg-prod/images/shoe-pile-2023-0109-preview-6446d61957fde.jpg?crop=0.555xw:0.472xh;0.345xw,0.284xh&resize=768:*",
+            "bentoColumn": 4,
             "subcategories": [
                 {
                     "id": 1,
@@ -124,10 +122,11 @@
             ]
         },
         {
-            "id": 6,
+            "id": 5,
             "name": "home appliances",
             "url": "category/home appliances",
             "photoUrl": "https://www.midea.com/content/dam/midea-aem/gulf/kv3.jpg",
+            "bentoColumn": 3,
             "subcategories": [
                 {
                     "id": 1,
