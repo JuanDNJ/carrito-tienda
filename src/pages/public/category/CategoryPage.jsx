@@ -3,7 +3,7 @@ import Product from "../../../components/products/Product"
 import { useProductCtx } from "@/context/ProductsCtx"
 import { Fragment } from "react"
 import styles from './css/styles.module.css'
-
+import { capitalizeWord } from '@/utils'
 export default function CategoryPage() {
     const { category } = useParams()
     const { products } = useProductCtx()
@@ -12,7 +12,8 @@ export default function CategoryPage() {
     return (
 
         <section className={styles.categoryPage}>
-            <h2 className={styles.subTitle}>Total products: <span className={styles.numProducts}>{productsCategory && productsCategory.length}</span></h2>
+            <h2 className="titleXL">{capitalizeWord(category)}</h2>
+            <h3 className={'titleMD'}>Total products: <span className={styles.numProducts}>{productsCategory && productsCategory.length}</span></h3>
             <section className="viewCategory">
                 <article className="listProducts">
                     <ul className={styles.gridList} >

@@ -12,10 +12,7 @@
     padding: 1rem;
     overflow: hidden scroll;
   }
-  .subTitle{
-    color: #333;
-    padding: 1rem;
-  }
+  
   .numProducts{
     font-size: 6vw;
     color: rgb(139, 11, 32);
